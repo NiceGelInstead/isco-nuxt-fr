@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Tema Standar */
+@theme {
+    --color-primary: #004BAA;
+    --color-secondary: #031D40;
+}
+
+/* Tipografi */
+@layer base {
+    h1 {
+        @apply font-bold;
+        @apply text-4xl lg:text-5xl;
+    }
+}
+
+/* Komponen */
+@layer components {
+    .btn {
+        @apply flex px-5 py-2.5 rounded-lg transition-all duration-500 place-content-center mx-auto;
+    }
+}
+
+/* Container dengan Safe Area */
+.isco-container {
+    @apply max-w-screen-xl w-full mx-auto;
+}
