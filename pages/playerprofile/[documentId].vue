@@ -59,41 +59,48 @@ import { type Player, defaultPlayer } from '~/types/playerTypes';
 const { data, error } = await useApiData<Player>(`/api/players/${documentId}?populate=*`)
 const player = computed(() => data.value?.data ?? defaultPlayer) // This is for ONE player
 
-
-import { ref, computed, onMounted } from 'vue';
-
-const pdfSection = ref<HTMLElement | null>(null);
-let html2pdf: any = null;
-
-onMounted(async () => {
-  if (process.client) {
-    html2pdf = (await import('html2pdf.js')).default;
-    console.log("html2pdf.js dimuat!");
-  }
-});
-
+// html2pdf exporter
+import { usePdfExporter } from '~/composables/usePdfExporter';
+const { pdfSection, handleExport } = usePdfExporter();
+// const player = ref({ }); // Already in API call player = computed(())
 const exportToPDF = () => {
-  if (!pdfSection.value) return;
-
-  const element = pdfSection.value;
-  const opt = {
-    margin: 10,
-    filename: `sertifikat_${player.value.Name}.pdf`,
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-  };
-
-  html2pdf()
-    .from(element)
-    .set(opt)
-    .toPdf()
-    .get('pdf')
-    .then((pdf: { internal: { scaleFactor: number; }; }) => {
-      pdf.internal.scaleFactor = 1.5; // Bisa disesuaikan untuk kualitas lebih baik
-    })
-    .save();
+  handleExport(`certificate_${player.value.Name}`);
 };
+
+// import { ref, computed, onMounted } from 'vue';
+
+// const pdfSection = ref<HTMLElement | null>(null);
+// let html2pdf: any = null;
+
+// onMounted(async () => {
+//   if (process.client) {
+//     html2pdf = (await import('html2pdf.js')).default;
+//     console.log("html2pdf.js dimuat!");
+//   }
+// });
+
+// const exportToPDF = () => {
+//   if (!pdfSection.value) return;
+
+//   const element = pdfSection.value;
+//   const opt = {
+//     margin: 10,
+//     filename: `sertifikat_${player.value.Name}.pdf`,
+//     image: { type: 'jpeg', quality: 0.98 },
+//     html2canvas: { scale: 2, useCORS: true },
+//     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+//   };
+
+//   html2pdf()
+//     .from(element)
+//     .set(opt)
+//     .toPdf()
+//     .get('pdf')
+//     .then((pdf: { internal: { scaleFactor: number; }; }) => {
+//       pdf.internal.scaleFactor = 1.5; // Bisa disesuaikan untuk kualitas lebih baik
+//     })
+//     .save();
+// };
 
 
 
