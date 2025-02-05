@@ -10,6 +10,9 @@ export default defineNuxtConfig({
       strapiUrl: 'https://admin.testjellysuper.my.id',
     },
   },
+  modules: [
+    'nuxt-qrcode'
+  ],
   css: ['~/assets/css/index.css'],
   vite: {
     plugins: [

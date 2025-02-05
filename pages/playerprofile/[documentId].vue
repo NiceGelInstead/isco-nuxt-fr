@@ -21,6 +21,11 @@
         <h1 class="mb-8">{{ player.Name }}</h1>
         <p class="text-lg mt-8">{{ player.EmergencyContact }}</p>
         <div class="text-lg mb-8 underline">{{ player.uid }}</div>
+        <Qrcode
+          :value="fullUrl"
+          variant="pixelated"
+          height="100"
+        />
       </div>
     </div>
 
