@@ -10,4 +10,17 @@ fr fr
 ## How To Deploy
 
 1. Run `nuxi generate`
-2. Put generated files to hosting 
+2. Put generated files to hosting
+
+## Other Resources
+
+### .htaccess
+
+    <IfModule mod_rewrite.c>
+      RewriteEngine On
+      RewriteBase /
+      RewriteRule ^index\.html$ - [L]
+      RewriteCond %{REQUEST_FILENAME} !-f
+      RewriteCond %{REQUEST_FILENAME} !-d
+      RewriteRule . /index.html [L]
+    </IfModule>
