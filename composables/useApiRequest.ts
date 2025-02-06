@@ -1,4 +1,4 @@
-// composables/useApiData.ts
+// composables/useApiRequest.ts
 import type { ApiResponse } from '~/types/playerTypes'
 
 export const useApiData = <T>(endpoint: string) => {
