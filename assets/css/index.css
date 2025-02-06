@@ -34,7 +34,7 @@
     .btn {
         @apply flex px-5 py-2.5 rounded-lg transition-all duration-500 place-content-center mx-auto;
     }
-    .container {
+    .isco-container {
         @apply max-w-7xl w-full mx-auto px-2 md:px-8 lg:px-16;
     }
 }
@@ -43,5 +43,8 @@
     p {
         @apply font-medium text-text;
         @apply text-base;
+    }
+    section {
+        @apply w-full;
     }
 }
