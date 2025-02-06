@@ -44,4 +44,7 @@
         @apply font-medium text-text;
         @apply text-base;
     }
+    section {
+        @apply w-full;
+    }
 }
