@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 @import "tailwindcss";
 
 /* Tema Standar */
 @theme {
     --color-primary: #004BAA;
     --color-secondary: #031D40;
+    --color-accent: #005FCC;
+    --color-text: #4F4F4F;
+    --color-border: #C3C5C7;
+    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Tipografi */
@@ -11,6 +16,22 @@
     h1 {
         @apply font-bold;
         @apply text-4xl lg:text-5xl;
+    }
+    h2 {
+        @apply font-bold;
+        @apply text-3xl lg:text-4xl;
+    }
+    h3 {
+        @apply font-semibold;
+        @apply text-xl lg:text-2xl;
+    }
+    h4 {
+        @apply font-medium;
+        @apply text-xl;
+    }
+    p {
+        @apply font-medium;
+        @apply text-base;
     }
 }
 
