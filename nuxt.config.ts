@@ -2,23 +2,26 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  compatibilityDate: '2024-11-01',
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+  compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   runtimeConfig: {
-    strapiUrl: 'https://admin.testjellysuper.my.id',
+    strapiUrl: "https://admin.testjellysuper.my.id",
     public: {
-      strapiUrl: 'https://admin.testjellysuper.my.id',
-      siteUrl: process.env.SITE_URL || 'https://testjellysuper.my.id',
+      strapiUrl: "https://admin.testjellysuper.my.id",
     },
   },
-  modules: [
-    'nuxt-qrcode',
-    '@nuxt/eslint'
+  modules: ['nuxt-qrcode',
+           '@nuxt/eslint'
   ],
-  css: ['~/assets/css/index.css'],
+  css: ["~/assets/css/index.css"],
   vite: {
-    plugins: [
-      tailwindcss(),    
-    ],
+    plugins: [tailwindcss()],
   },
-})
+ 
+});
