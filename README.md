@@ -24,3 +24,7 @@ fr fr
       RewriteCond %{REQUEST_FILENAME} !-d
       RewriteRule . /index.html [L]
     </IfModule>
+
+### Runtime Config
+
+You might want to set `siteUrl` in `.env` or in `nuxt.config.ts`

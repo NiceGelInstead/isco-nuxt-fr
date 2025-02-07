@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     strapiUrl: 'https://admin.testjellysuper.my.id',
     public: {
       strapiUrl: 'https://admin.testjellysuper.my.id',
+      siteUrl: process.env.SITE_URL || 'https://testjellysuper.my.id',
     },
   },
   modules: [

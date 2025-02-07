@@ -55,8 +55,9 @@ const strapiUrl = config.public.strapiUrl;
 import { useRequestURL, useRoute } from "#app";
 const route = useRoute()
 const url = useRequestURL();
-const fullUrl = computed(() => `${url.origin}${route.path}`); // All path/route
+// const fullUrl = computed(() => `${url.origin}${route.path}`); // All path/route
 const documentId = route.params.documentId // Current path/route
+const fullUrl = computed(() => `${config.public.siteUrl}${route.path}`);
 
 // Api Call (the real deal is here)
 import { useApiData } from '~/composables/useApiRequest'
