@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div>
-                <ButtonCTA buttonText="Hubungi Kami Sekarang" to="/players" />
+                <ButtonCTA button-text="Hubungi Kami Sekarang" to="/players" />
             </div>
     
     </div>

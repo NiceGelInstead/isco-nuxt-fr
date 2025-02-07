@@ -6,12 +6,13 @@
       :src="imageSrc"
       alt="gambar-pelayanan"
       class="size-16 md:size-20 object-cover"
-    />
+    >
     <div class="py-4 md:py-9">
       <h3 class="text-xl md:text-2xl font-bold md:mb-3 mb-2 truncate whitespace-nowrap overflow-hidden">{{ title }}</h3>
       <p class="text-gray-600 line-clamp-3 overflow-hidden">{{ description }}</p>
     </div>
-    <nuxt-link :to="to"
+    <nuxt-link
+:to="to"
       class="text-primary text-lg font-bold hover:text-cta hover:underline">
       Lihat Layanan
     </nuxt-link>

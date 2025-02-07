@@ -2,16 +2,17 @@
   <div class="w-full min-h-screen bg-[#FF5482] place-content-center">
     <div 
       v-if="player" 
-      class="isco-container p-8 grid grid-cols-3 gap-8 bg-[#FF54] rounded-lg" 
-      ref="pdfSection"
+      ref="pdfSection" 
+      class="isco-container p-8 grid grid-cols-3 gap-8 bg-[#FF54] rounded-lg"
     >
       <img
         :src="player.Photo?.url ? strapiUrl + player.Photo.url : ''"
         alt=""
         class="w-full h-48 object-cover"
-      />
+      >
       <div class="bg-white">
-        <div :class="{
+        <div
+:class="{
           'text-black': !player.isAlive,
           'text-[#FF5482]': player.isAlive,
           'text-2xl font-semibold mb-2': true
@@ -31,8 +32,8 @@
 
     <div class="mt-8 text-center">
       <button
-        @click="exportToPDF"
         class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
+        @click="exportToPDF"
       >
         Unduh Sertifikat
       </button>
@@ -43,6 +44,16 @@
   
 <script setup lang="ts">
  // Nonaktifkan SSR khusus untuk halaman ini
+// Taking current URL (for dynamic routing and QR code)
+import { useRequestURL, useRoute } from "#app";
+
+// Api Call (the real deal is here)
+import { useApiData } from '~/composables/useApiRequest'
+import { type Player, defaultPlayer } from '~/types/playerTypes'; // This is for ONE player
+
+// html2pdf exporter
+import { usePdfExporter } from '~/composables/usePdfExporter';
+
 definePageMeta({
   ssr: false,
 });
@@ -50,23 +61,13 @@ definePageMeta({
 // Strapi Base URL (for image purposes)
 const config = useRuntimeConfig();
 const strapiUrl = config.public.strapiUrl;
-
-// Taking current URL (for dynamic routing and QR code)
-import { useRequestURL, useRoute } from "#app";
 const route = useRoute()
 const url = useRequestURL();
 // const fullUrl = computed(() => `${url.origin}${route.path}`); // All path/route
 const documentId = route.params.documentId // Current path/route
 const fullUrl = computed(() => `${config.public.siteUrl}${route.path}`);
-
-// Api Call (the real deal is here)
-import { useApiData } from '~/composables/useApiRequest'
-import { type Player, defaultPlayer } from '~/types/playerTypes';
 const { data, error } = await useApiData<Player>(`/api/players/${documentId}?populate=*`)
-const player = computed(() => data.value?.data ?? defaultPlayer) // This is for ONE player
-
-// html2pdf exporter
-import { usePdfExporter } from '~/composables/usePdfExporter';
+const player = computed(() => data.value?.data ?? defaultPlayer)
 const { pdfSection, handleExport } = usePdfExporter();
 // const player = ref({ }); // Already in API call player = computed(())
 const exportToPDF = () => {

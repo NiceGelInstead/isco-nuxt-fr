@@ -10,11 +10,11 @@ const emit = defineEmits(["update:searchQuery"]);
   <div class="">Cari Player</div>
   <input
     :value="searchQuery"
-    @input="
-      emit('update:searchQuery', ($event.target as HTMLInputElement).value)
-    "
     type="text"
     placeholder="Player Name"
     class="w-3xs mb-4 p-1 border-b border-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
-  />
+    @input="
+      emit('update:searchQuery', ($event.target as HTMLInputElement).value)
+    "
+  >
 </template>

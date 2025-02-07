@@ -41,7 +41,7 @@
             src="@/assets/images/logo-IscoGroup.png"
             alt="Logo"
             class="size-11"
-          />
+          >
           <a class="text-2xl font-bold">
             <nuxt-link to="/">Isco Group</nuxt-link>
           </a>
@@ -60,13 +60,14 @@
             <nuxt-link to="/players" class="hover:underline">Players</nuxt-link>
           </li>
         </ul>
-        <nuxt-link :to="to"
+        <nuxt-link
+:to="to"
           role="button" :aria-label="buttonText" class="hidden md:block bg-primary hover:bg-cta hover:scale-105 hover:shadow-md hover:transition-all duration-300 rounded-lg text-white px-5 py-3.5 text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
         Hubungi Kami
         </nuxt-link>
         <button
-          @click="toggleMobileMenu"
           class="md:hidden focus:outline-none transition-all duration-300"
+          @click="toggleMobileMenu"
         >
           <svg
             class="size-7"
@@ -80,7 +81,7 @@
               stroke-linejoin="round"
               stroke-width="2"
               d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
+            />
           </svg>
         </button>
         <div

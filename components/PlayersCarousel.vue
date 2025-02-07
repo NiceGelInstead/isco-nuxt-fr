@@ -1,7 +1,7 @@
 <!-- /components/PlayersCarousel.vue -->
 <template>
   <div class="player-carousel">
-    <SearchBar v-model:searchQuery="searchQuery" />
+    <SearchBar v-model:search-query="searchQuery" />
     <div v-if="error" class="text-red-500">Error: {{ error.message }}</div>
     <div v-else-if="paginatedPlayers.length" class="grid lg:grid-cols-3 gap-8">
       <!-- /components/PlayerCard.vue -->
@@ -15,17 +15,17 @@
     <!-- Pagination nation nation nation -->
     <div v-if="totalPages > 1" class="flex justify-center mt-4 gap-2">
       <button
-        @click="prevPage"
         :disabled="currentPage === 1"
         class="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
+        @click="prevPage"
       >
         Previous
       </button>
       <span class="px-4 py-2">Page {{ currentPage }} of {{ totalPages }}</span>
       <button
-        @click="nextPage"
         :disabled="currentPage === totalPages"
         class="px-4 py-2 bg-gray-300 rounded disabled:opacity-50"
+        @click="nextPage"
       >
         Next
       </button>
@@ -35,21 +35,21 @@
 
 <script setup lang="ts">
 // Props, asking players per page for pagiii
-const props = defineProps<{ playersPerPage: number }>();
-
 // Fetch API Data
 import { useApiData } from "~/composables/useApiRequest";
 import { type Player, defaultPlayer } from "~/types/playerTypes";
-const { data, error } = await useApiData<Player[]>("/api/players?populate=*");
 
 // Player Search
 import { useSearchPlayerName } from "~/composables/useSearchPlayerName";
-const { searchQuery, getFilteredPlayers } = useSearchPlayerName(
-  data?.value?.data ?? [defaultPlayer],
-);
 
 // Pagination
 import { computed, ref, watch } from "vue";
+
+const props = defineProps<{ playersPerPage: number }>();
+const { data, error } = await useApiData<Player[]>("/api/players?populate=*");
+const { searchQuery, getFilteredPlayers } = useSearchPlayerName(
+  data?.value?.data ?? [defaultPlayer],
+);
 const currentPage = ref(1);
 const totalPages = computed(() =>
   Math.ceil(getFilteredPlayers.value.length / props.playersPerPage),

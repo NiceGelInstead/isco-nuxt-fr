@@ -4,16 +4,16 @@
         <!-- Logo & Deskripsi + Sosial Media -->
         <div class="w-full md:w-1/4">
           <div class="flex items-center gap-3 mb-4">
-            <img src="@/assets/images/logo-IscoGroup.png" alt="Logo" class="size-16" />
+            <img src="@/assets/images/logo-IscoGroup.png" alt="Logo" class="size-16" >
             <nuxt-link to="/" class="text-2xl font-bold text-white">Isco Group</nuxt-link>
           </div>
           <p class="text-base font-medium mb-4 text-white text-left">
             ISCO GROUP adalah perusahaan yang bergerak di konsultasi konstruksi dan legalitas sertifikasi.
           </p>
           <div class="flex gap-4">
-            <nuxt-link to="/"><i class="fab fa-facebook text-white text-xl hover:underline"></i></nuxt-link>
-            <nuxt-link to="/"><i class="fab fa-instagram text-white text-xl hover:underline"></i></nuxt-link>
-            <nuxt-link to="/"><i class="fab fa-linkedin text-white text-xl hover:underline"></i></nuxt-link>
+            <nuxt-link to="/"><i class="fab fa-facebook text-white text-xl hover:underline"/></nuxt-link>
+            <nuxt-link to="/"><i class="fab fa-instagram text-white text-xl hover:underline"/></nuxt-link>
+            <nuxt-link to="/"><i class="fab fa-linkedin text-white text-xl hover:underline"/></nuxt-link>
           </div>
         </div>
   

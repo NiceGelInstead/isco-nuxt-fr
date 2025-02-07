@@ -1,7 +1,7 @@
 <template>
   <main id="content">
-    <Header />
+    <IscoHeader />
     <NuxtPage />
-    <Footer />
+    <IscoFooter />
   </main>
 </template>

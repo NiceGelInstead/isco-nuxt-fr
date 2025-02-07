@@ -2,7 +2,7 @@
   <!-- Halaman Beranda -->
   <div class="home-page">
     <!-- Hero Section -->
-    <section id="hero"class="bg-secondary md:py-16 py-14">
+    <section id="hero" class="bg-secondary md:py-16 py-14">
 
       <div class="container flex flex-col md:flex-row items-center md:justify-between gap-60 mt-12">
         <!-- Konten Kiri (Text + Tombol) -->
@@ -18,7 +18,7 @@
             <img
               src="@/assets/images/test2.png"
               class="w-full object-contain" alt="poto"
-            />
+            >
           </div>
 
           <p
@@ -32,8 +32,8 @@
 
           <div class="flex flex-col mt-12 md:mt-14 md:flex-row gap-6 md:gap-4 order-4 md:order-4 items-center">
           
-            <ButtonCTA buttonText="Lihat Semua Layanan" to="/players" />
-            <ButtonCTA buttonText="Lihat Semua Layanan" to="/players" />
+            <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
+            <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
       
            
           </div>
@@ -43,8 +43,8 @@
         <div class="hidden md:flex md:w-1/2 order-2">
             <img
               src="@/assets/images/test2.png"
-              class="my-6 w-full mx-auto object-contain block"alt="poto"
-            />
+              class="my-6 w-full mx-auto object-contain block" alt="poto"
+            >
         </div>
       </div>
     </section>
@@ -75,7 +75,7 @@
             <ServiceCard
               v-for="(service, index) in page"
               :key="index"
-              :imageSrc="service.imageSrc"
+              :image-src="service.imageSrc"
               :title="service.title"
               :description="service.description"
               :to="service.to"
@@ -86,9 +86,9 @@
 
       <!-- Tombol panah Prev (kiri) -->
       <button
-        @click="prevPage"
         :disabled="currentPage === 1"
         class="absolute -left-20 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125  transition-all duration-300 focus:outline-none"
+        @click="prevPage"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -105,9 +105,9 @@
 
       <!-- Tombol panah Next (kanan) -->
       <button
-        @click="nextPage"
         :disabled="currentPage === totalPages"
         class="absolute -right-20 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
+        @click="nextPage"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@
           :key="page"
           class="w-2 h-2 rounded-full transition-all duration-300"
           :class="page === currentPage ? 'bg-primary scale-150' : 'bg-gray-300'"
-        ></div>
+        />
       </div>
     </div>
 
@@ -138,7 +138,7 @@
       <ServiceCard
         v-for="(service, index) in mobileServices"
         :key="index"
-        :imageSrc="service.imageSrc"
+        :image-src="service.imageSrc"
         :title="service.title"
         :description="service.description"
         :to="service.to"
@@ -147,7 +147,7 @@
 
     <!-- Tombol CTA -->
     <div class="flex justify-center mt-8">
-      <ButtonCTA buttonText="Lihat Semua Layanan" to="/players" />
+      <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
     </div>
   </section>
 
@@ -199,12 +199,12 @@
                   <!-- Gambar untuk mobile (hanya tampil di mobile) -->
                   <transition name="fade">
                     <img
+                      key="mobileImage"
                       :src="item.image"
                       alt="Dropdown Image"
                       class="my-6 w-2/3 mx-auto object-contain block md:hidden"
-                      key="mobileImage"
                       loading="lazy"
-                    />
+                    >
                   </transition>
                 </div>
               </transition>
@@ -212,19 +212,19 @@
           </div>
           <!-- Tombol CTA -->
           <div class="mt-14 flex justify-center md:justify-start">
-            <ButtonCTA buttonText="Lihat Semua Layanan" to="/players" />
+            <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
           </div>
         </div>
         <!-- Right: Gambar untuk desktop (hanya tampil di desktop) -->
         <div class="w-full hidden md:w-1/2 md:flex justify-end">
     <transition name="fade">
       <img
+        key="desktopImage"
         :src="currentImage"
         alt="Dropdown Image"
         class="w-full object-contain max-w-xl"
-        key="desktopImage"
         loading="lazy"
-      />
+      >
     </transition>
   </div>
       </div>

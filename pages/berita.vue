@@ -11,7 +11,7 @@
 
   <section>
     <div class="container">
-      <PlayersCarousel :playersPerPage="3" />
+      <PlayersCarousel :players-per-page="3" />
     </div>
   </section>
 </template>

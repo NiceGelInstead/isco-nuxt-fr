@@ -3,7 +3,7 @@
     class="flex flex-col items-center p-0 rounded-lg shadow-xl bg-white w-full"
   >
     <!-- /components/PlayerImage.vue -->
-    <PlayerImage :player="player" class="w-full h-64 object-cover rounded-xl" />
+    <PlayerImage :player="player" css-class="w-full h-64 object-cover rounded-xl" />
     <div class="flex flex-col gap-1 w-full p-2">
       <div class="flex gap-1 text-sm">
         <span class="text-primary font-bold">
@@ -21,6 +21,6 @@
 <script setup lang="ts">
 // Props, asking who player object is
 import { defineProps } from "vue";
-import { type Player } from "~/types/playerTypes";
+import type { Player } from "~/types/playerTypes";
 defineProps<{ player: Player }>();
 </script>
