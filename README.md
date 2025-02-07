@@ -12,6 +12,16 @@ fr fr
 1. Run `nuxi generate`
 2. Put generated files to hosting
 
+## How to make Your Code Aesthetic✨ and Robust🚀
+
+> How to use best practices on writing code (ESLint & Prettier)
+
+1. run `npm run lint`
+2. FIX EVERYTHING FIRST
+3. run `npm run lintfix`
+4. .....???
+5. Profit!!
+
 ## Other Resources
 
 ### .htaccess
