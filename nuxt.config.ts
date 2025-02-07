@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    'nuxt-qrcode'
+    'nuxt-qrcode',
+    '@nuxt/eslint'
   ],
   css: ['~/assets/css/index.css'],
   vite: {
