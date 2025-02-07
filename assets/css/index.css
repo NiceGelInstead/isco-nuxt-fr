@@ -1,50 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
 @import "tailwindcss";
 
 /* Tema Standar */
 @theme {
-    --color-primary: #004BAA;
-    --color-secondary: #031D40;
-    --color-accent: #005FCC;
-    --color-text: #4F4F4F;
-    --color-border: #C3C5C7;
-    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-primary: #004baa;
+  --color-secondary: #031d40;
+  --color-cta: #005fcc;
+  --color-accent: #005fcc;
+  --color-text: #4f4f4f;
+  --color-border-color: #c3c5c7;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Komponen */
 @layer components {
-    /* Tipografi */
-    .isco-h1 {
-        @apply font-bold text-white;
-        @apply text-4xl lg:text-5xl;
-    }
-    .isco-h2 {
-        @apply font-bold text-secondary;
-        @apply text-3xl lg:text-4xl;
-    }
-    .isco-h3 {
-        @apply font-semibold text-primary;
-        @apply text-xl lg:text-2xl;
-    }
-    .isco-h4 {
-        @apply font-medium;
-        @apply text-xl;
-    }
-    /* Komponen */
-    .btn {
-        @apply flex px-5 py-2.5 rounded-lg transition-all duration-500 place-content-center mx-auto;
-    }
-    .container {
-        @apply max-w-7xl w-full mx-auto px-2 md:px-8 lg:px-16;
-    }
+  /* Tipografi */
+  .isco-h1 {
+    @apply font-bold text-white;
+    @apply text-4xl lg:text-5xl;
+  }
+  .isco-h2 {
+    @apply font-bold text-secondary;
+    @apply text-3xl lg:text-4xl;
+  }
+  .isco-h3 {
+    @apply font-semibold text-primary;
+    @apply text-xl lg:text-2xl;
+  }
+  .isco-h4 {
+    @apply font-medium;
+    @apply text-xl;
+  }
+
+  .footer-p {
+    @apply text-base font-medium text-white hover:underline;
+  }
+  /* Komponen */
+  .btn {
+    @apply flex px-5 py-2.5 rounded-lg transition-all duration-500 place-content-center mx-auto;
+  }
+  .container {
+    /* @apply max-w-7xl w-full mx-auto px-2 md:px-8 lg:px-16; */
+    @apply max-w-7xl mx-auto px-4 md:px-24;
+  }
 }
 
 @layer base {
-    p {
-        @apply font-medium text-text;
-        @apply text-base;
-    }
-    section {
-        @apply w-full;
-    }
+  p {
+    @apply font-medium text-text;
+    @apply text-base;
+  }
+  /* section {
+    @apply w-full;
+  } */
+
+  /* Transisi untuk paragraf dropdown */
+  .slide-fade-enter-active,
+  .slide-fade-leave-active {
+    transition: all 0.5s ease;
+  }
+  .slide-fade-enter-from,
+  .slide-fade-leave-to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  /* Transisi untuk gambar */
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+  .fade-enter-from,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  /* Animasi untuk upper navbar */
+  .slide-down-enter-active,
+  .slide-down-leave-active {
+    transition:
+      transform 0.3s ease,
+      opacity 0.3s ease;
+  }
+  .slide-down-enter-from,
+  .slide-down-leave-to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  .slide-down-enter-to,
+  .slide-down-leave-from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  /* Animasi slide untuk navigasi Next (slide ke kiri) */
+  .slide-next-enter-active,
+  .slide-next-leave-active {
+    transition: transform 1s ease;
+    position: absolute;
+    width: 100%;
+  }
+  .slide-next-enter-from {
+    transform: translateX(100%);
+  }
+  .slide-next-leave-to {
+    transform: translateX(-100%);
+  }
+
+  /* Animasi slide untuk navigasi Prev (slide ke kanan) */
+  .slide-prev-enter-active,
+  .slide-prev-leave-active {
+    transition: transform 1s ease;
+    position: absolute;
+    width: 100%;
+  }
+  .slide-prev-enter-from {
+    transform: translateX(-100%);
+  }
+  .slide-prev-leave-to {
+    transform: translateX(100%);
+  }
 }
