@@ -2,5 +2,13 @@
 import withNuxt from './.nuxt/eslint.config.mjs'
 
 export default withNuxt(
-  // Your custom configs here
+  // https://eslint.nuxt.com/packages/module
+  // {
+  //   "rules": {
+  //     "sort-imports": "off",
+  //     "import/order": "off",
+  //     "sort-vars": "off",
+  //     "sort-keys": "off"
+  //   }
+  // }
 )
