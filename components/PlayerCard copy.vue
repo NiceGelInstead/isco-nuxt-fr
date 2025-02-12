@@ -6,9 +6,8 @@
     <PlayerImage :player="player" css-class="w-full h-64 object-cover rounded-xl" />
     <div class="flex flex-col gap-1 w-full p-2">
       <div class="flex gap-1 text-sm">
-      <!-- Gunakan slot 'status'. Jika tidak ada slot, maka tampilkan hasil ekspresi default -->
-      <span class="text-primary font-bold">
-          <slot name="status">{{ player.isAlive ? "Alive" : "Deceased" }}</slot>
+        <span class="text-primary font-bold">
+          {{ player.isAlive ? "Alive" : "Deceased" }}
         </span>
         <span class="font-thin">|</span>
         <span class="text-sm font-medium">{{ player.TimeOfDeath }}</span>

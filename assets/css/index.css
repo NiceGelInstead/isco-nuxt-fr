@@ -42,7 +42,7 @@
   }
   .container {
     /* @apply max-w-7xl w-full mx-auto px-2 md:px-8 lg:px-16; */
-    @apply max-w-7xl mx-auto px-4 md:px-24;
+    @apply max-w-7xl mx-auto;
   }
 }
 
@@ -51,9 +51,9 @@
     @apply font-medium text-text;
     @apply text-base;
   }
-  /* section {
+  section {
     @apply w-full;
-  } */
+  }
 
   /* Transisi untuk paragraf dropdown */
   .slide-fade-enter-active,

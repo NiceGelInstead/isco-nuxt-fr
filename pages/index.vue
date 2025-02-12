@@ -1,169 +1,156 @@
 <template>
-  <!-- Halaman Beranda -->
-  <div class="home-page">
-    <!-- Hero Section -->
-    <section id="hero" class="bg-secondary md:py-16 py-14">
+    <section id="hero" class="bg-secondary ">
+  <div class="container py-14 md:py-16 px-4 md:px-24 grid gap-6 grid-cols-1 md:grid-cols-2 items-center mt-10">
+    
+    <!-- Konten Kiri (Text + Tombol) -->
+    <div class="md:w-full my-auto ">
+      <h1 class="text-3xl  lg:text-5xl font-bold text-white text-center md:text-left leading-snug mb-4">
+        Bangun Kesuksesan Bersama ISCO Group
+      </h1>
 
-      <div class="container flex flex-col md:flex-row items-center md:justify-between gap-60 mt-12">
-        <!-- Konten Kiri (Text + Tombol) -->
-        <div class="w-full md:w-2/3 lg:w-1/2">
-          <h1
-            class="text-center md:text-left text-4xl md:text-5xl md:leading-snug font-bold text-white mb-4 md:mb-2 order-1"
-          >
-            Bangun Kesuksesan Bersama ISCO Group
-          </h1>
-
-          <!-- Gambar Mobile -->
-          <div class="mx-auto mb-4 md:hidden order-2">
-            <img
-              src="@/assets/images/test2.png"
-              class="w-full object-contain" alt="poto"
-            >
-          </div>
-
-          <p
-            class="text-center md:text-left text-white mt-6 order-3 md:order-3 leading-relaxed"
-          >
-            Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi
-            di Indonesia. kami mencapai 250+ lebih kontraktor di seluruh
-            Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender
-            ternama.
-          </p>
-
-          <div class="flex flex-col mt-12 md:mt-14 md:flex-row gap-6 md:gap-4 order-4 md:order-4 items-center">
-          
-            <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
-            <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
-      
-           
-          </div>
-        </div>
-
-        <!-- Gambar Desktop -->
-        <div class="hidden md:flex md:w-1/2 order-2">
-            <img
-              src="@/assets/images/test2.png"
-              class="my-6 w-full mx-auto object-contain block" alt="poto"
-            >
-        </div>
-      </div>
-    </section>
-
-    <section id="Layanan" class="container md:py-16 py-14">
-    <h2 class="text-base font-medium text-primary text-center mb-4">
-      Layanan Kami
-    </h2>
-    <h3 class="text-3xl font-bold text-center mb-12">
-      Solusi Tepat untuk Setiap Tender Anda
-    </h3>
-
-    <!-- Desktop View: Carousel Slider -->
-    <div class="hidden md:block relative">
-      <!-- Container slider -->
-      <div class="overflow-hidden">
-        <!-- Inner container yang akan digeser -->
-        <div
-          class="flex transition-transform duration-500 ease-out"
-          :style="{ transform: `translateX(-${(currentPage - 1) * 100}%)` }"
-        >
-          <!-- Setiap halaman carousel -->
-          <div
-            v-for="(page, pageIndex) in pages"
-            :key="pageIndex"
-            class="w-full flex-shrink-0 grid grid-cols-3 gap-8"
-          >
-            <ServiceCard
-              v-for="(service, index) in page"
-              :key="index"
-              :image-src="service.imageSrc"
-              :title="service.title"
-              :description="service.description"
-              :to="service.to"
-            />
-          </div>
-        </div>
+      <!-- Gambar untuk Mobile -->
+      <div class="mx-auto mb-6 md:hidden">
+        <img src="@/assets/images/test2.png" class="w-3/2 mx-auto object-contain" alt="poto">
       </div>
 
-      <!-- Tombol panah Prev (kiri) -->
-      <button
-        :disabled="currentPage === 1"
-        class="absolute -left-20 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125  transition-all duration-300 focus:outline-none"
-        @click="prevPage"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="size-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          :class="currentPage === 1 ? 'text-gray-400' : 'text-primary'"
-          stroke="currentColor"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
+      <p class="text-sm md:text-base text-white text-center md:text-left max-w-lg leading-relaxed ">
+        Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
+        Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
+      </p>
 
-      <!-- Tombol panah Next (kanan) -->
-      <button
-        :disabled="currentPage === totalPages"
-        class="absolute -right-20 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
-        @click="nextPage"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="size-12"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2"
-          :class="currentPage === totalPages ? 'text-gray-400' : 'text-primary'"
-          stroke="currentColor"
-        >
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
-
-      <!-- Pagination Bullets -->
-      <div class="flex justify-center mt-8 space-x-2">
-        <div
-          v-for="page in totalPages"
-          :key="page"
-          class="w-2 h-2 rounded-full transition-all duration-300"
-          :class="page === currentPage ? 'bg-primary scale-150' : 'bg-gray-300'"
-        />
+      <!-- Tombol CTA -->
+      <div class="flex flex-col md:flex-row gap-4 items-center mt-8 md:mt-12">
+        <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
+        <ButtonCTA button-text="Hubungi Kami" to="/" />
       </div>
     </div>
 
-    <!-- Mobile View: Menampilkan 3 card saja -->
-    <div class="md:hidden grid grid-cols-1 gap-4">
-      <ServiceCard
-        v-for="(service, index) in mobileServices"
-        :key="index"
-        :image-src="service.imageSrc"
-        :title="service.title"
-        :description="service.description"
-        :to="service.to"
+    <!-- Gambar untuk Desktop -->
+    <div class="hidden md:flex h-full place-content-end">
+      <img src="@/assets/images/test2.png" class="w-full object-contain max-w-sm lg:max-w-lg " alt="poto">
+    </div>
+    
+  </div>
+</section>
+
+
+<section id="Layanan" class="container mx-auto py-14 md:py-16 px-12">
+  <h2 class="text-base font-medium text-primary text-center mb-4">
+    Layanan Kami
+  </h2>
+  <h3 class="text-3xl font-bold text-center mb-12">
+    Solusi Tepat untuk Setiap Tender Anda
+  </h3>
+
+  <!-- Desktop View: Carousel Slider -->
+  <div class="hidden md:block relative">
+    <!-- Container slider -->
+    <div class="overflow-hidden">
+      <!-- Inner container yang akan digeser -->
+      <div
+        class="flex transition-transform duration-500 ease-out"
+        :style="{ transform: `translateX(-${(currentPage - 1) * 100}%)` }"
+      >
+        <!-- Setiap halaman carousel -->
+        <div
+          v-for="(page, pageIndex) in pages"
+          :key="pageIndex"
+          class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <ServiceCard
+            v-for="(service, index) in page"
+            :key="index"
+            :image-src="service.imageSrc"
+            :title="service.title"
+            :description="service.description"
+            :to="service.to"
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- Tombol panah Prev (kiri) -->
+    <button
+      :disabled="currentPage === 1"
+      class="hidden sm:flex absolute -left-20 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125 transition-all duration-300 focus:outline-none"
+      @click="prevPage"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="size-12"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        :class="currentPage === 1 ? 'text-gray-400' : 'text-primary'"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Tombol panah Next (kanan) -->
+    <button
+      :disabled="currentPage === totalPages"
+      class="hidden sm:flex absolute -right-20 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
+      @click="nextPage"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="size-12"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="2"
+        :class="currentPage === totalPages ? 'text-gray-400' : 'text-primary'"
+        stroke="currentColor"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <!-- Pagination Bullets -->
+    <div class="hidden sm:flex justify-center mt-8 space-x-2">
+      <div
+        v-for="page in totalPages"
+        :key="page"
+        class="w-2 h-2 rounded-full transition-all duration-300"
+        :class="page === currentPage ? 'bg-primary scale-150' : 'bg-gray-300'"
       />
     </div>
+  </div>
 
-    <!-- Tombol CTA -->
-    <div class="flex justify-center mt-8">
-      <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
-    </div>
-  </section>
+  <!-- Mobile View: Menampilkan 3 card saja -->
+  <div class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <ServiceCard
+      v-for="(service, index) in mobileServices"
+      :key="index"
+      :image-src="service.imageSrc"
+      :title="service.title"
+      :description="service.description"
+      :to="service.to"
+    />
+  </div>
+
+  <!-- Tombol CTA -->
+  <div class="flex justify-center mt-8">
+    <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
+  </div>
+</section>
+
 
    <!-- Tentang Perusahaan -->
-    <section id="Mengapa Kami" class="container md:py-16 py-14">
-      <div class="flex flex-col md:flex-row items-center md:justify-between gap-60">
+    <section id="Mengapa Kami" class="container lg:py-16 py-14">
+      <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 items-center">
         <!-- Left: Dropdown (pada mobile gambar muncul di dalam item aktif) -->
-        <div class="w-full md:w-2/3 lg:w-1/2"> 
+        <div class="w-full h-full"> 
           <h2 class="text-base font-medium text-primary mb-4 leading-relaxed">Mengapa Memilih Kami?</h2>
-          <h3 class="text-2xl md:text-4xl font-bold mb-8">Memajukan Perkembangan Kontraktor Di Indonesia</h3>
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Memajukan Perkembangan Kontraktor Di Indonesia</h3>
           <div>
             <div
               v-for="(item, index) in items"
               :key="item.id"
               class="mb-6 border-b pb-4"
               :class="{ 'border-cta': activeIndex === index }"
+              :aria-expanded="activeIndex === index"
             >
               <!-- Button judul & icon -->
               <button
@@ -173,7 +160,7 @@
                 <h3
                   :class="[
                     'text-xl text-left font-semibold transition-colors cursor-pointer',
-                    activeIndex === index ? 'text-cta' : 'hover:text-cta :'
+                    activeIndex === index ? 'text-cta' : 'hover:text-cta'
                   ]"
                 >
                   {{ item.title }}
@@ -202,7 +189,7 @@
                       key="mobileImage"
                       :src="item.image"
                       alt="Dropdown Image"
-                      class="my-6 w-2/3 mx-auto object-contain block md:hidden"
+                      class="my-6 w-2/3 mx-auto object-contain block lg:hidden"
                       loading="lazy"
                     >
                   </transition>
@@ -211,22 +198,22 @@
             </div>
           </div>
           <!-- Tombol CTA -->
-          <div class="mt-14 flex justify-center md:justify-start">
+          <div class="mt-14 flex justify-center lg:justify-start">
             <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
           </div>
         </div>
         <!-- Right: Gambar untuk desktop (hanya tampil di desktop) -->
-        <div class="w-full hidden md:w-1/2 md:flex justify-end">
-    <transition name="fade">
-      <img
-        key="desktopImage"
-        :src="currentImage"
-        alt="Dropdown Image"
-        class="w-full object-contain max-w-xl"
-        loading="lazy"
-      >
-    </transition>
-  </div>
+        <div class="hidden lg:flex h-full lg:place-content-end">
+          <transition name="fade">
+            <img
+              key="desktopImage"
+              :src="currentImage"
+              alt="Dropdown Image"
+              class="w-full object-contain md:max-w-md lg:max-w-lg"
+              loading="lazy"
+            >
+          </transition>
+      </div>
       </div>
     </section>
 
@@ -235,8 +222,13 @@
       <BlockCTA />
     </section>
 
+    
+    <section>
+    <div class="container py-16 w-">
+      <Carousel :players-per-page="7" />
+    </div>
+  </section>
 
-  </div>
 </template>
 
 <script setup>
@@ -391,6 +383,8 @@ const select = (index) => {
     activeIndex.value = index
   }
 }
+
+
 
 </script>
 

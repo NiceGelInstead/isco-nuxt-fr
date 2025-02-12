@@ -1,3 +1,7 @@
+<template>
+  <img :src="imageUrl" alt="" :class="cssClass" >
+</template>
+
 <script setup>
 
 // URL strapi
@@ -12,7 +16,3 @@ const props = defineProps({
 const imageUrl = props.player?.Photo?.url ? strapiUrl + props.player.Photo.url : '';
 
 </script>
-
-<template>
-  <img :src="imageUrl" alt="" :class="cssClass" >
-</template>

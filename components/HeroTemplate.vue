@@ -1,13 +1,13 @@
-// components/HeroTemplate.vue
+// components/HeroTemplate.vue Lama 
 <template>
 
 <div class="w-full grid gap-6 grid-cols-1 md:grid-cols-2 items-center">
-<div>
+<div class="">
     <h1 class="isco-h3 mb-6">{{ title }}</h1>
     <h2 class="isco-h2">{{ tagline }}</h2>
 </div>
 <div class="flex h-full lg:place-content-end">
-    <p class="max-w-md mt-auto">
+    <p class="max-w-md md:max-w-lg mt-auto">
     {{ description }}
     </p>
 </div>
@@ -21,4 +21,4 @@ defineProps({
   tagline: String,
   description: String
 });
-</script>
+</script>.

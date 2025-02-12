@@ -4,7 +4,7 @@
       'fixed top-0 left-0 w-full transition-all duration-300 z-50',
       isHome && isTransparent
         ? 'bg-transparent text-white'
-        : 'bg-white text-primary shadow-md',
+        : 'bg-white text-primary ',
     ]"
   >
     <!-- Navbar Upper untuk desktop -->
@@ -13,7 +13,7 @@
       v-show="showNavbarUpper"
       class="hidden md:flex p-2 bg-secondary"
     >
-      <div class="container flex justify-between">
+      <div class="container flex justify-between px-4 md:px-24">
         <ul class="text-white">
           <nuxt-link to="/">Hubungi Kami</nuxt-link>
         </ul>
@@ -34,8 +34,8 @@
   </transition>
 
     <!-- Navbar utama -->
-    <nav class="py-4 flex items-center">
-      <div class="container flex justify-between items-center">
+    <nav class="py-2 flex items-center">
+      <div class="container flex justify-between items-center px-4 md:px-24">
         <div class="flex items-center gap-1.5">
           <img
             src="@/assets/images/logo-IscoGroup.png"
@@ -46,7 +46,7 @@
             <nuxt-link to="/">Isco Group</nuxt-link>
           </a>
         </div>
-        <ul class="hidden md:flex gap-4 mx-auto">
+        <ul class="hidden sm:flex gap-4 mx-auto">
           <li>
             <nuxt-link to="/" class="hover:underline">Home</nuxt-link>
           </li>
@@ -54,10 +54,10 @@
             <nuxt-link to="/players" class="hover:underline">Players</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/players" class="hover:underline">Players</nuxt-link>
+            <nuxt-link to="/berita" class="hover:underline">Berita</nuxt-link>
           </li>
           <li>
-            <nuxt-link to="/players" class="hover:underline">Players</nuxt-link>
+            <nuxt-link to="/blog" class="hover:underline">Blog & Berita</nuxt-link>
           </li>
         </ul>
         <nuxt-link

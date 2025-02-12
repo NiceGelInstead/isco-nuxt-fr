@@ -1,5 +1,5 @@
 <template>
-  <section class="pt-32 pb-32">
+  <section class="py-44 pb-32">
     <div class="container">
       <HeroTemplate
         title="Berita & Artikel"
