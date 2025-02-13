@@ -5,8 +5,8 @@
 @theme {
   --color-primary: #004baa;
   --color-secondary: #031d40;
-  --color-cta: #005fcc; /* <<<<<<<< FROM UPSTREAM BRANCH */
-  --color-accent: #ff8e00;
+  --color-cta: #005fcc;
+  --color-accent: #ff8e00; /* <<<<<<<< FROM UPSTREAM BRANCH */
   --color-text: #4f4f4f;
   --color-border-color: #c3c5c7;
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif,
@@ -15,6 +15,10 @@
 
 .isco-text-responsive { /* <<<<<<<< FROM UPSTREAM BRANCH */
   @apply text-center lg:text-left;
+}
+
+.isco-text-break { /* <<<<<<<< FROM UPSTREAM BRANCH */
+    @apply text-wrap break-words;
 }
 
 /* Komponen */
@@ -30,7 +34,7 @@
   }
   .isco-h3 { /* <<<<<<<< FROM UPSTREAM BRANCH */
     @apply font-bold text-accent text-center;
-    @apply text-xl lg:text-2xl;
+    @apply text-lg lg:text-xl;
   }
   .isco-h4 { /* <<<<<<<< FROM UPSTREAM BRANCH */
     @apply font-bold truncate whitespace-nowrap overflow-hidden text-primary;
@@ -44,19 +48,19 @@
   .btn {
     @apply flex px-5 py-2.5 rounded-lg transition-all duration-500 place-content-center mx-auto;
   }
-  .container {
+  .container { /* <<<<<<<< FROM UPSTREAM BRANCH */
     /* @apply max-w-7xl w-full mx-auto px-2 md:px-8 lg:px-16; */
-    @apply max-w-7xl mx-auto max-w-7xl w-full mx-auto px-3 md:px-7 lg:px-15; /* <<<<<<<< FROM UPSTREAM BRANCH */
+    @apply max-w-7xl mx-auto; 
   }
 }
 
 @layer base {
-  p {
-    @apply font-medium text-text;
+  p { /* <<<<<<<< FROM UPSTREAM BRANCH */
+    @apply font-normal text-text;
     @apply text-base;
   }
-  section {
-    @apply w-full;
+  section { /* <<<<<<<< FROM UPSTREAM BRANCH */
+    @apply w-full px-3 md:px-7 lg:px-15 py-24;
   }
 
   /* Transisi untuk paragraf dropdown */
