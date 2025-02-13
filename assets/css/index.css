@@ -5,36 +5,32 @@
 @theme {
   --color-primary: #004baa;
   --color-secondary: #031d40;
-  --color-cta: #005fcc; /* <<<<<<<< FROM UPSTREAM BRANCH */
-  --color-accent: #ff8e00;
+  --color-cta: #005fcc;
+  --color-accent: #005fcc;
   --color-text: #4f4f4f;
   --color-border-color: #c3c5c7;
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.isco-text-responsive { /* <<<<<<<< FROM UPSTREAM BRANCH */
-  @apply text-center lg:text-left;
-}
-
 /* Komponen */
 @layer components {
   /* Tipografi */
-  .isco-h1 { /* <<<<<<<< FROM UPSTREAM BRANCH */
-    @apply font-bold text-white leading-snug;
+  .isco-h1 {
+    @apply font-bold text-white;
     @apply text-4xl lg:text-5xl;
   }
-  .isco-h2 { /* <<<<<<<< FROM UPSTREAM BRANCH */
-    @apply font-bold text-primary leading-snug;
+  .isco-h2 {
+    @apply font-bold text-secondary;
     @apply text-3xl lg:text-4xl;
   }
-  .isco-h3 { /* <<<<<<<< FROM UPSTREAM BRANCH */
-    @apply font-bold text-accent text-center;
+  .isco-h3 {
+    @apply font-semibold text-primary;
     @apply text-xl lg:text-2xl;
   }
-  .isco-h4 { /* <<<<<<<< FROM UPSTREAM BRANCH */
-    @apply font-bold truncate whitespace-nowrap overflow-hidden text-primary;
-    @apply text-xl md:text-2xl ;
+  .isco-h4 {
+    @apply font-medium;
+    @apply text-xl;
   }
 
   .footer-p {
@@ -46,7 +42,7 @@
   }
   .container {
     /* @apply max-w-7xl w-full mx-auto px-2 md:px-8 lg:px-16; */
-    @apply max-w-7xl mx-auto max-w-7xl w-full mx-auto px-3 md:px-7 lg:px-15; /* <<<<<<<< FROM UPSTREAM BRANCH */
+    @apply max-w-7xl mx-auto;
   }
 }
 
