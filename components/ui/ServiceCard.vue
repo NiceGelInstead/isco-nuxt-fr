@@ -7,8 +7,8 @@
       alt="gambar-pelayanan"
       class="size-16 md:size-20 object-cover"
     >
-    <div class="py-4 md:py-9">
-      <h3 class="text-xl md:text-2xl font-bold md:mb-3 mb-2 truncate whitespace-nowrap overflow-hidden">{{ title }}</h3>
+    <div class="my-5 md:my-8">
+      <h2 class="isco-h3 text-left text-black truncate whitespace-nowrap overflow-hidden mb-2 md:mb-3.5">{{ title }}</h2>
       <p class="text-gray-600 line-clamp-3 overflow-hidden">{{ description }}</p>
     </div>
     <nuxt-link

@@ -13,7 +13,7 @@
       v-show="showNavbarUpper"
       class="hidden md:flex p-2 bg-secondary"
     >
-      <div class="container flex justify-between px-4 md:px-24">
+      <div class="container py-0 flex justify-between ">
         <ul class="text-white">
           <nuxt-link to="/">Hubungi Kami</nuxt-link>
         </ul>
@@ -34,8 +34,8 @@
   </transition>
 
     <!-- Navbar utama -->
-    <nav class="py-2 flex items-center">
-      <div class="container flex justify-between items-center px-4 md:px-24">
+    <nav class="flex items-center">
+      <div class="container flex justify-between items-center py-2 ">
         <div class="flex items-center gap-1.5">
           <img
             src="@/assets/images/logo-IscoGroup.png"

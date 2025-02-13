@@ -1,64 +1,127 @@
 <template>
-    <section id="hero" class="bg-secondary ">
-  <div class="container py-14 md:py-16 px-4 md:px-24 grid gap-6 grid-cols-1 md:grid-cols-2 items-center mt-10">
-    
-    <!-- Konten Kiri (Text + Tombol) -->
-    <div class="md:w-full my-auto ">
-      <h1 class="text-3xl  lg:text-5xl font-bold text-white text-center md:text-left leading-snug mb-4">
-        Bangun Kesuksesan Bersama ISCO Group
-      </h1>
+   <main id="home-page" class="home-page">
+      <section id="hero" class="bg-secondary pt-10">
+          <div class="container min-h-screen grid gap-6 grid-cols-1 md:grid-cols-2 items-center ">    
+            <!-- Konten Kiri (Text + Tombol) -->
+            <div class="pr-0 lg:pr-28">
+              <h1 class="md:px-0 mb-4">
+                Bangun Kesuksesan Bersama ISCO Group
+              </h1>
 
-      <!-- Gambar untuk Mobile -->
-      <div class="mx-auto mb-6 md:hidden">
-        <img src="@/assets/images/test2.png" class="w-3/2 mx-auto object-contain" alt="poto">
-      </div>
+              <!-- Gambar untuk Mobile -->
+              <div class="my-12 md:hidden">
+                <img src="@/assets/images/test2.png" class="w-full object-contain" alt="poto">
+              </div>
 
-      <p class="text-sm md:text-base text-white text-center md:text-left max-w-lg leading-relaxed ">
-        Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
-        Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
-      </p>
+              <p class=" text-white text-center md:text-left">
+                Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
+                Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
+              </p>
 
-      <!-- Tombol CTA -->
-      <div class="flex flex-col md:flex-row gap-4 items-center mt-8 md:mt-12">
-        <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
-        <ButtonCTA button-text="Hubungi Kami" to="/" />
-      </div>
-    </div>
+              <!-- Tombol CTA -->
+                <div class="flex flex-col md:flex-row gap-4 items-center mt-8 md:mt-12">
+                  <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
+                  <ButtonCTA button-text="Hubungi Kami" to="/" />
+                </div>
+            </div>
 
-    <!-- Gambar untuk Desktop -->
-    <div class="hidden md:flex h-full place-content-end">
-      <img src="@/assets/images/test2.png" class="w-full object-contain max-w-sm lg:max-w-lg " alt="poto">
-    </div>
-    
-  </div>
-</section>
+            <!-- Gambar untuk Desktop -->
+            <div class="justify-end hidden md:flex ">
+              <img src="@/assets/images/test2.png" class="object-contain w-3/4 max-w-lg " alt="poto">
+            </div>
+            
+          </div>
+      </section>
+      
+      <section id="Layanan" class="">
+          <div class="container">    
+            <h2 class="md:text-center mb-4">
+              Layanan Kami
+            </h2>
+            <h3 class="text-center mb-12">
+              Solusi Tepat untuk Setiap Tender Anda
+            </h3>
 
+        <!-- Desktop View: Carousel Slider -->
+        <div class="hidden md:block relative">
+          <!-- Container slider -->
+          <div class="overflow-hidden">
+            <!-- Inner container yang akan digeser -->
+            <div
+              class="flex transition-transform duration-500 ease-out"
+              :style="{ transform: `translateX(-${(currentPage - 1) * 100}%)` }"
+            >
+              <!-- Setiap halaman carousel -->
+              <div
+                v-for="(page, pageIndex) in pages"
+                :key="pageIndex"
+                class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+              >
+                <ServiceCard
+                  v-for="(service, index) in page"
+                  :key="index"
+                  :image-src="service.imageSrc"
+                  :title="service.title"
+                  :description="service.description"
+                  :to="service.to"
+                />
+              </div>
+            </div>
+          </div>
 
-<section id="Layanan" class="container mx-auto py-14 md:py-16 px-12">
-  <h2 class="text-base font-medium text-primary text-center mb-4">
-    Layanan Kami
-  </h2>
-  <h3 class="text-3xl font-bold text-center mb-12">
-    Solusi Tepat untuk Setiap Tender Anda
-  </h3>
+          <!-- Tombol panah Prev (kiri) -->
+          <button
+            :disabled="currentPage === 1"
+            class="hidden sm:flex absolute -left-20 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125 transition-all duration-300 focus:outline-none"
+            @click="prevPage"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-12"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              :class="currentPage === 1 ? 'text-gray-400' : 'text-primary'"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
 
-  <!-- Desktop View: Carousel Slider -->
-  <div class="hidden md:block relative">
-    <!-- Container slider -->
-    <div class="overflow-hidden">
-      <!-- Inner container yang akan digeser -->
-      <div
-        class="flex transition-transform duration-500 ease-out"
-        :style="{ transform: `translateX(-${(currentPage - 1) * 100}%)` }"
-      >
-        <!-- Setiap halaman carousel -->
-        <div
-          v-for="(page, pageIndex) in pages"
-          :key="pageIndex"
-          class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+          <!-- Tombol panah Next (kanan) -->
+          <button
+            :disabled="currentPage === totalPages"
+            class="hidden sm:flex absolute -right-20 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
+            @click="nextPage"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="size-12"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="2"
+              :class="currentPage === totalPages ? 'text-gray-400' : 'text-primary'"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+
+          <!-- Pagination Bullets -->
+          <div class="hidden sm:flex justify-center mt-8 space-x-2">
+            <div
+              v-for="page in totalPages"
+              :key="page"
+              class="w-2 h-2 rounded-full transition-all duration-300"
+              :class="page === currentPage ? 'bg-primary scale-150' : 'bg-gray-300'"
+            />
+          </div>
+        </div>
+
+        <!-- Mobile View: Menampilkan 3 card saja -->
+        <div class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
           <ServiceCard
-            v-for="(service, index) in page"
+            v-for="(service, index) in mobileServices"
             :key="index"
             :image-src="service.imageSrc"
             :title="service.title"
@@ -66,75 +129,13 @@
             :to="service.to"
           />
         </div>
-      </div>
-    </div>
 
-    <!-- Tombol panah Prev (kiri) -->
-    <button
-      :disabled="currentPage === 1"
-      class="hidden sm:flex absolute -left-20 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125 transition-all duration-300 focus:outline-none"
-      @click="prevPage"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="size-12"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        :class="currentPage === 1 ? 'text-gray-400' : 'text-primary'"
-        stroke="currentColor"
-      >
-        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-      </svg>
-    </button>
-
-    <!-- Tombol panah Next (kanan) -->
-    <button
-      :disabled="currentPage === totalPages"
-      class="hidden sm:flex absolute -right-20 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
-      @click="nextPage"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="size-12"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="2"
-        :class="currentPage === totalPages ? 'text-gray-400' : 'text-primary'"
-        stroke="currentColor"
-      >
-        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-    </button>
-
-    <!-- Pagination Bullets -->
-    <div class="hidden sm:flex justify-center mt-8 space-x-2">
-      <div
-        v-for="page in totalPages"
-        :key="page"
-        class="w-2 h-2 rounded-full transition-all duration-300"
-        :class="page === currentPage ? 'bg-primary scale-150' : 'bg-gray-300'"
-      />
-    </div>
-  </div>
-
-  <!-- Mobile View: Menampilkan 3 card saja -->
-  <div class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
-    <ServiceCard
-      v-for="(service, index) in mobileServices"
-      :key="index"
-      :image-src="service.imageSrc"
-      :title="service.title"
-      :description="service.description"
-      :to="service.to"
-    />
-  </div>
-
-  <!-- Tombol CTA -->
-  <div class="flex justify-center mt-8">
-    <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
-  </div>
-</section>
+        <!-- Tombol CTA -->
+        <div class="flex justify-center mt-8">
+          <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
+        </div>
+        </div>
+      </section>
 
 
    <!-- Tentang Perusahaan -->
@@ -142,8 +143,8 @@
       <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 items-center">
         <!-- Left: Dropdown (pada mobile gambar muncul di dalam item aktif) -->
         <div class="w-full h-full"> 
-          <h2 class="text-base font-medium text-primary mb-4 leading-relaxed">Mengapa Memilih Kami?</h2>
-          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-8">Memajukan Perkembangan Kontraktor Di Indonesia</h3>
+          <h2 class="mb-4">Mengapa Memilih Kami?</h2>
+          <h3 class="mb-8">Memajukan Kontraktor Di Indonesia</h3>
           <div>
             <div
               v-for="(item, index) in items"
@@ -157,14 +158,14 @@
                 class="flex justify-between items-center w-full focus:outline-none"
                 @click="select(index)"
               >
-                <h3
+                <h4
                   :class="[
                     'text-xl text-left font-semibold transition-colors cursor-pointer',
                     activeIndex === index ? 'text-cta' : 'hover:text-cta'
                   ]"
                 >
                   {{ item.title }}
-                </h3>
+                </h4>
                 <svg
                   :class="[
                     'h-6 w-6 transition-transform duration-300 hover:text-cta cursor-pointer',
@@ -218,21 +219,21 @@
     </section>
 
     <!-- Blok Cta-->
-    <section id="Block Cta">
+    <section id="Hubungi Kami Segera">
       <BlockCTA />
     </section>
 
-    
-    <section>
-    <div class="container py-16 w-">
-      <Carousel :players-per-page="7" />
-    </div>
-  </section>
-
+          <section id="Blog & Berita">
+          <div class="container py-16 w-">
+            <PlayersCarousel :players-per-page="7" />
+          </div>
+        </section>
+      </main>
 </template>
 
 <script setup>
 import { ref, computed } from "vue";
+import PlayersCarousel from "~/components/PlayersCarousel.vue";
 
 // Data dummy layanan (sesuaikan dengan data Anda)
 const allServices = ref([
