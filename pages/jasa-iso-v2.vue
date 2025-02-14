@@ -1,10 +1,10 @@
 <template>
   <div id="landing-page" class="landing-page bg-gray-100">
-    <section id="hero" class="pt-0 lg:pt-12 bg-secondary">
+    <section id="hero" class="pt-0 lg:pt-16 bg-secondary">
       <div class="container min-h-[120vh] lg:min-h-screen place-content-center">
         <div class="grid lg:grid-cols-12 items-center">
           <div class="flex flex-col lg:col-span-8">
-            <h1 class="isco-h3 isco-text-responsive">
+            <h1 class="isco-h3 isco-text-responsive text-accent">
               Jasa Sertifikasi ISO
             </h1>
             <h2 class="isco-h1 isco-text-responsive mb-6">
@@ -37,11 +37,11 @@
     </section>
     <section>
       <div class="container">
-        <div class="flex flex-col text-center mb-16">
-          <h2 class="isco-h2">
+        <div class="flex flex-col mb-16 gap-2">
+          <h2 class="isco-h2 text-center">
             Dapatkan Sertifikasi ISO Lengkap
           </h2>
-          <p>
+          <p class="text-center self-center">
             Kami menyediakan sertifikasi dari industri konstruksi, konsultan, hingga manufaktur.
           </p>
         </div>
@@ -49,43 +49,43 @@
           <IconBox 
             svg="check-to-slot"
             tagline="ISO 9001"
-            description=""
+            description="Sistem Manajemen Mutu"
             styling="vertical"
           />
           <IconBox 
             svg="check-to-slot"
             tagline="ISO 14001"
-            description=""
+            description="Sistem Manajemen Lingkungan"
             styling="vert"
           />
           <IconBox 
             svg="check-to-slot"
             tagline="ISO 45001"
-            description=""
+            description="Sistem Manajemen K3"
             styling="vertin"
           />
           <IconBox 
             svg="check-to-slot"
             tagline="ISO 27001"
-            description=""
+            description="Sistem Manajemen Keamanan Informasi"
             styling="verguso"
           />
           <IconBox 
             svg="check-to-slot"
             tagline="ISO 13485"
-            description=""
+            description="Sistem Manajemen Mutu (Medis)"
             styling="ver"
           />
           <IconBox 
             svg="check-to-slot"
             tagline="ISO 21001"
-            description=""
+            description="Sistem Manajemen Pendidikan"
             styling="v"
           />
           <IconBox 
             svg="check-to-slot"
             tagline="ISO 26000"
-            description=""
+            description="Sistem Manajemen CSR"
             styling="walah"
           />
           <IconBox 
@@ -99,11 +99,11 @@
     </section>
     <section>
       <div class="container">
-        <div class="flex flex-col text-center mb-16">
-          <h2 class="isco-h2">
+        <div class="flex flex-col mb-16 gap-2">
+          <h2 class="isco-h2 text-center">
             Mengapa Memilih Kami?
           </h2>
-          <p>
+          <p class="text-center self-center">
             Berpengalaman lebih dari 10+ tahun, kami membantu 100+ kontraktor memenangkan lebih banyak tender.
           </p>
         </div>
@@ -187,6 +187,24 @@
             </div>
           </div>
           
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="flex flex-col mb-4 gap-2">
+          <h2 class="isco-h2 text-center">
+            Dapatkan Serfikat ISO Anda Segera
+          </h2>
+          <p class="text-center self-center">
+            Kami menyediakan sertifikasi dari industri konstruksi, konsultan, hingga manufaktur.
+          </p>
+        </div>
+        <div class="grid grid-cols-4 w-full place-items-center">
+          <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+          <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+          <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+          <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
         </div>
       </div>
     </section>
