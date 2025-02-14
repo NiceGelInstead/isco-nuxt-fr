@@ -91,7 +91,7 @@
     @apply text-sm md:text-base max-w-lg leading-relaxed;
   }
   section { /* <<<<<<<< FROM UPSTREAM BRANCH */
-    @apply w-full px-3 md:px-7 lg:px-15 py-24;
+    @apply w-full py-14 lg:py-16 px-4 lg:px-16;
   }
 
   /* Transisi untuk paragraf dropdown */
