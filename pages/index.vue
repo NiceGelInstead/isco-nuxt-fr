@@ -4,7 +4,7 @@
           <div class="container min-h-screen grid gap-6 grid-cols-1 md:grid-cols-2 items-center ">    
             <!-- Konten Kiri (Text + Tombol) -->
             <div class="pr-0 lg:pr-28">
-              <h1 class="md:px-0 mb-4">
+              <h1 class="isco-h1 md:px-0 mb-4">
                 Bangun Kesuksesan Bersama ISCO Group
               </h1>
 
@@ -20,7 +20,7 @@
 
               <!-- Tombol CTA -->
                 <div class="flex flex-col md:flex-row gap-4 items-center mt-8 md:mt-12">
-                  <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
+                  <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
                   <ButtonCTA button-text="Hubungi Kami" to="/" />
                 </div>
             </div>
@@ -132,7 +132,7 @@
 
         <!-- Tombol CTA -->
         <div class="flex justify-center mt-8">
-          <ButtonCTA button-text="Lihat Semua Layanan" to="/players" />
+          <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
         </div>
         </div>
       </section>
@@ -231,73 +231,10 @@
       </main>
 </template>
 
-<script setup>
-import { ref, computed } from "vue";
-import PlayersCarousel from "~/components/PlayersCarousel.vue";
 
-// Data dummy layanan (sesuaikan dengan data Anda)
-const allServices = ref([
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "Web Development",
-    description: "Sertifikat atau lisensi resmi yang dikeluarkan oleh Lembaga...",
-    to:"/players",
-  },
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "Mobile Apps",
-    description: "Aplikasi mobile cross-platform yang powerful",
-    to:"/players",
-  },
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "Digital Marketing",
-    description: "Sertifikat atau lisensi resmi yang dikeluarkan oleh Lembaga.",
-    to:"/players",
-  },
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "SEO Optimization 1",
-    description: "Meningkatkan peringkat website di mesin pencari",
-    to:"/players",
-  },
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "SEO Optimization 2",
-    description: "Meningkatkan peringkat website di mesin pencari",
-    to:"/players",
-  },
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "SEO Optimization 3",
-    description: "Meningkatkan peringkat website di mesin pencari",
-    to:"/players",
-  },
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "SEO Optimization 4",
-    description: "Meningkatkan peringkat website di mesin pencari",
-    to:"/players",
-  },
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "SEO Optimization 5",
-    description: "Meningkatkan peringkat website di mesin pencari",
-    to:"/players",
-  },
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "SEO Optimization 6",
-    description: "Meningkatkan peringkat website di mesin pencari",
-    to:"/players",
-  },
-  {
-    imageSrc: new URL("@/assets/images/logo-IscoGroup.png", import.meta.url).href,
-    title: "SEO Optimization 7",
-    description: "Meningkatkan peringkat website di mesin pencari",
-    to:"/players",
-  },
-]);
+<script setup lang="ts">
+import { ref, computed } from "vue";
+import servicesData from '~/types/servicesData.json'
 
 // Desktop: Pagination (3 card per halaman)
 const itemsPerPage = 3;
@@ -305,12 +242,13 @@ const currentPage = ref(1);
 
 // Membagi data layanan menjadi halaman-halaman untuk carousel desktop
 const pages = computed(() => {
-  const result = [];
-  for (let i = 0; i < allServices.value.length; i += itemsPerPage) {
-    result.push(allServices.value.slice(i, i + itemsPerPage));
+  const result: typeof servicesData[] = [];
+  for (let i = 0; i < servicesData.length; i += itemsPerPage) {
+    result.push(servicesData.slice(i, i + itemsPerPage));
   }
   return result;
 });
+
 const totalPages = computed(() => pages.value.length);
 
 const nextPage = () => {
@@ -327,7 +265,7 @@ const prevPage = () => {
 
 // Mobile: Hanya tampilkan 3 card (misal, 3 card pertama)
 const mobileServices = computed(() => {
-  return allServices.value.slice(0, 3);
+  return servicesData.slice(0, 3);
 });
 
 // Data dropdown
@@ -358,7 +296,7 @@ const activeIndex = ref(0)
 
 onMounted(() => {
   if (window.innerWidth < 768) {
-    activeIndex.value = null
+    activeIndex.value = 0
   }
 })
 
