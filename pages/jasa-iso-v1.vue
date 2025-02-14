@@ -1,11 +1,11 @@
 <template>
   <div id="landing-page" class="landing-page bg-gray-100">
-    <section id="hero" class="pt-0 lg:pt-12 bg-secondary">
+    <section id="hero" class="pt-0 lg:pt-16 bg-secondary">
       <div class="container min-h-[120vh] lg:min-h-screen place-content-center">
         <div class="grid lg:grid-cols-2">
           <div class="flex flex-col gap-12 my-auto">
             <div class="flex flex-col gap-2">
-              <h1 class="isco-h3 isco-text-responsive">
+              <h1 class="isco-h3 isco-text-responsive text-accent">
                 Jasa Sertifikasi ISO
               </h1>
               <h2 class="isco-h1 isco-text-responsive">
@@ -45,7 +45,7 @@
             Mengapa Memilih Kami
           </h2>
           <h3 class="isco-h2">
-            Membantu Anda Meraih Tender <u>Lebih Banyak</u>
+            Membantu Anda Meraih Tender Lebih Banyak
           </h3>
         </div>
         <div class="grid gap-8 lg:grid-cols-2">
@@ -144,7 +144,7 @@
           <img src="@/assets/images/test2.png" class="h-2/3 place-self-center" alt="poto">
           <div class="flex flex-col">
             <div class="flex flex-col mb-8">
-              <h2 class="isco-h3 text-start">
+              <h2 class="isco-h3 text-start text-accent">
                 Bagaimana Caranya?
               </h2>
               <h3 class="isco-h2 text-white text-start">
@@ -180,6 +180,44 @@
             </div>
           </div>
           
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <div class="flex flex-col mb-4 gap-2">
+          <h2 class="isco-h2 text-center">
+            Dapatkan Serfikat ISO Anda Segera
+          </h2>
+          <p class="text-center self-center">
+            Kami menyediakan sertifikasi dari industri konstruksi, konsultan, hingga manufaktur.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 w-full place-items-center gap-4">
+          <div class="flex flex-col place-items-center gap-2">
+            <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+            <span>
+              Terdaftar di OJK
+            </span>
+          </div>
+          <div class="flex flex-col place-items-center gap-2">
+            <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+            <span>
+              LPSE Resmi
+            </span>
+          </div>
+          <div class="flex flex-col place-items-center gap-2">
+            <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+            <span>
+              Partner LPJK
+            </span>
+          </div>
+          <div class="flex flex-col place-items-center gap-2">
+            <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+            <span>
+              BNSP Resmi
+            </span>
+          </div>
         </div>
       </div>
     </section>
