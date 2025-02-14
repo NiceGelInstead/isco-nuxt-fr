@@ -47,7 +47,8 @@
   .container {
     /* @apply max-w-7xl w-full mx-auto px-2 md:px-8 lg:px-16; */
     /* @apply max-w-7xl mx-auto py-14 md:py-16 px-4 md:px-24; */
-    @apply max-w-7xl mx-auto py-14 md:py-16 px-4 md:px-16;
+    /* @apply max-w-7xl mx-auto px-3 md:px-7 lg:px-15 py-24; */
+    @apply max-w-7xl mx-auto px-3 md:px-7 lg:px-14 py-24;
   }
 }
 
@@ -60,9 +61,12 @@
     font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   }
   h1 {
-    @apply font-bold text-white;
+    @apply font-bold;
     @apply text-center md:text-left;
-    @apply text-3xl lg:text-5xl leading-snug;
+    @apply text-xl md:text-2xl;
+    /* @apply font-bold text-white;
+    @apply text-center md:text-left;
+    @apply text-3xl lg:text-5xl leading-snug; */
   }
   h2 {
     @apply font-medium text-primary;
