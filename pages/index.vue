@@ -76,7 +76,7 @@
               <!-- Tombol panah Prev (kiri) -->
               <button
                 :disabled="currentPage === 1"
-                class="hidden sm:flex absolute -left-20 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125 transition-all duration-300 focus:outline-none"
+                class="hidden sm:flex absolute -left-5/100 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125 transition-all duration-300 focus:outline-none"
                 @click="prevPage"
               >
                 <svg
@@ -95,7 +95,7 @@
               <!-- Tombol panah Next (kanan) -->
               <button
                 :disabled="currentPage === totalPages"
-                class="hidden sm:flex absolute -right-20 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
+                class="hidden sm:flex absolute -right-5/100 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
                 @click="nextPage"
               >
                 <svg
