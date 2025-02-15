@@ -29,13 +29,16 @@
       </section>
       
       <section id="layanan" class="">
-          <div class="container">    
-            <h2 class="isco-h2 mb-4">
-              Layanan Kami
-            </h2>
-            <h3 class="text-center mb-12">
-              Solusi Tepat untuk Setiap Tender Anda
-            </h3>
+          <div class="container"> 
+            <div class="flex flex-col gap-4">
+              <h2 class="isco-h2 text-center">
+                Layanan Kami
+              </h2>
+              <h3 class="text-center mb-12">
+                Solusi Tepat untuk Setiap Tender Anda
+              </h3>
+            </div>   
+            
 
         <!-- Desktop View: Carousel Slider -->
         <div class="hidden md:block relative">
