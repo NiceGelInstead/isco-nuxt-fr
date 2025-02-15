@@ -5,14 +5,14 @@
             <!-- Konten Kiri (Text + Tombol) -->
             <div class="flex flex-col">
               <div class="flex flex-col mb-8 md:mb-12">
-                <h1 class="isco-h1 mb-4">
+                <h1 class="isco-h1 isco-text-center-left mb-4">
                   Bangun Kesuksesan Kontraktor Bersama ISCO Group
                 </h1>
                 <!-- Gambar untuk Mobile -->
                 <div class="relative md:static">
                     <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"/>
                     <img src="@/public/images/test2.png" class="w-full object-cover md:hidden" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
-                  <p class="isco-p-desc absolute bottom-1/10 md:static text-white self-center isco-text-responsive">
+                  <p class="isco-p-desc isco-text-center-left absolute bottom-1/10 md:static text-white self-center">
                     Majukan Pembangunan Kontraktor Jasa Konstruksi dan Konsultasi Di Indonesia Bersama Kami.
                   </p>
                 </div>
@@ -30,7 +30,7 @@
       
       <section id="layanan" class="">
           <div class="container">    
-            <h2 class="md:text-center mb-4">
+            <h2 class="isco-h2 mb-4">
               Layanan Kami
             </h2>
             <h3 class="text-center mb-12">
