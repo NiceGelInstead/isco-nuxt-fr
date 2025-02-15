@@ -1,11 +1,13 @@
 <template>
   <!-- External link, pake <a> -->
-  <a v-if="isOutbound" :href="to" target="_blank" rel="noopener noreferrer nofollow"
+  <a
+v-if="isOutbound" :href="to" target="_blank" rel="noopener noreferrer nofollow"
      role="button" :aria-label="buttonText" :class="buttonClass">
     {{ buttonText }}
   </a>
   <!-- Internal link, pake nuxt-link -->
-  <nuxt-link v-else :to="to"
+  <nuxt-link
+v-else :to="to"
              role="button" :aria-label="buttonText" :class="buttonClass">
     {{ buttonText }}
   </nuxt-link>

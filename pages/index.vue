@@ -10,7 +10,7 @@
                 </h1>
                 <!-- Gambar untuk Mobile -->
                 <div class="relative md:static">
-                    <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"/>
                     <img src="@/public/images/test2.png" class="w-full object-cover md:hidden" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
                   <p class="absolute top-3/4 md:static text-white self-center isco-text-responsive">
                     Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
@@ -20,8 +20,8 @@
               </div>
               <!-- Tombol CTA -->
                 <div class="flex flex-col md:flex-row gap-4 items-center">
-                  <ButtonCTA buttonText="Hubungi Kami" :to="'https://wa.me/6285157375776'" :isOutbound="true" class="md:hidden"/>
-                  <ButtonCTA buttonText="Hubungi Kami" :to="'/pelayanan'" :isOutbound="false" class="hidden md:block"/>
+                  <ButtonCTA button-text="Hubungi Kami" :to="'https://wa.me/6285157375776'" :is-outbound="true" class="md:hidden"/>
+                  <ButtonCTA button-text="Hubungi Kami" :to="'/pelayanan'" :is-outbound="false" class="hidden md:block"/>
                   <ButtonSecondary button-text="Lihat Semua Layanan" to="/pelayanan" />
                 </div>
             </div>
