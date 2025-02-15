@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col w-full p-4 hover:border-primary hover:shadow-lg transition-all duration-500"
+    class="flex flex-col w-full p-4 hover:border-2 hover:border-primary rounded-xl hover:shadow-lg transition-all duration-500"
   >
     <img
       :src="imageSrc"
