@@ -17,9 +17,9 @@
         <!-- Kolom Kanan: PlayerCardStyle2 dalam 3 baris -->
         <div class="grid grid-rows-3 gap-8">
     <component
+      :is="PlayerCardStyle2"
       v-for="(player, index) in topPlayers.slice(1)"
       :key="player.id"
-      :is="PlayerCardStyle2"
       :player="player"
     >
       <template #status>
@@ -35,9 +35,9 @@
   class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 mx-auto"
 >
   <component
+    :is="PlayerCardStyle3"
     v-for="player in bottomPlayers"
     :key="player.id"
-    :is="PlayerCardStyle3"
     :player="player"
   >
     <template #status>
