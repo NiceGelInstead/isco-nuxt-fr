@@ -56,9 +56,6 @@
           <li>
             <nuxt-link to="/berita" class="hover:underline">Berita</nuxt-link>
           </li>
-          <li>
-            <nuxt-link to="/blog" class="hover:underline">Blog & Berita</nuxt-link>
-          </li>
         </ul>
         <nuxt-link
 :to="to"

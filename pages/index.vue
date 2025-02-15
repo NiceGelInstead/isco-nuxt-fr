@@ -6,15 +6,14 @@
             <div class="flex flex-col">
               <div class="flex flex-col mb-8 md:mb-12">
                 <h1 class="isco-h1 mb-4">
-                  Bangun Kesuksesan Bersama ISCO Group
+                  Bangun Kesuksesan Kontraktor Bersama ISCO Group
                 </h1>
                 <!-- Gambar untuk Mobile -->
                 <div class="relative md:static">
                     <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"/>
                     <img src="@/public/images/test2.png" class="w-full object-cover md:hidden" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
-                  <p class="absolute top-3/4 md:static text-white self-center isco-text-responsive">
-                    Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
-                    Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
+                  <p class="isco-p-desc absolute bottom-1/100 md:static text-white self-center isco-text-responsive">
+                    Majukan Pembangunan Kontraktor Jasa Konstruksi dan Konsultasi Di Indonesia Bersama Kami.
                   </p>
                 </div>
               </div>
@@ -29,7 +28,7 @@
           </div>
       </section>
       
-      <section id="Layanan" class="">
+      <section id="layanan" class="">
           <div class="container">    
             <h2 class="md:text-center mb-4">
               Layanan Kami

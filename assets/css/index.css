@@ -40,6 +40,9 @@
     @apply font-medium;
     @apply text-xl;
   }
+  .isco-p-desc {
+    @apply text-lg max-w-lg leading-relaxed;
+  }
 
   .footer-p {
     @apply text-base font-medium text-white hover:underline;
