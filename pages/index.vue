@@ -1,25 +1,24 @@
 <template>
    <main id="home-page" class="home-page">
       <section id="hero" class="bg-secondary pt-10">
-          <div class="container min-h-screen grid gap-6 grid-cols-1 md:grid-cols-2 items-center ">    
+          <div class="container min-h-screen grid gap-6 grid-cols-1 md:grid-cols-2 items-center">    
             <!-- Konten Kiri (Text + Tombol) -->
-            <div class="pr-0 lg:pr-28">
-              <h1 class="isco-h1 md:px-0 mb-4">
-                Bangun Kesuksesan Bersama ISCO Group
-              </h1>
-
-              <!-- Gambar untuk Mobile -->
-              <div class="my-12 md:hidden">
-                <img src="@/assets/images/test2.png" class="w-full object-contain" alt="poto">
+            <div class="flex flex-col">
+              <div class="flex flex-col mb-8 md:mb-12">
+                <h1 class="isco-h1 mb-4">
+                  Bangun Kesuksesan Bersama ISCO Group
+                </h1>
+                <!-- Gambar untuk Mobile -->
+                <div class="my-12 md:hidden">
+                  <img src="@/assets/images/test2.png" class="w-full object-contain" alt="poto">
+                </div>
+                <p class="text-white text-center md:text-left self-center">
+                  Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
+                  Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
+                </p>
               </div>
-
-              <p class=" text-white text-center md:text-left">
-                Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
-                Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
-              </p>
-
               <!-- Tombol CTA -->
-                <div class="flex flex-col md:flex-row gap-4 items-center mt-8 md:mt-12">
+                <div class="flex flex-col md:flex-row gap-4 items-center ">
                   <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
                   <ButtonCTA button-text="Hubungi Kami" to="/" />
                 </div>
