@@ -38,7 +38,7 @@
   }
   .isco-h3 { /* <<<<<<<< CHANGED IN UPSTREAM */
     @apply font-bold;
-    @apply text-2xl lg:text-3xl;
+    @apply text-3xl lg:text-4xl;
   }
   .isco-h4 { /* <<<<<<<< CHANGED IN UPSTREAM */
     @apply font-bold;
