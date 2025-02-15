@@ -8,19 +8,19 @@
     {
       "imageSrc": "/images/logo-IscoGroup.png",
       "title": "Kalau yang ini ada dua baris",
-      "description": "Deksripsi ini agak panjang. Mungkin ada yg penting jadi harus di taruh disini.",
+      "description": "Mungkin ada yg penting jadi harus di taruh disini.",
       "to": "/jasa-iso-v2"
     },
     {
       "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "Kalau yang satu ini nih, ada tiga baris. Misalnya infonya panjang",
+      "title": "Kalau yang satu ini nih, ada lebih tiga baris keatas",
       "description": "Nah, yang ini itu terlalu panjang. Bisa jadi info SUPER PENTING disini. Jadi nggak oke kalau di singkat.",
       "to": "/players"
     },
     {
       "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "SEO Optimization 1",
-      "description": "Meningkatkan peringkat website di mesin pencari",
+      "title": "",
+      "description": "Kosong.",
       "to": "/players"
     },
     {

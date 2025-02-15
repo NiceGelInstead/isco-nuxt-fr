@@ -59,7 +59,7 @@
                   <div
                     v-for="(page, pageIndex) in pages"
                     :key="pageIndex"
-                    class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+                    class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-4 gap-4"
                   >
                     <ServiceCard
                       v-for="(service, index) in page"
@@ -241,7 +241,7 @@ import { ref, computed } from "vue";
 import servicesData from '~/types/servicesData.json'
 
 // Desktop: Pagination (3 card per halaman)
-const itemsPerPage = 3;
+const itemsPerPage = 4;
 const currentPage = ref(1);
 
 // Membagi data layanan menjadi halaman-halaman untuk carousel desktop
