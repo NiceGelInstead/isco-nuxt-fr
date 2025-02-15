@@ -1,6 +1,6 @@
 <template>
    <main id="home-page" class="home-page">
-      <section id="hero" class="bg-secondary pt-10">
+      <section id="hero" class="bg-secondary py-0">
           <div class="container min-h-screen grid gap-6 grid-cols-1 md:grid-cols-2 items-center">    
             <!-- Konten Kiri (Text + Tombol) -->
             <div class="flex flex-col">
@@ -9,26 +9,23 @@
                   Bangun Kesuksesan Bersama ISCO Group
                 </h1>
                 <!-- Gambar untuk Mobile -->
-                <div class="my-12 md:hidden">
-                  <img src="@/assets/images/test2.png" class="w-full object-contain" alt="poto">
+                <div class="relative md:static">
+                    <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"></div>
+                    <img src="@/public/images/test2.png" class="w-full object-cover md:hidden" alt="poto">
+                  <p class="absolute top-3/4 md:static text-white self-center isco-text-responsive">
+                    Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
+                    Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
+                  </p>
                 </div>
-                <p class="text-white self-center isco-text-responsive">
-                  Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
-                  Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
-                </p>
               </div>
               <!-- Tombol CTA -->
-                <div class="flex flex-col md:flex-row gap-4 items-center ">
-                  <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
+                <div class="flex flex-col md:flex-row gap-4 items-center">
                   <ButtonCTA button-text="Hubungi Kami" to="/" />
+                  <ButtonSecondary button-text="Lihat Semua Layanan" to="/pelayanan" />
                 </div>
             </div>
-
             <!-- Gambar untuk Desktop -->
-            <div class="justify-end hidden md:flex ">
-              <img src="@/assets/images/test2.png" class="object-contain w-3/4 max-w-lg " alt="poto">
-            </div>
-            
+              <img src="@/assets/images/test2.png" class="object-contain w-3/4 max-w-lg hidden md:block justify-self-end" alt="poto">
           </div>
       </section>
       
