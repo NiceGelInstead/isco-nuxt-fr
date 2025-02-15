@@ -12,7 +12,7 @@
                 <div class="my-12 md:hidden">
                   <img src="@/assets/images/test2.png" class="w-full object-contain" alt="poto">
                 </div>
-                <p class="text-white text-center md:text-left self-center">
+                <p class="text-white self-center isco-text-responsive">
                   Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
                   Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
                 </p>

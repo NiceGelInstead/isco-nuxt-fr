@@ -15,6 +15,10 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.isco-text-responsive {
+  @apply text-center md:text-left;
+}
+
 /* Komponen */
 @layer components {
   /* Tipografi */
