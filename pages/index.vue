@@ -1,5 +1,5 @@
 <template>
-   <main id="home-page" class="home-page">
+   <main id="home-page" class="bg-gray-50">
       <section id="hero" class="bg-secondary py-8">
           <div class="container min-h-screen grid grid-cols-1 md:grid-cols-12 items-center">  
 

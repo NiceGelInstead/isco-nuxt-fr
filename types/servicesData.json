@@ -1,20 +1,20 @@
 [
     {
       "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "Iso Series",
-      "description": "Sertifikat atau lisensi resmi yang dikeluarkan oleh Lembaga...",
+      "title": "Satu Baris Doang",
+      "description": "Deskripsi ini juga pendek.",
       "to": "/jasa-iso-v1"
     },
     {
       "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "Mobile Apps",
-      "description": "Aplikasi mobile cross-platform yang powerful",
+      "title": "Kalau yang ini ada dua baris",
+      "description": "Deksripsi ini agak panjang. Mungkin ada yg penting jadi harus di taruh disini.",
       "to": "/jasa-iso-v2"
     },
     {
       "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "Digital Marketing",
-      "description": "Sertifikat atau lisensi resmi yang dikeluarkan oleh Lembaga.",
+      "title": "Kalau yang satu ini nih, ada tiga baris. Misalnya infonya panjang",
+      "description": "Nah, yang ini itu terlalu panjang. Bisa jadi info SUPER PENTING disini. Jadi nggak oke kalau di singkat.",
       "to": "/players"
     },
     {
