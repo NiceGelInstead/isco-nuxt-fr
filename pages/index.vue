@@ -11,7 +11,7 @@
                 <!-- Gambar untuk Mobile -->
                 <div class="relative md:static">
                     <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"></div>
-                    <img src="@/public/images/test2.png" class="w-full object-cover md:hidden" alt="poto">
+                    <img src="@/public/images/test2.png" class="w-full object-cover md:hidden" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
                   <p class="absolute top-3/4 md:static text-white self-center isco-text-responsive">
                     Mitra Terdepan para Kontraktor Jasa Konstruksi dan Jasa Konsultasi di Indonesia.
                     Kami mencapai 250+ lebih kontraktor di seluruh Indonesia dan menyelesaikan lebih dari 1000+ proyek dari tender ternama.
@@ -20,12 +20,13 @@
               </div>
               <!-- Tombol CTA -->
                 <div class="flex flex-col md:flex-row gap-4 items-center">
-                  <ButtonCTA button-text="Hubungi Kami" to="/" />
+                  <ButtonCTA buttonText="Hubungi Kami" :to="'https://wa.me/6285157375776'" :isOutbound="true" class="md:hidden"/>
+                  <ButtonCTA buttonText="Hubungi Kami" :to="'/pelayanan'" :isOutbound="false" class="hidden md:block"/>
                   <ButtonSecondary button-text="Lihat Semua Layanan" to="/pelayanan" />
                 </div>
             </div>
             <!-- Gambar untuk Desktop -->
-              <img src="@/assets/images/test2.png" class="object-contain w-3/4 max-w-lg hidden md:block justify-self-end" alt="poto">
+              <img src="@/assets/images/test2.png" class="object-contain w-3/4 max-w-lg hidden md:block justify-self-end" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
           </div>
       </section>
       
