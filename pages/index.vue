@@ -20,8 +20,7 @@
               </div>
               <!-- Tombol CTA -->
                 <div class="flex flex-col md:flex-row gap-4 items-center">
-                  <ButtonCTA button-text="Hubungi Kami" :to="'https://wa.me/6285157375776'" :is-outbound="true" class="md:hidden"/>
-                  <ButtonCTA button-text="Hubungi Kami" :to="'/pelayanan'" :is-outbound="false" class="hidden md:block"/>
+                  <ButtonCTA button-text="Hubungi Kami" :to="'https://wa.me/6285157375776'" :is-outbound="true"/>
                   <ButtonSecondary button-text="Lihat Semua Layanan" to="/pelayanan" />
                 </div>
             </div>
