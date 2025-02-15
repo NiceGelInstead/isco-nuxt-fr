@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col w-full p-4 hover:border-2 hover:border-primary rounded-xl hover:shadow-lg transition-all duration-500"
+    class="flex flex-col w-full p-4 hover:border-2 hover:border-primary rounded-xl hover:shadow-2xl transition-all duration-500"
   >
     <img
       :src="imageSrc"
@@ -13,7 +13,8 @@
       <nuxt-link
       :to="to"
       class="text-primary text-lg font-bold hover:text-cta hover:underline">
-      Lihat Layanan >
+      Lihat Layanan
+      <svg class="inline" width="0.75rem" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 9L9 1M9 1H2.5M9 1V7.22222" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
     </nuxt-link>
     </div> 
   </div>
