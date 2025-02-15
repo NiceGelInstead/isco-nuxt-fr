@@ -12,7 +12,7 @@
                 <div class="relative md:static">
                     <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"/>
                     <img src="@/public/images/test2.png" class="w-full object-cover md:hidden" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
-                  <p class="isco-p-desc absolute bottom-1/100 md:static text-white self-center isco-text-responsive">
+                  <p class="isco-p-desc absolute bottom-1/10 md:static text-white self-center isco-text-responsive">
                     Majukan Pembangunan Kontraktor Jasa Konstruksi dan Konsultasi Di Indonesia Bersama Kami.
                   </p>
                 </div>
