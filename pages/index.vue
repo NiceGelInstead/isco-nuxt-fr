@@ -1,132 +1,138 @@
 <template>
    <main id="home-page" class="home-page">
-      <section id="hero" class="bg-secondary py-0">
-          <div class="container min-h-screen grid gap-6 grid-cols-1 md:grid-cols-2 items-center">    
+      <section id="hero" class="bg-secondary py-8">
+          <div class="container min-h-screen grid grid-cols-1 md:grid-cols-12 items-center">  
+
             <!-- Konten Kiri (Text + Tombol) -->
-            <div class="flex flex-col">
-              <div class="flex flex-col mb-8 md:mb-12">
-                <h1 class="isco-h1 isco-text-center-left mb-4">
+            <div class="w-full col-span-8">
+              <div class="flex flex-col gap-4 mb-8 md:mb-12">
+                <h1 class="isco-h1 isco-text-center-left">
                   Bangun Kesuksesan Kontraktor Bersama ISCO Group
                 </h1>
-                <!-- Gambar untuk Mobile -->
+
+                <!-- Gambar mobile & Deskripsi -->
                 <div class="relative md:static">
-                    <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"/>
-                    <img src="@/public/images/test2.png" class="w-full object-cover md:hidden" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
-                  <p class="isco-p-desc isco-text-center-left absolute bottom-1/10 md:static text-white self-center">
-                    Majukan Pembangunan Kontraktor Jasa Konstruksi dan Konsultasi Di Indonesia Bersama Kami.
+                  <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"/>
+                  <img src="@/public/images/test2.png" class="w-9/10 object-cover md:hidden place-self-center" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
+                  <p class="isco-p-desc isco-text-center-left absolute md:static bottom-1 text-white self-center">
+                    Majukan Pembangunan Kontraktor Jasa Konstruksi dan Jasa Konsultasi Di Indonesia Bersama Kami.
                   </p>
                 </div>
               </div>
+
               <!-- Tombol CTA -->
-                <div class="flex flex-col md:flex-row gap-4 items-center">
-                  <ButtonCTA button-text="Hubungi Kami" :to="'https://wa.me/6285157375776'" :is-outbound="true"/>
-                  <ButtonSecondary button-text="Lihat Semua Layanan" to="/pelayanan" />
-                </div>
+              <div class="flex flex-col md:flex-row gap-4 items-center">
+                <ButtonCTA button-text="Hubungi Kami" :to="'https://wa.me/6285157375776'" :is-outbound="true"/>
+                <ButtonSecondary button-text="Lihat Semua Layanan" to="/pelayanan" />
+              </div>
             </div>
+
             <!-- Gambar untuk Desktop -->
-              <img src="@/assets/images/test2.png" class="object-contain w-3/4 max-w-lg hidden md:block justify-self-end" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
+            <div class="w-full col-span-4">
+              <img src="@/assets/images/test2.png" class="object-contain w-full max-w-lg hidden md:block justify-self-end" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
+            </div>
           </div>
       </section>
       
       <section id="layanan" class="">
           <div class="container"> 
-            <div class="flex flex-col gap-4">
-              <h2 class="isco-h2 text-center">
+            <!-- Heading & Tagline -->
+            <div class="flex flex-col text-center gap-4 mb-12">
+              <h2 class="isco-h2">
                 Layanan Kami
               </h2>
-              <h3 class="text-center mb-12">
+              <h3 class="isco-h3">
                 Solusi Tepat untuk Setiap Tender Anda
               </h3>
             </div>   
-            
 
-        <!-- Desktop View: Carousel Slider -->
-        <div class="hidden md:block relative">
-          <!-- Container slider -->
-          <div class="overflow-hidden">
-            <!-- Inner container yang akan digeser -->
-            <div
-              class="flex transition-transform duration-500 ease-out"
-              :style="{ transform: `translateX(-${(currentPage - 1) * 100}%)` }"
-            >
-              <!-- Setiap halaman carousel -->
-              <div
-                v-for="(page, pageIndex) in pages"
-                :key="pageIndex"
-                class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            <!-- Desktop View: Carousel Slider -->
+            <div class="hidden md:block relative">
+              <!-- Container slider -->
+              <div class="overflow-hidden">
+                <!-- Inner container yang akan digeser -->
+                <div
+                  class="flex transition-transform duration-500 ease-out"
+                  :style="{ transform: `translateX(-${(currentPage - 1) * 100}%)` }"
+                >
+                  <!-- Setiap halaman carousel -->
+                  <div
+                    v-for="(page, pageIndex) in pages"
+                    :key="pageIndex"
+                    class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+                  >
+                    <ServiceCard
+                      v-for="(service, index) in page"
+                      :key="index"
+                      :image-src="service.imageSrc"
+                      :title="service.title"
+                      :description="service.description"
+                      :to="service.to"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tombol panah Prev (kiri) -->
+              <button
+                :disabled="currentPage === 1"
+                class="hidden sm:flex absolute -left-20 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125 transition-all duration-300 focus:outline-none"
+                @click="prevPage"
               >
-                <ServiceCard
-                  v-for="(service, index) in page"
-                  :key="index"
-                  :image-src="service.imageSrc"
-                  :title="service.title"
-                  :description="service.description"
-                  :to="service.to"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="size-12"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  :class="currentPage === 1 ? 'text-gray-400' : 'text-primary'"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+
+              <!-- Tombol panah Next (kanan) -->
+              <button
+                :disabled="currentPage === totalPages"
+                class="hidden sm:flex absolute -right-20 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
+                @click="nextPage"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="size-12"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="2"
+                  :class="currentPage === totalPages ? 'text-gray-400' : 'text-primary'"
+                  stroke="currentColor"
+                >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+
+              <!-- Pagination Bullets -->
+              <div class="hidden sm:flex justify-center mt-8 space-x-2">
+                <div
+                  v-for="page in totalPages"
+                  :key="page"
+                  class="w-2 h-2 rounded-full transition-all duration-300"
+                  :class="page === currentPage ? 'bg-primary scale-150' : 'bg-gray-300'"
                 />
               </div>
             </div>
-          </div>
 
-          <!-- Tombol panah Prev (kiri) -->
-          <button
-            :disabled="currentPage === 1"
-            class="hidden sm:flex absolute -left-20 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125 transition-all duration-300 focus:outline-none"
-            @click="prevPage"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-12"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              :class="currentPage === 1 ? 'text-gray-400' : 'text-primary'"
-              stroke="currentColor"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
-            </svg>
-          </button>
-
-          <!-- Tombol panah Next (kanan) -->
-          <button
-            :disabled="currentPage === totalPages"
-            class="hidden sm:flex absolute -right-20 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
-            @click="nextPage"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-12"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="2"
-              :class="currentPage === totalPages ? 'text-gray-400' : 'text-primary'"
-              stroke="currentColor"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          <!-- Pagination Bullets -->
-          <div class="hidden sm:flex justify-center mt-8 space-x-2">
-            <div
-              v-for="page in totalPages"
-              :key="page"
-              class="w-2 h-2 rounded-full transition-all duration-300"
-              :class="page === currentPage ? 'bg-primary scale-150' : 'bg-gray-300'"
-            />
-          </div>
-        </div>
-
-        <!-- Mobile View: Menampilkan 3 card saja -->
-        <div class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <ServiceCard
-            v-for="(service, index) in mobileServices"
-            :key="index"
-            :image-src="service.imageSrc"
-            :title="service.title"
-            :description="service.description"
-            :to="service.to"
-          />
-        </div>
+            <!-- Mobile View: Menampilkan 3 card saja -->
+            <div class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <ServiceCard
+                v-for="(service, index) in mobileServices"
+                :key="index"
+                :image-src="service.imageSrc"
+                :title="service.title"
+                :description="service.description"
+                :to="service.to"
+              />
+            </div>
 
         <!-- Tombol CTA -->
         <div class="flex justify-center mt-8">
