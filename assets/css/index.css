@@ -21,7 +21,7 @@
 .isco-text-left-center { /* <<<<<<<< CHANGED IN UPSTREAM */
   @apply text-left md:text-center;
 }
-.isco-text-break-pretty {
+.isco-text-break-pretty { /* <<<<<<<< CHANGED IN UPSTREAM */
   @apply break-words text-pretty;
 }
 

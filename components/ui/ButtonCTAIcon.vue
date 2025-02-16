@@ -1,18 +1,14 @@
 <template>
-  <nuxt-link
-:to="to"
-    role="button" :aria-label="buttonText" class="invisible md:visible bg-primary hover:bg-cta hover:scale-105 hover:shadow-md hover:transition-all duration-300 rounded-lg text-white px-4 py-2 text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+  <a
+    href="https://wa.me/6285157375776" target="_blank" rel="noopener noreferrer nofollow"
+     role="button" :aria-label="buttonText" class="btn bg-primary hover:bg-cta text-white text-base font-medium">
     {{ buttonText }}
-  </nuxt-link>
+  </a>
 </template>
 
 <script setup>
 defineProps({
   buttonText: {
-    type: String,
-    required: true,
-  },
-  to: {
     type: String,
     required: true,
   },

@@ -1,18 +1,18 @@
 <template>
-<div class="bg-[#073573]">
-    <div class="container md:py-16 py-14 flex flex-col md:flex-row justify-between items-center">
-      
+    <div class="flex flex-col md:flex-row justify-between items-center">
             <div>
-                <h1 class="isco-h2 font-semibold mb-4 text-white text-center md:text-left">Siap Untuk Bertumbuh Secara Digital?</h1>
-                <h2 class="isco-h4 font-medium mb-8 text-white text-center md:text-left">Kami di sini untuk membantu. Kirim pesan untuk memulai berdiskusi!</h2>
+                <div class="mb-8">
+                    <h2 class="isco-h3 text-white isco-text-center-left mb-4">Siap Untuk Bertumbuh Secara Digital?</h2>
+                <h3 class="isco-p-desc font-medium text-white isco-text-center-left">Kami di sini untuk membantu. Kirim pesan untuk memulai berdiskusi!</h3>
+                </div>
                 <div class="flex flex-col md:flex-row gap-2.5 md:gap-8 items-center mb-10 md:mb-0">
-                <div class="flex items-center gap-3">
+                    <div class="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-white">
                     <path d="M4.5 3.75a3 3 0 0 0-3 3v.75h21v-.75a3 3 0 0 0-3-3h-15Z" />
                     <path fill-rule="evenodd" d="M22.5 9.75h-21v7.5a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3v-7.5Zm-18 3.75a.75.75 0 0 1 .75-.75h6a.75.75 0 0 1 0 1.5h-6a.75.75 0 0 1-.75-.75Zm.75 2.25a.75.75 0 0 0 0 1.5h3a.75.75 0 0 0 0-1.5h-3Z" clip-rule="evenodd" />
                     </svg>
                     <p class="footer-p">Harga Murah</p>
-                </div>
+                    </div>
                 <div class="flex items-center gap-3">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6 text-white">
                     <path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 6a.75.75 0 0 0-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 0 0 0-1.5h-3.75V6Z" clip-rule="evenodd" />
@@ -28,10 +28,8 @@
                 </div>
             </div>
             <div>
-                <ButtonCTA button-text="Hubungi Kami Sekarang" to="/players" />
+                <ButtonCTAIcon button-text="Hubungi Kami" />
             </div>
-    
     </div>
-</div>
 
 </template>
