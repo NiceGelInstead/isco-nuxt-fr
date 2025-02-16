@@ -38,7 +38,7 @@
       <div class="container flex justify-between items-center py-2 ">
         <div class="flex items-center gap-1.5">
           <img
-            src="@/assets/images/logo-IscoGroup.png"
+            src="@/public/images/logo/Logo-IscoGroup.png"
             alt="Logo"
             class="size-11"
           >

@@ -201,10 +201,10 @@
           </p>
         </div>
         <div class="grid grid-cols-4 w-full place-items-center">
-          <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
-          <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
-          <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
-          <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+          <img src="@/public/images/logo/Logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+          <img src="@/public/images/logo/Logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+          <img src="@/public/images/logo/Logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+          <img src="@/public/images/logo/Logo-IscoGroup.png" class="h-8 w-8" alt="poto">
         </div>
       </div>
     </section>

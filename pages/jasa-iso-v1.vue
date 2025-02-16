@@ -195,25 +195,25 @@
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 w-full place-items-center gap-4">
           <div class="flex flex-col place-items-center gap-2">
-            <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+            <img src="@/public/images/logo/Logo-IscoGroup.png" class="h-8 w-8" alt="poto">
             <span>
               Terdaftar di OJK
             </span>
           </div>
           <div class="flex flex-col place-items-center gap-2">
-            <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+            <img src="@/public/images/logo/Logo-IscoGroup.png" class="h-8 w-8" alt="poto">
             <span>
               LPSE Resmi
             </span>
           </div>
           <div class="flex flex-col place-items-center gap-2">
-            <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+            <img src="@/public/images/logo/Logo-IscoGroup.png" class="h-8 w-8" alt="poto">
             <span>
               Partner LPJK
             </span>
           </div>
           <div class="flex flex-col place-items-center gap-2">
-            <img src="@/public/images/logo-IscoGroup.png" class="h-8 w-8" alt="poto">
+            <img src="@/public/images/logo/Logo-IscoGroup.png" class="h-8 w-8" alt="poto">
             <span>
               BNSP Resmi
             </span>

@@ -1,63 +1,51 @@
 [
     {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "Satu Baris Doang",
-      "description": "Deskripsi ini juga pendek.",
-      "to": "/jasa-iso-v1"
+      "imageSrc": "/images/logo/Logo-ISO.png",
+      "title": "Sertifikat International Standard Organization",
+      "description": "Sertifikasi ISO 9001:2015 QMS, ISO 45001:2018 OHSAS, 14001:2015 EMS, dan lainnya.",
+      "to": "#"
     },
     {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "Kalau yang ini ada dua baris",
-      "description": "Mungkin ada yg penting jadi harus di taruh disini.",
-      "to": "/jasa-iso-v2"
+      "imageSrc": "/images/logo/Logo-PUPR.jpg",
+      "title": "Sertifikat Badan Usaha Jasa Konstruksi",
+      "description": "Sertifikasi Badan Usaha Jasa Konstruksi (BUJK) BUJK Nasional dan BUJK Asing.",
+      "to": "#"
     },
     {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "Kalau yang satu ini nih, ada lebih tiga baris keatas jadinya ini kepanjangan",
-      "description": "Nah, yang ini itu terlalu panjang. Bisa jadi info SUPER PENTING disini. Misalnya ada K3 (Kompetensi Keselamatan Kerja) nanti harus dipanjangin.",
-      "to": "/players"
+      "imageSrc": "/images/logo/Logo-LPJK.jpg",
+      "title": "Sertifikat Keahlian",
+      "description": "Sertifikat Keahlian (SKA dan SKT) Konstruksi LPJK.",
+      "to": "#"
     },
     {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "",
-      "description": "Kosong.",
-      "to": "/players"
+      "imageSrc": "/images/logo/Logo-PUPR.jpg",
+      "title": "Sertifikat Kompetensi Kerja",
+      "description": "Sertifikat Kompetensi Kerja (SKK) Konstruksi",
+      "to": "#"
     },
     {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "SEO Optimization 2",
-      "description": "Meningkatkan peringkat website di mesin pencari",
-      "to": "/players"
+      "imageSrc": "/images/logo/Logo-Kemenaker.png",
+      "title": "Sistem Manajemen Keselamatan dan Kesehatan Kerja",
+      "description": "Sistem Manajemen Keselamatan dan Kesehatan Kerja (SMK3) Kemenaker.",
+      "to": "#"
     },
     {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "SEO Optimization 3",
-      "description": "Meningkatkan peringkat website di mesin pencari",
-      "to": "/players"
+      "imageSrc": "/images/logo/Logo-Kemenperin.png",
+      "title": "Nomor Induk Berusaha (OSS)",
+      "description": "NIB dengan Online Single Submission (OSS.go.id) dari Kemenperin.",
+      "to": "#"
     },
     {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "SEO Optimization 4",
-      "description": "Meningkatkan peringkat website di mesin pencari",
-      "to": "/players"
+      "imageSrc": "/images/logo/Logo-SNI.png",
+      "title": "Sertifikat Standar Nasional Indonesia",
+      "description": "SNI",
+      "to": "#"
     },
     {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "SEO Optimization 5",
-      "description": "Meningkatkan peringkat website di mesin pencari",
-      "to": "/players"
-    },
-    {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "SEO Optimization 6",
-      "description": "Meningkatkan peringkat website di mesin pencari",
-      "to": "/players"
-    },
-    {
-      "imageSrc": "/images/logo-IscoGroup.png",
-      "title": "SEO Optimization 7",
-      "description": "Meningkatkan peringkat website di mesin pencari",
-      "to": "/players"
+      "imageSrc": "/images/logo/Logo-BSN.png",
+      "title": "BSN",
+      "description": "BSN",
+      "to": "#"
     }
   ]
   

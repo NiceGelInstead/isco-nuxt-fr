@@ -23,7 +23,7 @@
             <!-- Tombol CTA -->
             <div class="flex flex-col md:flex-row gap-4 items-center">
               <ButtonCTAIcon button-text="Hubungi Kami" />
-              <ButtonSecondary button-text="Lihat Semua Layanan" to="/" />
+              <ButtonSecondary button-text="Lihat Semua Layanan" to="/pelayanan" />
             </div>
           </div>
 
@@ -159,19 +159,19 @@ const dropdownItems = ref([
   {
     id: 1,
     title: 'Jaringan Asosiasi Pilihan Terakreditasi A',
-    text: 'Kami fokus pada kepuasan klien dengan hasil cepat, solusi berkualitas, harga terjangkau, dan keahlian yang didukung pengalaman lebih dari 10 tahun.',
+    text: 'Asosiasi knstruksi dan konsultan pilihan terbaik terakreditasi A',
     image: '/images/Image-Content-Asosiai.png'
   },
   {
     id: 2,
-    title: 'Prioritas Utama Kepuasan Klien',
-    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit...',
+    title: 'Pelayanan Sertifikasi Kompeten',
+    text: 'Personil aseseor berpengalaman lebih dari 10+ tahun memberi kepuasan klien.',
     image: '/images/test2.png'
   },
   {
     id: 3,
-    title: 'Melayani Tender di Seluruh Indonesia',
-    text: 'Kami fokus pada kepuasan klien dengan hasil cepat, solusi berkualitas, harga terjangkau, dan keahlian yang didukung pengalaman lebih dari 10 tahun.',
+    title: 'Melayani Seluruh Indonesia',
+    text: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     image: '/images/test2.png'
   }
 ]);
