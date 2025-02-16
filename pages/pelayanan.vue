@@ -1,5 +1,5 @@
 <template>
-    <main id="Layanan Isco Group">
+    <main id="layanan">
       <section class="mt-4 md:mt-16">
         <div class="container">
             <HeroTemplate
@@ -15,9 +15,9 @@
           </div>
       </section>
 
-      <section id="Hubungi Kami Segera">
-      <BlockCTA />
-    </section>
+      <section id="hubungi-kami">
+        <BlockCTA />
+      </section>
 
     </main>
   

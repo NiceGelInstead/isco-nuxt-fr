@@ -137,10 +137,8 @@
       </div>
     </section>
 
-    <section id="hubungi-kami" class="bg-[#073573]">
-      <div class="container">
+    <section id="hubungi-kami mt-16" class="bg-[#073573]">  
         <BlockCTA />
-      </div>
     </section>
 
     <section id="artikel-dan-berita" class="">
