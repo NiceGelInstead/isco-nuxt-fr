@@ -54,7 +54,7 @@
       </div>
     </section>
 
-    <section id="mengapa-kami">
+    <section id="mengapa-kami" class="">
       <div class="container">
         <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 items-center">
           <!-- Left: Dropdown (pada mobile gambar muncul di dalam item aktif) -->
@@ -138,12 +138,12 @@
     </section>
 
     <section id="hubungi-kami" class="bg-[#073573]">
-      <div class="container md:py-16 py-14">
+      <div class="container">
         <BlockCTA />
       </div>
     </section>
 
-    <section id="artikel-dan-berita">
+    <section id="artikel-dan-berita" class="">
       <div class="container">
         <PlayersCarousel :players-per-page="7" />
       </div>
