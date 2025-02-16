@@ -1,7 +1,10 @@
 <template>
   <nuxt-link
     :to="to"
-    role="button" :aria-label="buttonText" class="btn bg-primary hover:bg-cta text-white text-base font-medium">
+    role="button"
+    :aria-label="buttonText"
+    class="btn bg-primary hover:bg-cta text-white text-base font-medium"
+  >
     {{ buttonText }}
   </nuxt-link>
 </template>

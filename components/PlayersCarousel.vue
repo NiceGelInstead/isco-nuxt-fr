@@ -5,46 +5,40 @@
     <div v-if="error" class="text-red-500">Error: {{ error.message }}</div>
     <div v-else-if="paginatedPlayers.length">
       <!-- Bagian atas: topPlayers -->
-      <div class="grid grid-cols-2  gap-8 mx-auto">
+      <div class="grid grid-cols-2 gap-8 mx-auto">
         <!-- Kolom Kiri: PlayerCardStyle1 -->
         <div>
-    <PlayerCardStyle1 :player="topPlayers[0]">
-      <template #status>
-        Alive
-      </template>
-    </PlayerCardStyle1>
-  </div>
+          <PlayerCardStyle1 :player="topPlayers[0]">
+            <template #status> Alive </template>
+          </PlayerCardStyle1>
+        </div>
         <!-- Kolom Kanan: PlayerCardStyle2 dalam 3 baris -->
         <div class="grid grid-rows-3 gap-8">
-    <component
-      :is="PlayerCardStyle2"
-      v-for="(player, index) in topPlayers.slice(1)"
-      :key="player.id"
-      :player="player"
-    >
-      <template #status>
-        Alive
-      </template>
-    </component>
-  </div>
+          <component
+            :is="PlayerCardStyle2"
+            v-for="(player, index) in topPlayers.slice(1)"
+            :key="player.id"
+            :player="player"
+          >
+            <template #status> Alive </template>
+          </component>
+        </div>
       </div>
 
       <!-- Bagian bawah: PlayerCardStyle3 ditampilkan dalam grid tiga kolom -->
       <div
-  v-if="bottomPlayers.length"
-  class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 mx-auto"
->
-  <component
-    :is="PlayerCardStyle3"
-    v-for="player in bottomPlayers"
-    :key="player.id"
-    :player="player"
-  >
-    <template #status>
-      Deceased
-    </template>
-  </component>
-</div>
+        v-if="bottomPlayers.length"
+        class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 mx-auto"
+      >
+        <component
+          :is="PlayerCardStyle3"
+          v-for="player in bottomPlayers"
+          :key="player.id"
+          :player="player"
+        >
+          <template #status> Deceased </template>
+        </component>
+      </div>
     </div>
     <p v-else class="mt-4 text-gray-500 text-center">No players found.</p>
 
@@ -87,13 +81,13 @@ const { data, error } = await useApiData<Player[]>("/api/players?populate=*");
 
 // Setup pencarian
 const { searchQuery, getFilteredPlayers } = useSearchPlayerName(
-  data?.value?.data ?? [defaultPlayer]
+  data?.value?.data ?? [defaultPlayer],
 );
 
 // Pagination
 const currentPage = ref(1);
 const totalPages = computed(() =>
-  Math.ceil(getFilteredPlayers.value.length / props.playersPerPage)
+  Math.ceil(getFilteredPlayers.value.length / props.playersPerPage),
 );
 const paginatedPlayers = computed(() => {
   const start = (currentPage.value - 1) * props.playersPerPage;

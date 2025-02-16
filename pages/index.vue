@@ -1,56 +1,69 @@
 <template>
   <main id="home-page" class="bg-gray-50">
     <section id="hero" class="bg-secondary py-8">
-        <div class="container min-h-screen grid grid-cols-1 md:grid-cols-12 items-center">  
+      <div
+        class="container min-h-screen grid grid-cols-1 md:grid-cols-12 items-center"
+      >
+        <!-- Konten Kiri (Text + Tombol) -->
+        <div class="w-full col-span-8">
+          <div class="w-full mb-8 md:mb-12">
+            <h1 class="isco-h1 isco-text-center-left mb-4">
+              Bangun Kesuksesan Kontraktor Bersama ISCO Group
+            </h1>
 
-          <!-- Konten Kiri (Text + Tombol) -->
-          <div class="w-full col-span-8">
-            <div class="w-full mb-8 md:mb-12">
-              <h1 class="isco-h1 isco-text-center-left mb-4">
-                Bangun Kesuksesan Kontraktor Bersama ISCO Group
-              </h1>
-
-              <!-- Gambar mobile & Deskripsi -->
-              <div class="relative md:static">
-                <div class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"/>
-                <img src="@/public/images/test2.png" class="w-9/10 object-cover md:hidden place-self-center" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
-                <p class="isco-p-desc isco-text-center-left absolute md:static bottom-1 text-white self-center">
-                  Majukan Pembangunan Kontraktor Jasa Konstruksi dan Jasa Konsultasi Di Indonesia Bersama Kami.
-                </p>
-              </div>
-            </div>
-
-            <!-- Tombol CTA -->
-            <div class="flex flex-col md:flex-row gap-4 items-center">
-              <ButtonCTAIcon button-text="Hubungi Kami" />
-              <ButtonSecondary button-text="Lihat Semua Layanan" to="/pelayanan" />
+            <!-- Gambar mobile & Deskripsi -->
+            <div class="relative md:static">
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"
+              />
+              <img
+                src="@/public/images/test2.png"
+                class="w-9/10 object-cover md:hidden place-self-center"
+                alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
+              >
+              <p
+                class="isco-p-desc isco-text-center-left absolute md:static bottom-1 text-white self-center"
+              >
+                Majukan Pembangunan Kontraktor Jasa Konstruksi dan Jasa
+                Konsultasi Di Indonesia Bersama Kami.
+              </p>
             </div>
           </div>
 
-          <!-- Gambar untuk Desktop -->
-          <div class="w-full col-span-4">
-            <img src="@/assets/images/test2.png" class="object-contain w-full max-w-lg hidden md:block justify-self-end" alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia">
+          <!-- Tombol CTA -->
+          <div class="flex flex-col md:flex-row gap-4 items-center">
+            <ButtonCTAIcon button-text="Hubungi Kami" />
+            <ButtonSecondary
+              button-text="Lihat Semua Layanan"
+              to="/pelayanan"
+            />
           </div>
         </div>
+
+        <!-- Gambar untuk Desktop -->
+        <div class="w-full col-span-4">
+          <img
+            src="@/assets/images/test2.png"
+            class="object-contain w-full max-w-lg hidden md:block justify-self-end"
+            alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
+          >
+        </div>
+      </div>
     </section>
-      
+
     <section id="layanan" class="">
-        <div class="container"> 
-          <!-- Heading & Tagline -->
-          <div class="w-full text-center mb-12">
-            <h2 class="isco-h2 mb-4">
-              Layanan Kami
-            </h2>
-            <h3 class="isco-h3">
-              Solusi Tepat untuk Setiap Tender Anda
-            </h3>
-          </div>
-          <!-- components/HomeServiceCard.vue -->
-          <HomeServiceCard />
-          <!-- Tombol CTA -->
-          <div class="flex justify-center mt-8">
-            <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
-          </div>
+      <div class="container">
+        <!-- Heading & Tagline -->
+        <div class="w-full text-center mb-12">
+          <h2 class="isco-h2 mb-4">Layanan Kami</h2>
+          <h3 class="isco-h3">Solusi Tepat untuk Setiap Tender Anda</h3>
+        </div>
+        <!-- components/HomeServiceCard.vue -->
+        <HomeServiceSection />
+        <!-- Tombol CTA -->
+        <div class="flex justify-center mt-8">
+          <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
+        </div>
       </div>
     </section>
 
@@ -79,7 +92,7 @@
                   <h4
                     :class="[
                       'text-xl text-left font-semibold transition-colors cursor-pointer',
-                      activeIndex === index ? 'text-cta' : 'hover:text-cta'
+                      activeIndex === index ? 'text-cta' : 'hover:text-cta',
                     ]"
                   >
                     {{ item.title }}
@@ -87,13 +100,20 @@
                   <svg
                     :class="[
                       'h-6 w-6 transition-transform duration-300 hover:text-cta cursor-pointer',
-                      activeIndex === index ? 'transform rotate-180 text-cta' : 'transform rotate-0'
+                      activeIndex === index
+                        ? 'transform rotate-180 text-cta'
+                        : 'transform rotate-0',
                     ]"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
                   >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    />
                   </svg>
                 </button>
                 <!-- Konten dropdown untuk item aktif -->
@@ -105,6 +125,7 @@
                     <!-- Gambar untuk mobile (hanya tampil di mobile) -->
                     <transition name="fade">
                       <img
+                        v-if="activeIndex === index"
                         key="mobileImage"
                         :src="item.image"
                         alt="Dropdown Image"
@@ -125,6 +146,7 @@
           <div class="hidden lg:flex h-full lg:place-content-end">
             <transition name="fade">
               <img
+                v-if="currentImage"
                 key="desktopImage"
                 :src="currentImage"
                 alt="Dropdown Image"
@@ -137,8 +159,8 @@
       </div>
     </section>
 
-    <section id="hubungi-kami mt-16" class="bg-[#073573]">  
-        <BlockCTA />
+    <section id="hubungi-kami mt-16" class="bg-[#073573]">
+      <BlockCTA />
     </section>
 
     <section id="artikel-dan-berita" class="">
@@ -149,29 +171,28 @@
   </main>
 </template>
 
-
 <script setup lang="ts">
-import ButtonCTAIcon from '~/components/ui/ButtonCTAIcon.vue';
+import ButtonCTAIcon from "~/components/ui/ButtonCTAIcon.vue";
 
 const dropdownItems = ref([
   {
     id: 1,
-    title: 'Jaringan Asosiasi Pilihan Terakreditasi A',
-    text: 'Asosiasi knstruksi dan konsultan pilihan terbaik terakreditasi A',
-    image: '/images/Image-Content-Asosiai.png'
+    title: "Jaringan Asosiasi Pilihan Terakreditasi A",
+    text: "Asosiasi knstruksi dan konsultan pilihan terbaik terakreditasi A",
+    image: "/images/Image-Content-Asosiai.png",
   },
   {
     id: 2,
-    title: 'Pelayanan Sertifikasi Kompeten',
-    text: 'Personil aseseor berpengalaman lebih dari 10+ tahun memberi kepuasan klien.',
-    image: '/images/test2.png'
+    title: "Pelayanan Sertifikasi Kompeten",
+    text: "Personil aseseor berpengalaman lebih dari 10+ tahun memberi kepuasan klien.",
+    image: "/images/test2.png",
   },
   {
     id: 3,
-    title: 'Melayani Seluruh Indonesia',
-    text: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    image: '/images/test2.png'
-  }
+    title: "Melayani Seluruh Indonesia",
+    text: "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    image: "/images/test2.png",
+  },
 ]);
 
 // Manage active dropdown item (default: first item active on desktop)
@@ -185,7 +206,9 @@ onMounted(() => {
 
 // Get the current image for desktop view
 const currentImage = computed(() => {
-  return activeIndex.value !== null ? dropdownItems.value[activeIndex.value]?.image : '';
+  return activeIndex.value !== null
+    ? dropdownItems.value[activeIndex.value]?.image
+    : "";
 });
 
 // Handle dropdown selection
@@ -198,7 +221,4 @@ const select = (index: number) => {
     activeIndex.value = index;
   }
 };
-
-
 </script>
-

@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   components: [
     {
-      path: '~/components',
+      path: "~/components",
       pathPrefix: false,
     },
   ],
@@ -16,12 +16,9 @@ export default defineNuxtConfig({
       strapiUrl: "https://admin.testjellysuper.my.id",
     },
   },
-  modules: ['nuxt-qrcode',
-           '@nuxt/eslint'
-  ],
+  modules: ["nuxt-qrcode", "@nuxt/eslint"],
   css: ["~/assets/css/index.css"],
   vite: {
     plugins: [tailwindcss()],
   },
- 
 });

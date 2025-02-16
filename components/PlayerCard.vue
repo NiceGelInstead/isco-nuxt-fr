@@ -3,11 +3,14 @@
     class="flex flex-col items-center p-0 rounded-lg shadow-xl bg-white w-full"
   >
     <!-- /components/PlayerImage.vue -->
-    <PlayerImage :player="player" css-class="w-full h-64 object-cover rounded-xl" />
+    <PlayerImage
+      :player="player"
+      css-class="w-full h-64 object-cover rounded-xl"
+    />
     <div class="flex flex-col gap-1 w-full p-2">
       <div class="flex gap-1 text-sm">
-      <!-- Gunakan slot 'status'. Jika tidak ada slot, maka tampilkan hasil ekspresi default -->
-      <span class="text-primary font-bold">
+        <!-- Gunakan slot 'status'. Jika tidak ada slot, maka tampilkan hasil ekspresi default -->
+        <span class="text-primary font-bold">
           <slot name="status">{{ player.isAlive ? "Alive" : "Deceased" }}</slot>
         </span>
         <span class="font-thin">|</span>

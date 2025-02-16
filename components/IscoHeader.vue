@@ -9,33 +9,30 @@
   >
     <!-- Navbar Upper untuk desktop -->
     <transition name="slide-down">
-    <nav
-      v-show="showNavbarUpper"
-      class="hidden md:flex p-2 bg-secondary"
-    >
-      <div class="container py-0 flex justify-between ">
-        <ul class="text-white">
-          <nuxt-link to="/">Hubungi Kami</nuxt-link>
-        </ul>
-        <ul class="flex gap-4">
-          <li>
-            <nuxt-link to="/" class="hover:underline text-white">
-              iscogroup@gmail.com
-            </nuxt-link>
-          </li>
-          <li>
-            <nuxt-link to="/" class="hover:underline text-white">
-              +62-812367723
-            </nuxt-link>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </transition>
+      <nav v-show="showNavbarUpper" class="hidden md:flex p-2 bg-secondary">
+        <div class="container py-0 flex justify-between">
+          <ul class="text-white">
+            <nuxt-link to="/">Hubungi Kami</nuxt-link>
+          </ul>
+          <ul class="flex gap-4">
+            <li>
+              <nuxt-link to="/" class="hover:underline text-white">
+                iscogroup@gmail.com
+              </nuxt-link>
+            </li>
+            <li>
+              <nuxt-link to="/" class="hover:underline text-white">
+                +62-812367723
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </transition>
 
     <!-- Navbar utama -->
     <nav class="flex items-center">
-      <div class="container flex justify-between items-center py-2 ">
+      <div class="container flex justify-between items-center py-2">
         <div class="flex items-center gap-1.5">
           <img
             src="@/public/images/logo/Logo-IscoGroup.png"
@@ -58,9 +55,12 @@
           </li>
         </ul>
         <nuxt-link
-:to="to"
-          role="button" :aria-label="buttonText" class="hidden md:block bg-primary hover:bg-cta hover:scale-105 hover:shadow-md hover:transition-all duration-300 rounded-lg text-white px-5 py-3.5 text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-        Hubungi Kami
+          :to="to"
+          role="button"
+          :aria-label="buttonText"
+          class="hidden md:block bg-primary hover:bg-cta hover:scale-105 hover:shadow-md hover:transition-all duration-300 rounded-lg text-white px-5 py-3.5 text-base font-medium focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+        >
+          Hubungi Kami
         </nuxt-link>
         <button
           class="md:hidden focus:outline-none transition-all duration-300"
@@ -96,7 +96,6 @@
         </div>
       </div>
     </nav>
-
   </header>
 </template>
 
@@ -158,4 +157,3 @@ onUnmounted(() => {
   }
 });
 </script>
-

@@ -1,50 +1,55 @@
 <template>
-        <div ref="layananSection"class="player-carousel">
-            <SearchBar v-model:search-query="searchQuery" search-text="Cari Layanan" search-placeholder="Masukkan Nama Layanan" />
-             <!-- Misalnya, untuk menampilkan nilai searchQuery -->
+  <div ref="layananSection" class="player-carousel">
+    <SearchBar
+      v-model:search-query="searchQuery"
+      search-text="Cari Layanan"
+      search-placeholder="Masukkan Nama Layanan"
+    />
+    <!-- Misalnya, untuk menampilkan nilai searchQuery -->
 
-            <!-- Grid Layanan -->
-            <div
-                class="grid gap-4 md:gap-8"
-                :class="{
-                'grid-cols-1': isMobile,
-                'grid-cols-3': !isMobile
-                }"
-            >
-            <ServiceCard
-                v-for="(service, index) in pages"
-                :key="index"
-                :image-src="service.imageSrc"
-                :title="service.title"
-                :description="service.description"
-                :to="service.to"
-              />
-            </div>
+    <!-- Grid Layanan -->
+    <div
+      class="grid gap-4 md:gap-8"
+      :class="{
+        'grid-cols-1': isMobile,
+        'grid-cols-3': !isMobile,
+      }"
+    >
+      <ServiceCard
+        v-for="(service, index) in pages"
+        :key="index"
+        :image-src="service.imageSrc"
+        :title="service.title"
+        :description="service.description"
+        :to="service.to"
+      />
+    </div>
 
-            <!-- Pagination -->
-            <div class="flex justify-center items-center mt-16 space-x-4 border-t border-border-color pt-6">
-                <button
-                :disabled="currentPage === 1"
-                class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
-                @click="prevPage"
-                >
-                Previous
-                </button>
-                <span>Page {{ currentPage }} of {{ totalPages }}</span>
-                <button
-                :disabled="currentPage === totalPages"
-                class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
-                @click="nextPage"
-                >
-                Next
-                </button>
-            </div>
-        </div>
+    <!-- Pagination -->
+    <div
+      class="flex justify-center items-center mt-16 space-x-4 border-t border-border-color pt-6"
+    >
+      <button
+        :disabled="currentPage === 1"
+        class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
+        @click="prevPage"
+      >
+        Previous
+      </button>
+      <span>Page {{ currentPage }} of {{ totalPages }}</span>
+      <button
+        :disabled="currentPage === totalPages"
+        class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
+        @click="nextPage"
+      >
+        Next
+      </button>
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">
-
-import useServicePagination from '~/composables/useServicePagination'
+import useServicePagination from "~/composables/useServicePagination";
 const {
   currentPage,
   totalPages,
@@ -53,7 +58,7 @@ const {
   prevPage,
   isMobile,
   searchQuery,
-} = useServicePagination()
+} = useServicePagination();
 
 // // Untuk tampilan mobile, ambil 3 data teratas dari data terfilter
 // const mobileServices = computed(() => {
@@ -62,13 +67,12 @@ const {
 //   return pages.value?.[0] || []
 // })
 // Buat ref untuk elemen container layanan
-const layananSection = ref<HTMLElement | null>(null)
+const layananSection = ref<HTMLElement | null>(null);
 
 // Watch currentPage, ketika berubah scroll ke elemen layananSection
 watch(currentPage, () => {
   if (layananSection.value) {
-    layananSection.value.scrollIntoView({ behavior: 'smooth' })
+    layananSection.value.scrollIntoView({ behavior: "smooth" });
   }
-})
-
+});
 </script>

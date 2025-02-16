@@ -1,51 +1,50 @@
 [
-    {
-      "imageSrc": "/images/logo/Logo-ISO.png",
-      "title": "Sertifikat International Standard Organization",
-      "description": "Sertifikasi ISO 9001:2015 QMS, ISO 45001:2018 OHSAS, 14001:2015 EMS, dan lainnya.",
-      "to": "#"
-    },
-    {
-      "imageSrc": "/images/logo/Logo-PUPR.jpg",
-      "title": "Sertifikat Badan Usaha Jasa Konstruksi",
-      "description": "Sertifikasi Badan Usaha Jasa Konstruksi (BUJK) BUJK Nasional dan BUJK Asing.",
-      "to": "#"
-    },
-    {
-      "imageSrc": "/images/logo/Logo-LPJK.jpg",
-      "title": "Sertifikat Keahlian",
-      "description": "Sertifikat Keahlian (SKA dan SKT) Konstruksi LPJK.",
-      "to": "#"
-    },
-    {
-      "imageSrc": "/images/logo/Logo-PUPR.jpg",
-      "title": "Sertifikat Kompetensi Kerja",
-      "description": "Sertifikat Kompetensi Kerja (SKK) Konstruksi",
-      "to": "#"
-    },
-    {
-      "imageSrc": "/images/logo/Logo-Kemenaker.png",
-      "title": "Sistem Manajemen Keselamatan dan Kesehatan Kerja",
-      "description": "Sistem Manajemen Keselamatan dan Kesehatan Kerja (SMK3) Kemenaker.",
-      "to": "#"
-    },
-    {
-      "imageSrc": "/images/logo/Logo-Kemenperin.png",
-      "title": "Nomor Induk Berusaha (OSS)",
-      "description": "NIB dengan Online Single Submission (OSS.go.id) dari Kemenperin.",
-      "to": "#"
-    },
-    {
-      "imageSrc": "/images/logo/Logo-SNI.png",
-      "title": "Sertifikat Standar Nasional Indonesia",
-      "description": "SNI",
-      "to": "#"
-    },
-    {
-      "imageSrc": "/images/logo/Logo-BSN.png",
-      "title": "BSN",
-      "description": "BSN",
-      "to": "#"
-    }
-  ]
-  
+  {
+    "imageSrc": "/images/logo/Logo-ISO.png",
+    "title": "Sertifikat International Standard Organization",
+    "description": "Sertifikasi ISO 9001:2015 QMS, ISO 45001:2018 OHSAS, 14001:2015 EMS, dan lainnya.",
+    "to": "#"
+  },
+  {
+    "imageSrc": "/images/logo/Logo-PUPR.jpg",
+    "title": "Sertifikat Badan Usaha Jasa Konstruksi",
+    "description": "Sertifikasi Badan Usaha Jasa Konstruksi (BUJK) BUJK Nasional dan BUJK Asing.",
+    "to": "#"
+  },
+  {
+    "imageSrc": "/images/logo/Logo-LPJK.jpg",
+    "title": "Sertifikat Keahlian",
+    "description": "Sertifikat Keahlian (SKA dan SKT) Konstruksi LPJK.",
+    "to": "#"
+  },
+  {
+    "imageSrc": "/images/logo/Logo-PUPR.jpg",
+    "title": "Sertifikat Kompetensi Kerja",
+    "description": "Sertifikat Kompetensi Kerja (SKK) Konstruksi",
+    "to": "#"
+  },
+  {
+    "imageSrc": "/images/logo/Logo-Kemenaker.png",
+    "title": "Sistem Manajemen Keselamatan dan Kesehatan Kerja",
+    "description": "Sistem Manajemen Keselamatan dan Kesehatan Kerja (SMK3) Kemenaker.",
+    "to": "#"
+  },
+  {
+    "imageSrc": "/images/logo/Logo-Kemenperin.png",
+    "title": "Nomor Induk Berusaha (OSS)",
+    "description": "NIB dengan Online Single Submission (OSS.go.id) dari Kemenperin.",
+    "to": "#"
+  },
+  {
+    "imageSrc": "/images/logo/Logo-SNI.png",
+    "title": "Sertifikat Standar Nasional Indonesia",
+    "description": "SNI",
+    "to": "#"
+  },
+  {
+    "imageSrc": "/images/logo/Logo-BSN.png",
+    "title": "BSN",
+    "description": "BSN",
+    "to": "#"
+  }
+]

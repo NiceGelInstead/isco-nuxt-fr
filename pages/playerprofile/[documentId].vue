@@ -1,8 +1,8 @@
 <template>
   <div class="w-full min-h-screen bg-[#FF5482] place-content-center">
-    <div 
-      v-if="player" 
-      ref="pdfSection" 
+    <div
+      v-if="player"
+      ref="pdfSection"
       class="isco-container p-8 grid grid-cols-3 gap-8 bg-[#FF54] rounded-lg"
     >
       <img
@@ -12,21 +12,18 @@
       >
       <div class="bg-white">
         <div
-:class="{
-          'text-black': !player.isAlive,
-          'text-[#FF5482]': player.isAlive,
-          'text-2xl font-semibold mb-2': true
-        }">
-          {{ player.isAlive ? 'Alive' : 'Dead' }}
+          :class="{
+            'text-black': !player.isAlive,
+            'text-[#FF5482]': player.isAlive,
+            'text-2xl font-semibold mb-2': true,
+          }"
+        >
+          {{ player.isAlive ? "Alive" : "Dead" }}
         </div>
         <h1 class="mb-8">{{ player.Name }}</h1>
         <p class="text-lg mt-8">{{ player.EmergencyContact }}</p>
         <div class="text-lg mb-8 underline">{{ player.uid }}</div>
-        <Qrcode
-          :value="fullUrl"
-          variant="pixelated"
-          height="100"
-        />
+        <Qrcode :value="fullUrl" variant="pixelated" height="100" />
       </div>
     </div>
 
@@ -41,18 +38,17 @@
   </div>
 </template>
 
-  
 <script setup lang="ts">
- // Nonaktifkan SSR khusus untuk halaman ini
+// Nonaktifkan SSR khusus untuk halaman ini
 // Taking current URL (for dynamic routing and QR code)
 import { useRequestURL, useRoute } from "#app";
 
 // Api Call (the real deal is here)
-import { useApiData } from '~/composables/useApiRequest'
-import { type Player, defaultPlayer } from '~/types/playerTypes'; // This is for ONE player
+import { useApiData } from "~/composables/useApiRequest";
+import { type Player, defaultPlayer } from "~/types/playerTypes"; // This is for ONE player
 
 // html2pdf exporter
-import { usePdfExporter } from '~/composables/usePdfExporter';
+import { usePdfExporter } from "~/composables/usePdfExporter";
 
 definePageMeta({
   ssr: false,
@@ -61,13 +57,15 @@ definePageMeta({
 // Strapi Base URL (for image purposes)
 const config = useRuntimeConfig();
 const strapiUrl = config.public.strapiUrl;
-const route = useRoute()
+const route = useRoute();
 const url = useRequestURL();
 // const fullUrl = computed(() => `${url.origin}${route.path}`); // All path/route
-const documentId = route.params.documentId // Current path/route
+const documentId = route.params.documentId; // Current path/route
 const fullUrl = computed(() => `${config.public.siteUrl}${route.path}`);
-const { data, error } = await useApiData<Player>(`/api/players/${documentId}?populate=*`)
-const player = computed(() => data.value?.data ?? defaultPlayer)
+const { data, error } = await useApiData<Player>(
+  `/api/players/${documentId}?populate=*`,
+);
+const player = computed(() => data.value?.data ?? defaultPlayer);
 const { pdfSection, handleExport } = usePdfExporter();
 // const player = ref({ }); // Already in API call player = computed(())
 const exportToPDF = () => {
@@ -108,7 +106,4 @@ const exportToPDF = () => {
 //     })
 //     .save();
 // };
-
-
-
 </script>

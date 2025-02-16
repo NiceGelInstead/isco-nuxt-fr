@@ -12,20 +12,34 @@
       <p class="isco-p-desc text-gray-600 line-clamp-3">{{ description }}</p>
     </div>
     <nuxt-link
-:to="to"
-      class="text-primary text-lg font-bold hover:text-cta hover:underline">
+      :to="to"
+      class="text-primary text-lg font-bold hover:text-cta hover:underline"
+    >
       Lihat Layanan
-      <svg class="inline" width="0.75rem" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 9L9 1M9 1H2.5M9 1V7.22222" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <svg
+        class="inline"
+        width="0.75rem"
+        viewBox="0 0 10 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1 9L9 1M9 1H2.5M9 1V7.22222"
+          stroke="currentColor"
+          stroke-width="1.25"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
     </nuxt-link>
-
-   
   </div>
 </template>
 
 <script setup>
 defineProps({
   imageSrc: {
-    type: String,// Gambar diambil dari lokal, jadi wajib ada
+    type: String,
+    default: "/images/logo/Logo-IscoGroup.png",
   },
   title: {
     type: String,

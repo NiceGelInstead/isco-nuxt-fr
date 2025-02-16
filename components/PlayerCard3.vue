@@ -23,6 +23,4 @@
 import { defineProps } from "vue";
 import type { Player } from "~/types/playerTypes";
 defineProps<{ player: Player }>();
-
-
 </script>
