@@ -10,7 +10,7 @@
           :src="imageSrc"
           alt="gambar-blog"
           class="absolute inset-0 w-full h-full object-cover rounded-t-xl hover:scale-110 transition-transform duration-300"
-        >
+        />
       </div>
       <div class="flex flex-col px-4 py-6">
         <div class="flex flex-row gap-2 mb-3">

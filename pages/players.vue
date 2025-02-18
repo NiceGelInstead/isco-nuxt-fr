@@ -11,7 +11,7 @@
           :src="player.Photo?.url ? strapiUrl + player.Photo.url : ''"
           alt=""
           class="w-full h-48 object-cover"
-        >
+        />
         <div class="p-4 text-center">
           <h3
             :class="{

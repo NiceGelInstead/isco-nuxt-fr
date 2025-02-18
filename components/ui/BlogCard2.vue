@@ -11,7 +11,7 @@
           :src="imageSrc"
           alt="gambar-blog"
           class="absolute inset-0 w-full h-full object-cover rounded-t-xl md:rounded-l-xl hover:scale-110 transition-transform duration-300"
-        >
+        />
       </div>
       <!-- Konten teks -->
       <div class="flex flex-col items-start justify-center px-4 md:px-6 py-6">

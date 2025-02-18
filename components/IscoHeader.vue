@@ -38,7 +38,7 @@
             src="@/public/images/logo/Logo-IscoGroup.png"
             alt="Logo"
             class="size-11"
-          >
+          />
           <a class="text-2xl font-bold">
             <nuxt-link to="/">Isco Group</nuxt-link>
           </a>

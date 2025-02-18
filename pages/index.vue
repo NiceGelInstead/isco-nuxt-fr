@@ -20,7 +20,7 @@
                 src="@/public/images/test2.png"
                 class="w-9/10 object-cover md:hidden place-self-center"
                 alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
-              >
+              />
               <p
                 class="isco-p-desc isco-text-center-left absolute md:static bottom-1 text-white self-center"
               >
@@ -46,7 +46,7 @@
             src="@/assets/images/test2.png"
             class="object-contain w-full max-w-lg hidden md:block justify-self-end"
             alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
-          >
+          />
         </div>
       </div>
     </section>
@@ -131,7 +131,7 @@
                         alt="Dropdown Image"
                         class="my-6 w-2/3 mx-auto object-contain block lg:hidden"
                         loading="lazy"
-                      >
+                      />
                     </transition>
                   </div>
                 </transition>
@@ -152,7 +152,7 @@
                 alt="Dropdown Image"
                 class="w-full object-contain md:max-w-md lg:max-w-lg"
                 loading="lazy"
-              >
+              />
             </transition>
           </div>
         </div>

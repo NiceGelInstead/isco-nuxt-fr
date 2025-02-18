@@ -9,7 +9,7 @@
         :src="player.Photo?.url ? strapiUrl + player.Photo.url : ''"
         alt=""
         class="w-full h-48 object-cover"
-      >
+      />
       <div class="bg-white">
         <div
           :class="{
