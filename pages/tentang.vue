@@ -17,7 +17,7 @@
             src="@/assets/images/test2.png"
             class="h-100 w-full object-contain"
             alt="poto"
-          />
+          >
           <div class="flex flex-col gap-4">
             <h2 class="isco-h3">Sejarah</h2>
             <h3 class="isco-h2">
@@ -48,27 +48,27 @@
             src="@/assets/images/test2.png"
             class="h-28 w-full object-contain"
             alt="poto"
-          />
+          >
           <img
             src="@/assets/images/test2.png"
             class="h-28 w-full object-contain"
             alt="poto"
-          />
+          >
           <img
             src="@/assets/images/test2.png"
             class="h-28 w-full object-contain"
             alt="poto"
-          />
+          >
           <img
             src="@/assets/images/test2.png"
             class="h-28 w-full object-contain"
             alt="poto"
-          />
+          >
           <img
             src="@/assets/images/test2.png"
             class="h-28 w-full object-contain"
             alt="poto"
-          />
+          >
         </div>
       </div>
     </section>
@@ -80,7 +80,7 @@
             src="@/assets/images/test2.png"
             class="h-100 w-full object-contain"
             alt="poto"
-          />
+          >
           <div class="flex flex-col-reverse gap-4">
             <h2 class="isco-h3">Sejarah</h2>
             <h3 class="isco-h2">

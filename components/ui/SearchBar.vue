@@ -22,6 +22,6 @@ const emit = defineEmits(["update:searchQuery"]);
       @input="
         emit('update:searchQuery', ($event.target as HTMLInputElement).value)
       "
-    />
+    >
   </div>
 </template>

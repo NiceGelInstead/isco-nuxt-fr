@@ -5,7 +5,7 @@
         :src="blog.imageSrc"
         alt="gambar-blog"
         class="w-full rounded-xl mb-4"
-      />
+      >
       <h1 class="text-3xl font-bold">{{ blog.title }}</h1>
       <p class="text-gray-600 my-2">{{ blog.date }} - {{ blog.category }}</p>
       <p class="text-lg text-gray-800">{{ blog.description }}</p>

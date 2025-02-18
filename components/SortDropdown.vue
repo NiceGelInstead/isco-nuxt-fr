@@ -1,7 +1,7 @@
 <template>
   <div class="mt-0 md:mt-16">
     <div class="mb-1.5 font-semibold">Pilih Kategori</div>
-    <select class="border-b" v-model="internalCategory" @change="emitCategory">
+    <select v-model="internalCategory" class="border-b" @change="emitCategory">
       <option v-for="option in options" :key="option" :value="option">
         {{ option }}
       </option>

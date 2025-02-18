@@ -73,16 +73,16 @@
     <div class="flex justify-center items-center mt-8 space-x-4 border-t pt-4">
       <button
         :disabled="currentPage === 1"
-        @click="prevPage"
         class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
+        @click="prevPage"
       >
         Previous
       </button>
       <span>Page {{ currentPage }} of {{ totalPages }}</span>
       <button
         :disabled="currentPage === totalPages"
-        @click="nextPage"
         class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
+        @click="nextPage"
       >
         Next
       </button>

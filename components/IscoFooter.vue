@@ -10,7 +10,7 @@
             src="@/assets/images/logo-IscoGroup.png"
             alt="Logo"
             class="size-16"
-          />
+          >
           <nuxt-link to="/" class="text-2xl font-bold text-white"
             >Isco Group</nuxt-link
           >
