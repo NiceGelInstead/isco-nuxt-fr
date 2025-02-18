@@ -1,19 +1,21 @@
 <template>
-  <a
-    href="https://wa.me/6285157375776"
-    target="_blank"
-    rel="noopener noreferrer nofollow"
+  <nuxt-link
+    :to="to"
     role="button"
     :aria-label="buttonText"
-    class="btn bg-primary hover:bg-cta text-white text-base font-medium"
+    class="btn border-1 border-white bg-transparent text-white text-base font-medium"
   >
     {{ buttonText }}
-  </a>
+  </nuxt-link>
 </template>
 
 <script setup>
 defineProps({
   buttonText: {
+    type: String,
+    required: true,
+  },
+  to: {
     type: String,
     required: true,
   },
