@@ -12,7 +12,7 @@
             </h2>
             <p class="text-white isco-text-responsive mb-9">
               Jasa Sertifikasi ISO Cepat, Mudah, dan Bergaransi Terbaik
-              Se-Tangerang. <br >Melayani Banten dan Sekitarnya.
+              Se-Tangerang. <br />Melayani Banten dan Sekitarnya.
             </p>
             <ButtonCTA
               button-text="Sukseskan Audit Anda"
@@ -63,7 +63,7 @@
               src="@/assets/images/test2.png"
               class="w-4/5 place-self-center col-span-1"
               alt="poto"
-            >
+            />
           </div>
         </div>
       </div>
@@ -173,7 +173,7 @@
             src="@/assets/images/test2.png"
             class="h-2/3 place-self-center"
             alt="poto"
-          >
+          />
           <div class="flex flex-col">
             <h2 class="isco-h2 text-white text-start mb-8">Cara Kerjanya</h2>
             <div class="grid grid-rows-3 gap-8 isco-text-break w-full">
@@ -230,22 +230,22 @@
             src="@/public/images/logo/Logo-IscoGroup.png"
             class="h-8 w-8"
             alt="poto"
-          >
+          />
           <img
             src="@/public/images/logo/Logo-IscoGroup.png"
             class="h-8 w-8"
             alt="poto"
-          >
+          />
           <img
             src="@/public/images/logo/Logo-IscoGroup.png"
             class="h-8 w-8"
             alt="poto"
-          >
+          />
           <img
             src="@/public/images/logo/Logo-IscoGroup.png"
             class="h-8 w-8"
             alt="poto"
-          >
+          />
         </div>
       </div>
     </section>

@@ -1,7 +1,11 @@
 <!-- /components/PlayersCarousel.vue -->
 <template>
   <div class="player-carousel">
-    <SearchBar v-model:search-query="searchQuery" search-text="Cari Anggota" search-placeholder="Masukkan Nama Anggota" />
+    <SearchBar
+      v-model:search-query="searchQuery"
+      search-text="Cari Anggota"
+      search-placeholder="Masukkan Nama Anggota"
+    />
     <div v-if="error" class="text-red-500">Error: {{ error.message }}</div>
     <div v-else-if="paginatedPlayers.length" class="grid lg:grid-cols-3 gap-8">
       <!-- /components/PlayerCard.vue -->

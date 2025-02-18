@@ -80,7 +80,7 @@
     /* <<<<<<<< CHANGED IN UPSTREAM */
     @apply opacity-50 cursor-not-allowed;
   }
-  .container {
+  .isco-container {
     /* <<<<<<<< CHANGED IN UPSTREAM */
     @apply max-w-7xl mx-auto;
   }

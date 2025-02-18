@@ -2,7 +2,7 @@
   <main id="home-page" class="bg-gray-50">
     <section id="hero" class="bg-secondary py-8">
       <div
-        class="container min-h-screen grid grid-cols-1 md:grid-cols-12 items-center"
+        class="isco-container min-h-screen grid grid-cols-1 md:grid-cols-12 items-center"
       >
         <!-- Konten Kiri (Text + Tombol) -->
         <div class="w-full col-span-8">
@@ -20,7 +20,7 @@
                 src="@/public/images/test2.png"
                 class="w-9/10 object-cover md:hidden place-self-center"
                 alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
-              >
+              />
               <p
                 class="isco-p-desc isco-text-center-left absolute md:static bottom-1 text-white self-center"
               >
@@ -46,13 +46,13 @@
             src="@/assets/images/test2.png"
             class="object-contain w-full max-w-lg hidden md:block justify-self-end"
             alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
-          >
+          />
         </div>
       </div>
     </section>
 
     <section id="layanan" class="">
-      <div class="container">
+      <div class="isco-container">
         <!-- Heading & Tagline -->
         <div class="w-full text-center mb-12">
           <h2 class="isco-h2 mb-4">Layanan Kami</h2>
@@ -68,7 +68,7 @@
     </section>
 
     <section id="mengapa-kami" class="">
-      <div class="container">
+      <div class="isco-container">
         <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 items-center">
           <!-- Left: Dropdown (pada mobile gambar muncul di dalam item aktif) -->
           <div class="w-full h-full">
@@ -131,7 +131,7 @@
                         alt="Dropdown Image"
                         class="my-6 w-2/3 mx-auto object-contain block lg:hidden"
                         loading="lazy"
-                      >
+                      />
                     </transition>
                   </div>
                 </transition>
@@ -152,7 +152,7 @@
                 alt="Dropdown Image"
                 class="w-full object-contain md:max-w-md lg:max-w-lg"
                 loading="lazy"
-              >
+              />
             </transition>
           </div>
         </div>
@@ -164,7 +164,7 @@
     </section>
 
     <section id="artikel-dan-berita" class="">
-      <div class="container">
+      <div class="isco-container">
         <PlayersCarousel :players-per-page="7" />
       </div>
     </section>

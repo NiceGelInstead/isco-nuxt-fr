@@ -38,7 +38,7 @@
             src="@/public/images/logo/Logo-IscoGroup.png"
             alt="Logo"
             class="size-11"
-          >
+          />
           <a class="text-2xl font-bold">
             <nuxt-link to="/">Isco Group</nuxt-link>
           </a>
@@ -50,9 +50,11 @@
           <li>
             <nuxt-link to="/players" class="hover:underline">Players</nuxt-link>
           </li>
-          
+
           <li>
-            <nuxt-link to="/blog" class="hover:underline">Berita & Artikel</nuxt-link>
+            <nuxt-link to="/blog" class="hover:underline"
+              >Berita & Artikel</nuxt-link
+            >
           </li>
         </ul>
         <nuxt-link

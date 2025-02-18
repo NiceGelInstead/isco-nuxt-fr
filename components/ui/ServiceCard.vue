@@ -6,7 +6,7 @@
       :src="imageSrc"
       alt="gambar-pelayanan"
       class="size-16 md:size-20 object-cover"
-    >
+    />
     <div class="my-5 md:my-8 space-y-2 md:space-y-3.5">
       <h3 class="isco-h4 line-clamp-2">{{ title }}</h3>
       <p class="isco-p-desc text-gray-600 line-clamp-3">{{ description }}</p>

@@ -7,7 +7,10 @@
         search-text="Cari berita/artikel"
         search-placeholder="Masukkan judul..."
       />
-      <SortDropdown v-model="selectedCategory" :options="['Semua', 'Berita', 'Artikel']" />
+      <SortDropdown
+        v-model="selectedCategory"
+        :options="['Semua', 'Berita', 'Artikel']"
+      />
     </div>
 
     <!-- Jika dalam mode default (tanpa filter & di halaman pertama) -->
@@ -50,7 +53,10 @@
     <!-- Jika ada pencarian atau filter aktif atau halaman bukan 1 -->
     <div v-else>
       <!-- Jika tidak ada data yang cocok -->
-      <div v-if="filteredData.length === 0" class="mt-4 text-center text-gray-600">
+      <div
+        v-if="filteredData.length === 0"
+        class="mt-4 text-center text-gray-600"
+      >
         Berita & artikel yang anda cari tidak ada.
       </div>
       <!-- Jika ada data, tampilkan dengan card style 3 -->
@@ -85,50 +91,60 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
-import blogData from '~/types/blogData.json'
-import usePagination from '~/composables/usePagination'
+import { ref, computed } from "vue";
+import blogData from "~/types/blogData.json";
+import usePagination from "~/composables/usePagination";
 
 // STATE UNTUK SEARCH DAN SORT
-const searchQuery = ref('')
-const selectedCategory = ref('Semua')
+const searchQuery = ref("");
+const selectedCategory = ref("Semua");
 
 // FILTERING DATA BERDASARKAN SEARCH DAN SORT
 const filteredData = computed(() => {
-  const query = searchQuery.value.toLowerCase().trim()
+  const query = searchQuery.value.toLowerCase().trim();
   return blogData.filter((item) => {
     const matchesQuery = query
       ? item.title.toLowerCase().includes(query) ||
         item.category.toLowerCase().includes(query)
-      : true
+      : true;
     const matchesCategory =
-      selectedCategory.value === 'Semua'
+      selectedCategory.value === "Semua"
         ? true
-        : item.category.toLowerCase() === selectedCategory.value.toLowerCase()
-    return matchesQuery && matchesCategory
-  })
-})
+        : item.category.toLowerCase() === selectedCategory.value.toLowerCase();
+    return matchesQuery && matchesCategory;
+  });
+});
 
 // PANGGIL COMPOSABLE PAGINATION DENGAN DATA YANG SUDAH DIFILTER
-const { currentPage, totalPages, currentPageData, nextPage, prevPage, isMobile } =
-  usePagination({ data: filteredData })
+const {
+  currentPage,
+  totalPages,
+  currentPageData,
+  nextPage,
+  prevPage,
+  isMobile,
+} = usePagination({ data: filteredData });
 
 // MODE DEFAULT: Search kosong, kategori "Semua", dan halaman 1
 const isDefaultView = computed(() => {
-  return searchQuery.value.trim() === '' && selectedCategory.value === 'Semua' && currentPage.value === 1
-})
+  return (
+    searchQuery.value.trim() === "" &&
+    selectedCategory.value === "Semua" &&
+    currentPage.value === 1
+  );
+});
 
 // UNTUK TAMPILAN DEFAULT (DATA TIDAK DIFILTER)
 // Pisahkan data berdasarkan kategori (perhatikan data JSON memiliki "Berita" dan "Artikel")
 const beritaData = computed(() =>
-  blogData.filter((item) => item.category.toLowerCase() === 'berita')
-)
+  blogData.filter((item) => item.category.toLowerCase() === "berita"),
+);
 const artikelData = computed(() =>
-  blogData.filter((item) => item.category.toLowerCase() === 'artikel')
-)
+  blogData.filter((item) => item.category.toLowerCase() === "artikel"),
+);
 
 // Default view: Card 1 untuk berita pertama, Card 2 untuk 3 berita berikutnya, Card 3 untuk 6 artikel pertama
-const card1Data = computed(() => beritaData.value.slice(0, 1))
-const card2Data = computed(() => beritaData.value.slice(1, 5))
-const card3Data = computed(() => artikelData.value.slice(0, 6))
+const card1Data = computed(() => beritaData.value.slice(0, 1));
+const card2Data = computed(() => beritaData.value.slice(1, 5));
+const card3Data = computed(() => artikelData.value.slice(0, 6));
 </script>
