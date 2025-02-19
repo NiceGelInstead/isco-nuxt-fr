@@ -22,10 +22,10 @@ const route = useRoute();
 const slug = route.params.slug as string;
 
 // Fetch the article based on the slug
-const { data, error } = await useApiData<Article>(
+const { data, error } = await useApiData<Article[]>(
   `/api/articles?filters[slug][$eq]=${slug}&populate=*`
 );
 
-const article = computed(() => data.value?.data?.[0] ?? defaultArticle);
+const article = computed(() => data.value?.data[0] ?? defaultArticle);
 
 </script>
