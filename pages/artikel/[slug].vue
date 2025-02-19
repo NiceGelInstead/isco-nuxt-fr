@@ -6,7 +6,7 @@
       css-class="w-full h-64 object-cover rounded-xl"
     />
       <h1 class="text-3xl font-bold">{{ article.title }}</h1>
-      <p class="text-gray-600 my-2">{{ article.author }} - {{ article.category }}</p>
+      <p class="text-gray-600 my-2">{{ article.author?.name }} - {{ article.category?.name }}</p>
       <p class="text-lg text-gray-800">{{ article.description }}</p>
     </div>
   </div>
