@@ -23,7 +23,7 @@ const slug = route.params.slug as string;
 
 // Fetch the article based on the slug
 const { data, error } = await useApiData<Article[]>(
-  `/api/articles?filters[slug][$eq]=${slug}&populate=*`
+  `/api/articles?sort[0]=title:asc&filters[slug][$eq]=${slug}&populate[author][fields][0]=name&populate[category][fields][0]=name&populate[cover][fields][0]=url&fields[0]=title&fields[1]=slug&fields[2]=updatedAt&fields[3]=description&fields[4]=documentId&populate[blocks][populate]=*`
 );
 
 const article = computed(() => data.value?.data[0] ?? defaultArticle);
