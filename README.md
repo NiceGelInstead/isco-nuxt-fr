@@ -40,3 +40,11 @@ fr fr
 ### Runtime Config
 
 You might want to set `siteUrl` in `.env` or in `nuxt.config.ts`
+
+### Strapi API Reference
+
+Please use `/graphql` on Strapi, then asked ChatGPT to change the GraphQL format to [this](https://docs.strapi.io/dev-docs/api/rest/interactive-query-builder) format for REST API
+
+#### Articles Population
+
+`/api/articles?sort[0]=title:asc&filters[slug][$eq]=beautiful-picture&populate[author][fields][0]=name&populate[category][fields][0]=name&populate[cover][fields][0]=url&fields[0]=title&fields[1]=slug&fields[2]=updatedAt&fields[3]=description&fields[4]=documentId`
