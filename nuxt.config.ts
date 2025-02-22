@@ -11,12 +11,19 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   runtimeConfig: {
-    strapiUrl: "https://admin.testjellysuper.my.id",
+    strapiUrl: "https://staging.testjellysuper.my.id",
     public: {
-      strapiUrl: "https://admin.testjellysuper.my.id",
+      strapiUrl: "https://staging.testjellysuper.my.id",
+      graphql: {
+        clients: {
+          default: {
+            endpoint: 'https://staging.testjellysuper.my.id/graphql',
+          },
+        }
+      }
     },
   },
-  modules: ["nuxt-qrcode", "@nuxt/eslint"],
+  modules: ["nuxt-qrcode", "@nuxt/eslint", "nuxt-graphql-request"],
   css: ["~/assets/css/index.css"],
   vite: {
     plugins: [tailwindcss()],
