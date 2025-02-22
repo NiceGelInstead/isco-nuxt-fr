@@ -7,7 +7,7 @@ interface ArticlesResponse {
   articles: Article[]
 }
 
-const query = gql`
+const allArticlesQuery = gql`
   query RequestAllArticles {
     articles {
       title
@@ -17,12 +17,24 @@ const query = gql`
   }
 `
 
+const filteredArticleQuery = gql`
+query RequestAllArticles($filters: ArticleFiltersInput) {
+  articles(filters: $filters) {
+    title
+    slug
+    documentId
+  }
+}
+`
+
 export const fetchAllArticles = async (): Promise<Article[]> => {
   const { $graphql } = useNuxtApp()
-  const data = await $graphql.default.request<ArticlesResponse>(query)
+  const data = await $graphql.default.request<ArticlesResponse>(allArticlesQuery)
   return data.articles
 }
 
-export function useFetchArticles() {
-  return { fetchAllArticles: fetchAllArticles }
+export const fetchFilteredArticles = async (filters: Record<string, any>): Promise<Article[]> => {
+  const { $graphql } = useNuxtApp()
+  const data = await $graphql.default.request<ArticlesResponse>(filteredArticleQuery, { filters })
+  return data.articles
 }
