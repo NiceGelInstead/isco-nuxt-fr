@@ -41,9 +41,14 @@ fr fr
 
 You might want to set `siteUrl` in `.env` or in `nuxt.config.ts`
 
-### Strapi API Reference (REST API)
+### GraphQL API
 
-> For GraphQL, please playround in /graphql on Strapi
+Visit `/graphql` (Apollo Server Playground) on Strapi Backend to playground your API. See Examples code in composables.
+
+1. You basically just need to copy paste "Operation" from the playground (example: blog.vue)
+2. Any filters applied, copy them inside the page (example: slub.vue)
+
+### Strapi API Reference (REST API)
 
 Please use `/graphql` on Strapi, then asked ChatGPT to change the GraphQL format to [this](https://docs.strapi.io/dev-docs/api/rest/interactive-query-builder) format for REST API
 
