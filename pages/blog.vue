@@ -26,28 +26,25 @@
           <h2>{{ article.title }}</h2>
           <p>{{ article.slug }}</p>
         </div>
-
       </div>
     </section>
-    <div>
-    
-  </div>
+    <div />
   </main>
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
-import { fetchAllArticles } from '~/composables/useFetchArticles'
-import { type Article, defaultArticle } from '~/types/articleTypes'
+import { ref, onMounted } from "vue";
+import { fetchAllArticles } from "~/composables/useFetchArticles";
+import { type Article, defaultArticle } from "~/types/articleTypes";
 
-const articles = ref<Article[]>([])
+const articles = ref<Article[]>([]);
 
 onMounted(async () => {
-  const fetchedArticles = await fetchAllArticles() // API request
-  articles.value = fetchedArticles.map(article => ({ // Merging article with defautArticle for placeholder
+  const fetchedArticles = await fetchAllArticles(); // API request
+  articles.value = fetchedArticles.map((article) => ({
+    // Merging article with defautArticle for placeholder
     ...defaultArticle,
     ...article,
-  }))
-})
+  }));
+});
 </script>
-
