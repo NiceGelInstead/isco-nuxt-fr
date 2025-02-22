@@ -17,10 +17,10 @@ export default defineNuxtConfig({
       graphql: {
         clients: {
           default: {
-            endpoint: 'https://staging.testjellysuper.my.id/graphql',
+            endpoint: "https://staging.testjellysuper.my.id/graphql",
           },
-        }
-      }
+        },
+      },
     },
   },
   modules: ["nuxt-qrcode", "@nuxt/eslint", "nuxt-graphql-request"],
