@@ -43,8 +43,11 @@ import { type Article, defaultArticle } from '~/types/articleTypes'
 const articles = ref<Article[]>([])
 
 onMounted(async () => {
-  const fetchedArticles = await fetchAllArticles()
-  articles.value = fetchedArticles.map(article => mergeWithDefault(article, defaultArticle))
+  const fetchedArticles = await fetchAllArticles() // API request
+  articles.value = fetchedArticles.map(article => ({ // Merging article with defautArticle for placeholder
+    ...defaultArticle,
+    ...article,
+  }))
 })
 </script>
 
