@@ -19,7 +19,6 @@
     cover: defaultCover,
     author: defaultAuthor,
     category: defaultCategory,
-
   };
   
   export interface Article {
