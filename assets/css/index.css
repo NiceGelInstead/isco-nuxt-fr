@@ -28,6 +28,12 @@
   @apply break-words text-pretty;
 }
 
+/* Consistent Header Height (and margin for hero) */
+:root {
+  --header-height: 4rem;
+}
+
+
 /* Komponen */
 @layer components {
   /* Tipografi */

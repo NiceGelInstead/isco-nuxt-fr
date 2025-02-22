@@ -8,7 +8,7 @@ interface ArticlesResponse {
 }
 
 const allArticlesQuery = gql`
-  query RequestAllArticles {
+  query allArticlesQuery {
     articles {
       title
       slug
@@ -18,14 +18,73 @@ const allArticlesQuery = gql`
 `;
 
 const filteredArticleQuery = gql`
-  query RequestAllArticles($filters: ArticleFiltersInput) {
-    articles(filters: $filters) {
-      title
-      slug
-      documentId
+query filteredArticleQuery($filters: ArticleFiltersInput) {
+  articles(filters: $filters) {
+    title
+    slug
+    documentId
+    cover {
+      url
+    }
+    updatedAt
+    category {
+      name
+    }
+    author {
+      name
     }
   }
-`;
+}`
+
+const singleArticleBlocksQuery = gql`
+query filteredArticleQuery($filters: ArticleFiltersInput) {
+  articles(filters: $filters) {
+    title
+    slug
+    documentId
+    cover {
+      url
+    }
+    updatedAt
+    category {
+      name
+    }
+    author {
+      name
+    }
+    blocks {
+      ... on ComponentSharedMedia {
+        __typename
+        id
+        file {
+          url
+        }
+      }
+      ... on ComponentSharedQuote {
+        __typename
+        id
+        title
+        body
+      }
+      ... on ComponentSharedRichText {
+        __typename
+        id
+        body
+      }
+      ... on ComponentSharedSlider {
+        __typename
+        id
+        files {
+          url
+        }
+      }
+      ... on Error {
+        code
+        message
+      }
+    }
+  }
+}`
 
 export const fetchAllArticles = async (): Promise<Article[]> => {
   const { $graphql } = useNuxtApp();

@@ -1,25 +1,58 @@
 <template>
-  <div class="container mx-auto px-4 py-6">
+  <main>
+  <section class="mt-[calc(var(--header-height))]">
     <div
       v-for="article in articles"
       :key="article.documentId"
-      class="max-w-3xl mx-auto"
+      class="isco-container"
     >
+      <div class="flex flex-col w-full gap-6 mb-10">
+        <span class="isco-h4 text-center text-primary capitalize">
+          {{ article.category?.name }}
+        </span>
+        <h1 class="isco-h3 text-center text-secondary">
+          {{ article.title }}
+        </h1>
+        <div class="grid grid-cols-[1fr_auto_1fr] gap-1">
+          <span class="isco-p text-primary text-end font-bold">
+            <span class="text-black">
+              Penulis
+            </span>
+            {{ article.author?.name }}
+          </span>
+          <span class="isco-p text-primary">
+            |
+          </span>
+          <span class="isco-p">
+            {{ article.updatedAt }}
+          </span>
+        </div>
+      </div>
       <ArticleCover
         :article="article"
-        css-class="w-full h-64 object-cover rounded-xl"
-      />
-      <h1 class="text-3xl font-bold">{{ article.title }}</h1>
-      <p class="text-gray-600 my-2">
-        {{ article.author?.name }} - {{ article.category?.name }}
-      </p>
-      <p class="text-lg text-gray-800">{{ article.slug }}</p>
+        css-class="w-full aspect-2/1 object-cover rounded-xl"
+      />  
     </div>
-    <div v-for="article in articles" :key="article.documentId">
-      <h2>{{ article.title }}</h2>
-      <p>{{ article.slug }}</p>
+  </section>
+  <section>
+    <div class="isco-container">
+      <div class="grid grid-cols-4">
+        <div class="dic">
+          Sidebar
+        </div>
+        <div
+          v-for="article in articles"
+          :key="article.documentId"
+          class="col-span-2">
+          Sidebar
+        </div>
+        <div>
+          Sidebar
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+</main>
 </template>
 
 <script setup lang="ts">

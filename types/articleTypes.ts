@@ -19,6 +19,7 @@ export const defaultArticle: Article = {
   cover: defaultCover,
   author: defaultAuthor,
   category: defaultCategory,
+  updatedAt: "No Date"
 };
 
 export interface Article {
@@ -30,6 +31,7 @@ export interface Article {
   cover: cover | null;
   author: author | null;
   category: category | null;
+  updatedAt: string;
 }
 interface cover {
   url: string;
