@@ -36,7 +36,7 @@ query filteredArticleQuery($filters: ArticleFiltersInput) {
   }
 }`
 
-const singleArticleBlocksQuery = gql`
+const filteredArticleWithBlocksQuery = gql`
 query filteredArticleQuery($filters: ArticleFiltersInput) {
   articles(filters: $filters) {
     title
@@ -99,6 +99,17 @@ export const fetchFilteredArticles = async (
   const { $graphql } = useNuxtApp();
   const data = await $graphql.default.request<ArticlesResponse>(
     filteredArticleQuery,
+    { filters },
+  );
+  return data.articles;
+};
+
+export const fetchFilteredArticleWithBlocks = async (
+  filters: Record<string, any>,
+): Promise<Article[]> => {
+  const { $graphql } = useNuxtApp();
+  const data = await $graphql.default.request<ArticlesResponse>(
+    filteredArticleWithBlocksQuery,
     { filters },
   );
   return data.articles;
