@@ -13,6 +13,12 @@ const allArticlesQuery = gql`
       title
       slug
       documentId
+      category {
+        name
+      }
+      cover {
+        url
+      }
     }
   }
 `;
