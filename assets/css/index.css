@@ -33,7 +33,6 @@
   --header-height: 4rem;
 }
 
-
 /* Komponen */
 @layer components {
   /* Tipografi */
@@ -56,6 +55,9 @@
     /* <<<<<<<< CHANGED IN UPSTREAM */
     @apply font-bold;
     @apply text-xl md:text-2xl;
+  }
+  .isco-h-blog-card {
+    @apply text-lg font-semibold;
   }
   .isco-p-desc {
     /* <<<<<<<< CHANGED IN UPSTREAM */
