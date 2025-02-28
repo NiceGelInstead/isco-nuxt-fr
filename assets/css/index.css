@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import "tailwindcss";
 
 /* Tema Standar */
@@ -10,7 +9,7 @@
   --color-accent: #005fcc;
   --color-text: #4f4f4f;
   --color-border-color: #c3c5c7;
-  --font-sans: "Roboto", "Plus Jakarta Sans", ui-sans-serif, system-ui,
+  --font-sans: "Inter", ui-sans-serif, system-ui,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
     "Noto Color Emoji";
 }
@@ -30,7 +29,7 @@
 
 /* Consistent Header Height (and margin for hero) */
 :root {
-  --header-height: 4rem;
+  --header-height: 100px;
 }
 
 /* Komponen */
@@ -38,8 +37,8 @@
   /* Tipografi */
   .isco-h1 {
     /* <<<<<<<< CHANGED IN UPSTREAM */
-    @apply font-bold text-white;
-    @apply text-3xl lg:text-5xl leading-snug;
+    @apply font-semibold text-white tracking-wide;
+    @apply text-3xl lg:text-5xl;
   }
   .isco-h2 {
     /* <<<<<<<< CHANGED IN UPSTREAM */
@@ -63,6 +62,17 @@
     /* <<<<<<<< CHANGED IN UPSTREAM */
     @apply text-base max-w-lg leading-relaxed;
   }
+  .isco-short-desc {
+    /* <<<<<<<< CHANGED IN UPSTREAM */
+    @apply text-lg tracking-normal max-w-lg font-normal;
+  }
+  .isco-button-text {
+    @apply text-lg font-medium tracking-normal;
+  }
+  .isco-paragraph {
+    @apply text-base font-normal tracking-normal;
+  }
+
 
   .footer-p {
     @apply text-base font-medium text-white hover:underline;
@@ -70,11 +80,10 @@
   /* Komponen */
   .btn {
     /* <<<<<<<< CHANGED IN UPSTREAM */
-    @apply rounded-lg px-5 py-3.5;
-    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary;
-    @apply transition-all duration-300;
-    @apply w-full text-center;
-    @apply md:w-auto;
+    @apply flex rounded-[10px] px-5 py-2.5 gap-1.5;
+    @apply text-center;
+    @apply w-full h-auto;
+    @apply md:w-auto ;
   }
   .btn:hover {
     /* <<<<<<<< CHANGED IN UPSTREAM */
@@ -101,15 +110,14 @@
   h3,
   h4,
   span {
-    font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
   }
   p {
-    font-family: "Roboto", sans-serif;
     @apply text-sm md:text-base max-w-lg leading-relaxed;
   }
   section {
     /* <<<<<<<< CHANGED IN UPSTREAM */
-    @apply w-full px-3 md:px-7 lg:px-14 py-24;
+    @apply w-full px-2 md:px-8 lg:px-16 py-24;
   }
 
   /* Transisi untuk paragraf dropdown */

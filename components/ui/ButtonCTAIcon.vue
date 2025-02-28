@@ -4,18 +4,19 @@
     target="_blank"
     rel="noopener noreferrer nofollow"
     role="button"
-    :aria-label="buttonText"
-    class="btn bg-primary hover:bg-cta text-white text-base font-medium"
+    aria-label="Gratis Konsultasi"
+    class="btn bg-primary hover:bg-cta text-white isco-button-text focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300 text-lg"
   >
-    {{ buttonText }}
+  <span>#</span>
+  Gratis Konsultasi
   </a>
 </template>
 
 <script setup>
-defineProps({
-  buttonText: {
-    type: String,
-    required: true,
-  },
-});
+// defineProps({
+//   buttonText: {
+//     type: String,
+//     required: true,
+//   },
+// });
 </script>
