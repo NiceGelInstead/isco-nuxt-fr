@@ -10,7 +10,7 @@
         >
           <div class="w-full col-span-7">
             <div class="w-full mb-12 md:mb-14">
-              <h1 class="isco-h1 isco-text-center-left mb-6">
+              <h1 class="isco-h1 isco-text-center-left text-white mb-6">
                 Bangun Kesuksesan Kontraktor Bersama ISCO Group
               </h1>
 
@@ -55,14 +55,14 @@
     <section id="layanan" class="">
       <div class="isco-container">
         <!-- Heading & Tagline -->
-        <div class="w-full text-center mb-12">
-          <h2 class="isco-h2 mb-4">Layanan Kami</h2>
-          <h3 class="isco-h3">Solusi Tepat untuk Setiap Tender Anda</h3>
+        <div class="w-full text-center mb-9 md:mb-10">
+          <h2 class="isco-short-desc place-self-center mb-4 text-accent">Layanan Kami</h2>
+          <h3 class="isco-h2">Solusi Tepat untuk Setiap Tender Anda</h3>
         </div>
         <!-- components/HomeServiceCard.vue -->
         <HomeServiceSection />
         <!-- Tombol CTA -->
-        <div class="flex justify-center mt-8">
+        <div class="flex justify-center mt-8 md:mt-14">
           <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
         </div>
       </div>

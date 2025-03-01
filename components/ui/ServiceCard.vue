@@ -1,21 +1,21 @@
 <template>
   <div
-    class="bg-white py-4 md:py-10 px-4 md:px-8 border-2 shadow-md border-border-color hover:border-primary rounded-xl hover:shadow-lg transition-all duration-500"
+    class="flex flex-col gap-4 md:gap-8.5 bg-white py-5 md:py-9.5 px-4 md:px-8 border-2 shadow-md border-border-color hover:border-primary rounded-xl hover:shadow-lg transition-all duration-500"
   >
     <img
       :src="imageSrc"
       alt="gambar-pelayanan"
-      class="size-16 md:size-20 object-cover"
+      class="size-16 md:size-22.5 object-cover"
     />
-    <div class="my-5 md:my-8 space-y-2 md:space-y-3.5">
-      <h3 class="isco-h4 line-clamp-2">{{ title }}</h3>
-      <p class="isco-p-desc text-gray-600 line-clamp-3">{{ description }}</p>
+    <div class="w-full">
+      <h3 class="isco-h3 line-clamp-2 mb-3">{{ title }}</h3>
+      <p class="isco-paragraph line-clamp-3">{{ description }}</p>
     </div>
     <nuxt-link
       :to="to"
-      class="text-primary text-lg font-bold hover:text-cta hover:underline"
+      class="isco-button-text text-primary hover:text-cta hover:underline"
     >
-      Lihat Layanan
+      Lihat Pelayanan
       <svg
         class="inline"
         width="0.75rem"

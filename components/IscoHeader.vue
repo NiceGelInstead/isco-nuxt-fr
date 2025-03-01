@@ -12,18 +12,18 @@
         </div>
       </div>
       <div
-        class="hidden md:flex justify-between place-content-center w-full py-2"
+        class="hidden md:flex justify-between place-content-center w-full py-2 "
       >
         <div class="place-content-center">ISCO Group</div>
         <nav class="place-content-center">
           <ul class="flex flex-row justify-between gap-8">
-            <li class="isco-paragraph font-bold">Beranda</li>
-            <li class="isco-paragraph">Layanan</li>
-            <li class="isco-paragraph">
+            <li class="isco-paragraph font-bold text-white">Beranda</li>
+            <li class="isco-paragraph text-white">Layanan</li>
+            <li class="isco-paragraph text-white">
               Tentang Kami<span class="ml-1.5">#</span>
             </li>
-            <li class="isco-paragraph">Berita & Artikel</li>
-            <li class="isco-paragraph">Anggota<span class="ml-1.5">#</span></li>
+            <li class="isco-paragraph text-white">Berita & Artikel</li>
+            <li class="isco-paragraph text-white">Anggota<span class="ml-1.5">#</span></li>
           </ul>
         </nav>
         <ButtonCTAIcon />

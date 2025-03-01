@@ -13,7 +13,7 @@
           <div
             v-for="(page, pageIndex) in pages"
             :key="pageIndex"
-            class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-4"
+            class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <ServiceCard
               v-for="(service, index) in page"
@@ -74,12 +74,12 @@
       </button>
 
       <!-- Pagination Bullets -->
-      <div class="hidden sm:flex justify-center mt-8 space-x-2">
+      <div class="hidden sm:flex justify-center mt-4 gap-2">
         <div
           v-for="page in totalPages"
           :key="page"
-          class="w-2 h-2 rounded-full transition-all duration-300"
-          :class="page === currentPage ? 'bg-primary scale-150' : 'bg-gray-300'"
+          class="w-4 h-4 rounded-full transition-all duration-300"
+          :class="page === currentPage ? 'bg-primary scale-125' : 'bg-gray-300'"
         />
       </div>
     </div>
