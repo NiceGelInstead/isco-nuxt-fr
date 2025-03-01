@@ -12,7 +12,7 @@
         </div>
       </div>
       <div
-        class="hidden md:flex justify-between place-content-center w-full py-2 "
+        class="hidden md:flex justify-between place-content-center w-full py-2"
       >
         <div class="place-content-center">ISCO Group</div>
         <nav class="place-content-center">
@@ -23,7 +23,9 @@
               Tentang Kami<span class="ml-1.5">#</span>
             </li>
             <li class="isco-paragraph text-white">Berita & Artikel</li>
-            <li class="isco-paragraph text-white">Anggota<span class="ml-1.5">#</span></li>
+            <li class="isco-paragraph text-white">
+              Anggota<span class="ml-1.5">#</span>
+            </li>
           </ul>
         </nav>
         <ButtonCTAIcon />

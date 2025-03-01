@@ -6,7 +6,7 @@
     >
       <div class="isco-container grid place-items-center">
         <div
-          class="grid grid-cols-1 md:grid-cols-12 gap-8 place-items-center py-8 lg:py-16"
+          class="grid grid-cols-1 md:grid-cols-12 gap-x-8 place-items-center py-8 lg:py-16"
         >
           <div class="w-full col-span-7">
             <div class="w-full mb-12 md:mb-14">
@@ -56,7 +56,9 @@
       <div class="isco-container">
         <!-- Heading & Tagline -->
         <div class="w-full text-center mb-9 md:mb-10">
-          <h2 class="isco-short-desc place-self-center mb-4 text-accent">Layanan Kami</h2>
+          <h2 class="isco-short-desc place-self-center mb-4 text-accent">
+            Layanan Kami
+          </h2>
           <h3 class="isco-h2">Solusi Tepat untuk Setiap Tender Anda</h3>
         </div>
         <!-- components/HomeServiceCard.vue -->
@@ -70,18 +72,24 @@
 
     <section id="mengapa-kami" class="">
       <div class="isco-container">
-        <div class="grid gap-6 grid-cols-1 lg:grid-cols-2 items-center">
+        <div
+          class="grid gap-x-6 grid-cols-1 lg:grid-cols-12 place-items-center"
+        >
           <!-- Left: Dropdown (pada mobile gambar muncul di dalam item aktif) -->
-          <div class="w-full h-full">
-            <div class="w-full mb-8 isco-text-center-left">
-              <h2 class="isco-h2 mb-4">Mengapa Memilih Kami?</h2>
-              <h3 class="isco-h3">Memajukan Kontraktor Di Indonesia</h3>
+          <div class="w-full h-full col-span-6 justify-center">
+            <div class="w-full mb-6 isco-text-center-left">
+              <h2 class="isco-short-desc mb-4 text-accent">
+                Mengapa Memilih Kami?
+              </h2>
+              <h3 class="isco-h2">
+                Memajukan Perkembangan Kontraktor Di Indonesia
+              </h3>
             </div>
             <div class="mb-14">
               <div
                 v-for="(item, index) in dropdownItems"
                 :key="item.id"
-                class="mb-6 border-b pb-4"
+                class="mb-6 border-b pb-6"
                 :class="{ 'border-cta': activeIndex === index }"
                 :aria-expanded="activeIndex === index"
               >
@@ -92,8 +100,8 @@
                 >
                   <h4
                     :class="[
-                      'text-xl text-left font-semibold transition-colors cursor-pointer',
-                      activeIndex === index ? 'text-cta' : 'hover:text-cta',
+                      'isco-h3 transition-colors cursor-pointer',
+                      activeIndex === index ? 'text-accent' : 'hover:text-cta',
                     ]"
                   >
                     {{ item.title }}
@@ -120,7 +128,7 @@
                 <!-- Konten dropdown untuk item aktif -->
                 <transition name="slide-fade">
                   <div v-if="activeIndex === index">
-                    <p class="text-gray-600 leading-relaxed mt-2">
+                    <p class="text-gray-600 leading-relaxed mt-1">
                       {{ item.text }}
                     </p>
                     <!-- Gambar untuk mobile (hanya tampil di mobile) -->
@@ -138,23 +146,23 @@
                 </transition>
               </div>
             </div>
-            <!-- Tombol CTA -->
-            <div class="flex justify-start">
-              <ButtonCTA button-text="Tentang Kami" to="#" />
-            </div>
           </div>
+          <div>.</div>
           <!-- Right: Gambar untuk desktop (hanya tampil di desktop) -->
-          <div class="hidden lg:flex h-full lg:place-content-end">
+          <div class="hidden lg:flex h-125 lg:place-content-end col-span-5">
             <transition name="fade">
               <img
                 v-if="currentImage"
                 key="desktopImage"
                 :src="currentImage"
                 alt="Dropdown Image"
-                class="w-full object-contain md:max-w-md lg:max-w-lg"
+                class="object-contain md:max-w-md lg:max-w-lg"
                 loading="lazy"
               />
             </transition>
+          </div>
+          <div class="flex place-self-start col-span-3 mt-14">
+            <ButtonCTA button-text="Lihat Profil Perusahaan" to="#" />
           </div>
         </div>
       </div>
@@ -184,7 +192,7 @@ const dropdownItems = ref([
   },
   {
     id: 2,
-    title: "Pelayanan Sertifikasi Kompeten",
+    title: "Prioritas Utama Kepuasan Klien ",
     text: "Personil aseseor berpengalaman lebih dari 10+ tahun memberi kepuasan klien.",
     image: "/images/test2.png",
   },
