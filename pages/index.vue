@@ -1,55 +1,54 @@
 <template>
   <main id="home-page" class="bg-gray-50">
-    <section id="hero" class="bg-secondary py-0 pt-[calc(var(--header-height))] min-h-screen">
-      <div
-        class="isco-container grid place-items-center"
-      >
-      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 place-items-center py-16">
-        <div class="w-full col-span-7">
-          <div class="w-full mb-8 md:mb-14">
-            <h1 class="isco-h1 isco-text-center-left mb-6">
-              Bangun Kesuksesan Kontraktor Bersama ISCO Group
-            </h1>
+    <section
+      id="hero"
+      class="bg-secondary py-0 pt-[calc(var(--header-height))] min-h-screen"
+    >
+      <div class="isco-container grid place-items-center">
+        <div
+          class="grid grid-cols-1 md:grid-cols-12 gap-8 place-items-center py-8 lg:py-16"
+        >
+          <div class="w-full col-span-7">
+            <div class="w-full mb-12 md:mb-14">
+              <h1 class="isco-h1 isco-text-center-left mb-6">
+                Bangun Kesuksesan Kontraktor Bersama ISCO Group
+              </h1>
 
-            <!-- Gambar mobile & Deskripsi -->
-            <div class="relative md:static">
-              <div
-                class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"
-              />
-              <img
-                src="@/public/images/test2.png"
-                class="w-9/10 object-cover md:hidden place-self-center"
-                alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
-              />
-              <p
-                class="isco-short-desc isco-text-center-left absolute md:static bottom-1 text-white self-center"
-              >
-                Majukan Pembangunan Kontraktor Jasa Konstruksi dan<br>
-                Jasa Konsultasi Di Indonesia Bersama Kami.
-              </p>
+              <!-- Gambar mobile & Deskripsi -->
+              <div class="relative md:static">
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"
+                />
+                <img
+                  src="@/public/images/test2.png"
+                  class="w-9/10 object-cover md:hidden place-self-center"
+                  alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
+                />
+                <p
+                  class="isco-short-desc isco-text-center-left absolute md:static bottom-1 text-white self-center"
+                >
+                  Majukan Pembangunan Kontraktor Jasa Konstruksi dan Jasa
+                  Konsultan Di Indonesia Bersama Kami.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tombol CTA -->
+            <div class="flex flex-col md:flex-row gap-2.5 md:gap-8">
+              <ButtonCTAIcon />
+              <ButtonSecondary button-text="Lihat Pelayanan" to="/pelayanan" />
             </div>
           </div>
 
-          <!-- Tombol CTA -->
-          <div class="flex flex-col md:flex-row gap-8">
-            <ButtonCTAIcon />
-            <ButtonSecondary
-              button-text="Lihat Pelayanan"
-              to="/pelayanan"
+          <!-- Gambar untuk Desktop -->
+          <div class="w-full col-span-5">
+            <img
+              src="@/assets/images/test2.png"
+              class="object-contain w-full h-125 hidden md:block justify-self-end"
+              alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
             />
           </div>
         </div>
-
-        <!-- Gambar untuk Desktop -->
-        <div class="w-full col-span-5">
-          <img
-            src="@/assets/images/test2.png"
-            class="object-contain w-full h-125 max-w-lg hidden md:block justify-self-end"
-            alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
-          />
-        </div>
-      </div>
-        
       </div>
     </section>
 

@@ -3,7 +3,7 @@
     :to="to"
     role="button"
     :aria-label="buttonText"
-    class="btn border-1 border-white bg-transparent text-white text-base font-medium isco-button-text text-lg"
+    class="btn border-2 border-white bg-transparent text-white text-base font-medium isco-button-text text-lg"
   >
     {{ buttonText }}
   </nuxt-link>

@@ -6,38 +6,36 @@
         :key="article.documentId"
         class="isco-container"
       >
-      <div class="grid grid-cols-1 lg:grid-cols-4 gap-2.5">
-        <div class="col-span-1 lg:col-span-4">
-          <div class="flex flex-col w-full gap-6 mb-10">
-          <span class="isco-h4 text-center text-primary capitalize">
-            {{ article.category?.name }}
-          </span>
-          <h1 class="isco-h3 text-center text-secondary">
-            {{ article.title }}
-          </h1>
-          <div class="grid grid-cols-[1fr_auto_1fr] gap-1">
-            <span class="isco-p text-primary text-end font-bold">
-              <span class="text-black"> Penulis </span>
-              {{ article.author?.name }}
-            </span>
-            <span class="isco-p text-primary"> | </span>
-            <span class="isco-p">
-              {{ article.updatedAt }}
-            </span>
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-2.5">
+          <div class="col-span-1 lg:col-span-4">
+            <div class="flex flex-col w-full gap-6 mb-10">
+              <span class="isco-h4 text-center text-primary capitalize">
+                {{ article.category?.name }}
+              </span>
+              <h1 class="isco-h3 text-center text-secondary">
+                {{ article.title }}
+              </h1>
+              <div class="grid grid-cols-[1fr_auto_1fr] gap-1">
+                <span class="isco-p text-primary text-end font-bold">
+                  <span class="text-black"> Penulis </span>
+                  {{ article.author?.name }}
+                </span>
+                <span class="isco-p text-primary"> | </span>
+                <span class="isco-p">
+                  {{ article.updatedAt }}
+                </span>
+              </div>
+            </div>
+            <ArticleCover
+              :article="article"
+              css-class="w-full aspect-2/1 object-cover rounded-xl"
+            />
           </div>
-        </div>
-        <ArticleCover
-          :article="article"
-          css-class="w-full aspect-2/1 object-cover rounded-xl"
-        />
-        </div>
-        <div class="hidden lg:block sticky ">
-          <SideCTA />
-        </div>
-        <div class="col-span-1 lg:col-span-2">
-            CONTENT_HERE
-        </div>
-        <div class="grid grid-rows-3">
+          <div class="hidden lg:block sticky">
+            <SideCTA />
+          </div>
+          <div class="col-span-1 lg:col-span-2">CONTENT_HERE</div>
+          <div class="grid grid-rows-3">
             <p v-if="isAllArticlesLoading">Loading related articles...</p>
             <BlogCardNoDescription
               v-for="article in allArticles"
@@ -45,7 +43,7 @@
               :key="article.documentId"
               :article="article"
             />
-        </div>
+          </div>
         </div>
       </div>
     </section>

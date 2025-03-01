@@ -7,8 +7,8 @@
     aria-label="Gratis Konsultasi"
     class="btn bg-primary hover:bg-cta text-white isco-button-text focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300 text-lg"
   >
-  <span>#</span>
-  Gratis Konsultasi
+    <span>#</span>
+    Gratis Konsultasi
   </a>
 </template>
 
