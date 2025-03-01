@@ -5,7 +5,7 @@
     rel="noopener noreferrer nofollow"
     role="button"
     aria-label="Gratis Konsultasi"
-    class="btn bg-primary hover:bg-cta text-white isco-button-text focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300 text-lg"
+    class="btn border-2 border-primary bg-primary hover:bg-cta text-white isco-button-text focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300 text-lg"
   >
     <span>#</span>
     Gratis Konsultasi
