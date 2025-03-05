@@ -174,7 +174,48 @@
 
     <section id="artikel-dan-berita" class="">
       <div class="isco-container">
-        <PlayersCarousel :players-per-page="7" />
+        <div class="w-full text-center mb-9 md:mb-10">
+          <h2 class="isco-short-desc place-self-center mb-4 text-accent">
+            Berita & Artikel
+          </h2>
+          <h3 class="isco-h2">
+            Temukan Informasi Terkini Tentang Dunia Konstruksi
+          </h3>
+        </div>
+        <div class="flex justify-between w-full pt-16 pb-10">
+          <div class="isco-h2 text-black">Berita Terbaru</div>
+          <div class="isco-button-text text-primary">
+            Lihat Semua <span class="ml-3">#</span>
+          </div>
+        </div>
+        <div
+          class="w-full rounded-xl bg-[url(/images/munas-perdana-p2.jpeg)] h-108 object-cover object-center flex items-end"
+        >
+          <div
+            class="w-full py-10 px-8 bg-gradient-to-t from-black/100 to-transparent rounded-xl"
+          >
+            <div class="W-full isco-paragraph text-white mb-1.5">
+              Artikel
+              <span class="px-2.5">|</span>
+              24 Desember 2024
+            </div>
+            <div class="w-full">
+              <h3 class="isco-h3 text-white mb-2.5">
+                Pinned Article, This Article are Marked as “Featured”
+              </h3>
+              <p class="isco-paragraph text-white max-w-full">
+                Add Strapi configuration for this “Featured” article. Also this
+                is supposedly short description (meta description in SEO terms)
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-4 mt-10 gap-8">
+          <BlogCard1 />
+          <BlogCard1 />
+          <BlogCard1 />
+          <BlogCard1 />
+        </div>
       </div>
     </section>
   </main>

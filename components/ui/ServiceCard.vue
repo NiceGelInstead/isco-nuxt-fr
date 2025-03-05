@@ -1,11 +1,11 @@
 <template>
   <div
-    class="flex flex-col gap-4 md:gap-8.5 bg-white py-5 md:py-9.5 px-4 md:px-8 border-2 shadow-md border-border-color hover:border-primary rounded-xl hover:shadow-lg transition-all duration-500"
+    class="flex flex-col gap-4 md:gap-8.5 bg-white py-4 md:py-9.5 px-5 md:px-8 border-2 shadow-md border-border-color hover:border-primary rounded-xl hover:shadow-lg transition-all duration-500"
   >
     <img
       :src="imageSrc"
       alt="gambar-pelayanan"
-      class="size-16 md:size-22.5 object-cover"
+      class="size-19 md:size-22.5 object-cover"
     />
     <div class="w-full">
       <h3 class="isco-h3 line-clamp-2 mb-3">{{ title }}</h3>
