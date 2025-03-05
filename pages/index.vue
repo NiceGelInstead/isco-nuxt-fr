@@ -210,19 +210,31 @@
             </div>
           </div>
         </div>
-        <div class="grid grid-cols-4 mt-10 gap-8">
-          <BlogCard1 />
-          <BlogCard1 />
-          <BlogCard1 />
-          <BlogCard1 />
+        <div v-if="articles.length === 0" class="text-center mt-10">Loading articles...</div>
+        <div v-else class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+          <BlogCard
+            v-for="article in articles" 
+            :key="article.id" 
+            :article="article"
+          />
         </div>
-      </div>
+        </div>
     </section>
   </main>
 </template>
 
 <script setup lang="ts">
-import ButtonCTAIcon from "~/components/ui/ButtonCTAIcon.vue";
+import { fetchAllArticles } from "~/composables/useFetchArticles";
+import { type Article, defaultArticle } from "~/types/articleTypes";
+const articles = ref<Article[]>([]);
+onMounted(async () => {
+  const fetchedArticles = await fetchAllArticles(); // API request
+  articles.value = fetchedArticles.map((article) => ({
+    // Merging article with defautArticle for placeholder
+    ...defaultArticle,
+    ...article,
+  }));
+});
 
 const dropdownItems = ref([
   {

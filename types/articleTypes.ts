@@ -2,7 +2,7 @@
 
 // Default in case of nulls
 export const defaultCover: cover = {
-  url: "", // this has to be above defaultPlayer for whatever reason XD
+  url: "/images/munas-perdana-p2.jpeg", // this has to be above defaultPlayer for whatever reason XD
 };
 export const defaultAuthor: author = {
   name: "Isco Group", // this has to be above defaultPlayer for whatever reason XD

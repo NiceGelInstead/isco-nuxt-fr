@@ -13,6 +13,7 @@ const allArticlesQuery = gql`
       title
       slug
       documentId
+      description
       category {
         name
       }
