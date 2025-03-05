@@ -1,6 +1,6 @@
 <template>
   <a
-    :href="`/articles/${article.slug}`"
+    :href="`/artikel/${article.slug}`"
     class="w-full flex flex-col gap-1.5 md:gap-3"
   >
     <ArticleCover
@@ -9,7 +9,7 @@
     />
     <div class="isco-small-text md:isco-paragraph">
       <span class="text-primary">
-        {{ article.category.name }}
+        {{ computedCategory }}
       </span>
       <span class="px-1 md:px-2.5"> | </span>
       <span class="text-text">
@@ -29,17 +29,14 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from "vue";
-
-const props = defineProps({
-  article: { type: Object, required: true }, // Pass the entire article object
+const props = defineProps({ // Halo, selamat pagi. Saya minta artikel
+  article: { type: Object, required: true }, 
 });
 
-// Computed properties for safe handling
-const computedCategory = computed(
+const computedCategory = computed( // Kategori kalau empty
   () => props.article.category?.name || "No Category",
 );
-const formattedDate = computed(() => {
+const formattedDate = computed(() => { // Format tanggalan
   if (!props.article.updatedAt) return "No Date";
 
   const date = new Date(props.article.updatedAt);

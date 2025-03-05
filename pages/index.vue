@@ -62,7 +62,7 @@
           <h3 class="isco-h2">Solusi Tepat untuk Setiap Tender Anda</h3>
         </div>
         <!-- components/HomeServiceCard.vue -->
-        <HomeServiceSection />
+          <HomeServiceSection />
         <!-- Tombol CTA -->
         <div class="flex justify-center mt-8 md:mt-14">
           <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
@@ -172,7 +172,7 @@
       <BlockCTA />
     </section>
 
-    <section id="artikel-dan-berita" class="">
+    <section id="berita-dan-artikel" class="">
       <div class="isco-container">
         <div class="w-full text-center mb-9 md:mb-10">
           <h2 class="isco-short-desc place-self-center mb-4 text-accent">
@@ -184,15 +184,15 @@
         </div>
         <div class="flex justify-between w-full pt-16 pb-10">
           <div class="isco-h2 text-black">Berita Terbaru</div>
-          <div class="isco-button-text text-primary">
+          <div class="hidden md:block isco-button-text text-primary">
             Lihat Semua <span class="ml-3">#</span>
           </div>
         </div>
         <div
-          class="w-full rounded-xl bg-[url(/images/munas-perdana-p2.jpeg)] h-108 object-cover object-center flex items-end"
+          class="w-full rounded-xl bg-[url(/images/munas-perdana-p2.jpeg)] h-59.5 md:h-108 object-cover object-center flex items-end"
         >
           <div
-            class="w-full py-10 px-8 bg-gradient-to-t from-black/100 to-transparent rounded-xl"
+            class="w-full py-5 md:py-10 px-4 md:px-8 bg-gradient-to-t from-black/100 to-transparent rounded-xl"
           >
             <div class="W-full isco-paragraph text-white mb-1.5">
               Artikel
@@ -200,10 +200,10 @@
               24 Desember 2024
             </div>
             <div class="w-full">
-              <h3 class="isco-h3 text-white mb-2.5">
-                Pinned Article, This Article are Marked as “Featured”
+              <h3 class="isco-h3 text-white mb-2 line-clamp-1 md:line-clamp-2">
+                Pinned Article, Strapi Feature is Not Ready Yet
               </h3>
-              <p class="isco-paragraph text-white max-w-full">
+              <p class="isco-paragraph text-white max-w-full line-clamp-2">
                 Add Strapi configuration for this “Featured” article. Also this
                 is supposedly short description (meta description in SEO terms)
               </p>
@@ -211,11 +211,11 @@
           </div>
         </div>
         <div v-if="articles.length === 0" class="text-center mt-10">
-          Loading articles...
+          Loading...
         </div>
         <div
           v-else
-          class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5 md:gap-8 mt-10"
+          class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5 md:gap-8 my-10"
         >
           <BlogCard
             v-for="article in articles"
@@ -223,6 +223,7 @@
             :article="article"
           />
         </div>
+        <ButtonCTA button-text="Lihat Artikel Lainnya ->" to="#" />
       </div>
     </section>
   </main>

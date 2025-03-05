@@ -11,7 +11,7 @@
           </h3>
         </div>
         <div
-          class="flex flex-col md:flex-row gap-2.5 md:gap-8 items-center mb-10 md:mb-0"
+          class="flex flex-col md:flex-row gap-2.5 md:gap-8 md:items-center mb-10 md:mb-0"
         >
           <div class="flex items-center gap-3">
             <svg
