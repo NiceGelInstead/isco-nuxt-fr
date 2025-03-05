@@ -14,6 +14,7 @@ const allArticlesQuery = gql`
       slug
       documentId
       description
+      updatedAt
       category {
         name
       }

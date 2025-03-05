@@ -69,10 +69,14 @@
     @apply text-lg tracking-normal max-w-lg font-normal;
   }
   .isco-button-text {
-    @apply text-lg font-medium tracking-normal;
+    @apply text-base;
+    @apply md:text-lg font-medium tracking-normal;
   }
   .isco-paragraph {
     @apply text-base font-normal tracking-normal text-text;
+  }
+  .isco-small-text {
+    @apply text-xs font-normal tracking-normal text-text;
   }
 
   .footer-p {

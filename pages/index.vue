@@ -210,15 +210,20 @@
             </div>
           </div>
         </div>
-        <div v-if="articles.length === 0" class="text-center mt-10">Loading articles...</div>
-        <div v-else class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mt-10">
+        <div v-if="articles.length === 0" class="text-center mt-10">
+          Loading articles...
+        </div>
+        <div
+          v-else
+          class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5 md:gap-8 mt-10"
+        >
           <BlogCard
-            v-for="article in articles" 
-            :key="article.id" 
+            v-for="article in articles"
+            :key="article.id"
             :article="article"
           />
         </div>
-        </div>
+      </div>
     </section>
   </main>
 </template>
