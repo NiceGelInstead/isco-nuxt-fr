@@ -42,13 +42,14 @@
   .isco-h1 {
     @apply font-semibold tracking-wide;
     @apply text-3xl lg:text-5xl;
+    @apply leading-[1.25];
   }
   .isco-h2 {
     @apply font-semibold tracking-wide text-secondary;
     @apply text-3xl lg:text-4xl;
   }
   .isco-h3 {
-    @apply font-semibold;
+    @apply font-medium;
     @apply text-xl lg:text-2xl;
   }
   .isco-h4 {

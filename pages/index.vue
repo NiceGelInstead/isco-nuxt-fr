@@ -156,7 +156,7 @@
                 key="desktopImage"
                 :src="currentImage"
                 alt="Dropdown Image"
-                class="object-contain md:max-w-md lg:max-w-lg"
+                class="object-contain"
                 loading="lazy"
               />
             </transition>
@@ -210,12 +210,12 @@
             </div>
           </div>
         </div>
-        <div v-if="articles.length === 0" class="text-center mt-10">
+        <div v-if="articles.length === 0" class="text-center my-10">
           Loading...
         </div>
         <div
           v-else
-          class="grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-5 md:gap-8 my-10"
+          class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-x-8 md:gap-y-8 my-10"
         >
           <BlogCard
             v-for="article in articles"

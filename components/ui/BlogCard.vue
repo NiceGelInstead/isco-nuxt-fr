@@ -1,30 +1,32 @@
 <template>
   <a
     :href="`/artikel/${article.slug}`"
-    class="w-full flex flex-col gap-1.5 md:gap-3"
+    class="w-full flex flex-col border-2 border-border-color"
   >
     <ArticleCover
       :article="article"
-      css-class="w-full h-28.5 md:h-37.5 object-cover object-center rounded-xl"
+      css-class="w-full h-28.5 md:h-51 object-cover object-center rounded-xl"
     />
-    <div class="isco-small-text md:isco-paragraph">
-      <span class="text-primary">
-        {{ computedCategory }}
-      </span>
-      <span class="px-1 md:px-2.5"> | </span>
-      <span class="text-text">
-        {{ formattedDate }}
-      </span>
+    <div class="flex flex-col gap-4 p-4">
+      <div class="isco-small-text md:isco-paragraph">
+        <span class="text-primary">
+          {{ computedCategory }}
+        </span>
+        <span class="px-1 md:px-2.5"> | </span>
+        <span class="text-text">
+          {{ formattedDate }}
+        </span>
+      </div>
+      <div class="w-full">
+        <h2 class="isco-h3 mb-3 line-clamp-2">
+          {{ article.title }}
+        </h2>
+        <p class="hidden md:block text-text line-clamp-4">
+          {{ article.description }}
+        </p>
+      </div>
+      <div class="isco-button-text text-primary">Baca Selengkapnya</div>
     </div>
-    <div class="w-full">
-      <h2 class="isco-h3 mb-1.5 line-clamp-2">
-        {{ article.title }}
-      </h2>
-      <p class="hidden md:block text-text line-clamp-4">
-        {{ article.description }}
-      </p>
-    </div>
-    <div class="isco-button-text text-primary">Baca Selengkapnya</div>
   </a>
 </template>
 

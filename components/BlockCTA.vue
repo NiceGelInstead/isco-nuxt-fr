@@ -6,7 +6,7 @@
           <h2 class="isco-h2 text-white isco-text-center-left mb-4">
             Menang Tender Lebih Banyak Mulai Hari Ini!
           </h2>
-          <h3 class="isco-p-desc font-medium text-white isco-text-center-left">
+          <h3 class="isco-p-desc text-white isco-text-center-left">
             WhatsApp Kami dan Konsultasikan Kebutuhan Anda Sekarang!
           </h3>
         </div>
