@@ -40,20 +40,21 @@
 @layer components {
   /* Tipografi RULE */
   .isco-h1 {
-    @apply font-semibold tracking-wide;
+    @apply font-bold tracking-[0.02em];
     @apply text-3xl lg:text-5xl;
     @apply leading-[1.25];
   }
   .isco-h2 {
-    @apply font-semibold tracking-wide text-secondary;
+    @apply font-semibold text-secondary;
     @apply text-3xl lg:text-4xl;
+    @apply leading-[1.2];
   }
   .isco-h3 {
     @apply font-medium;
     @apply text-sm lg:text-2xl;
   }
   .isco-h4 {
-    @apply font-bold;
+    @apply font-semibold;
     @apply text-xl md:text-2xl;
   }
   .isco-short-desc {

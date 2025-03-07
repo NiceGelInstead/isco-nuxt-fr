@@ -1,14 +1,14 @@
 <template>
-  <main id="home-page" class="bg-gray-50">
+  <main id="home-page" class="">
     <section
       id="hero"
       class="bg-secondary py-0 pt-[calc(var(--header-height))] min-h-screen"
     >
       <div class="isco-container grid place-items-center">
         <div
-          class="grid grid-cols-1 md:grid-cols-12 gap-x-8 place-items-center py-8 lg:py-16"
+          class="grid grid-cols-1 md:grid-cols-12 gap-x-8 justify-between py-8 lg:py-16"
         >
-          <div class="w-full col-span-7">
+          <div class="w-full col-span-6 place-self-center">
             <div class="w-full mb-12 md:mb-14">
               <h1 class="isco-h1 isco-text-center-left text-white mb-6">
                 Bangun Kesuksesan Kontraktor Bersama ISCO Group
@@ -36,10 +36,12 @@
             <!-- Tombol CTA -->
             <div class="flex flex-col md:flex-row gap-2.5 md:gap-8">
               <ButtonCTAIcon />
-              <ButtonSecondary button-text="Lihat Pelayanan" to="/pelayanan" />
+              <ButtonSecondary button-text="Lihat Layanan" to="/pelayanan" />
             </div>
           </div>
-
+          <div>
+            .
+          </div>
           <!-- Gambar untuk Desktop -->
           <div class="w-full col-span-5">
             <img
@@ -52,14 +54,17 @@
       </div>
     </section>
 
-    <section id="layanan" class="">
+    <section id="layanan" class="bg-gray-50">
       <div class="isco-container">
         <!-- Heading & Tagline -->
         <div class="w-full text-center mb-9 md:mb-10">
-          <h2 class="isco-short-desc place-self-center mb-4 text-accent">
+          <h2 class="isco-short-desc place-self-center mb-4 md:mb-6 text-primary">
             Layanan Kami
           </h2>
-          <h3 class="isco-h2">Solusi Tepat untuk Setiap Tender Anda</h3>
+          <h3 class="isco-h2">
+            Solusi Tepat Untuk Setiap<br>
+            Tender Anda
+          </h3>
         </div>
         <!-- components/HomeServiceCard.vue -->
           <HomeServiceSection />
@@ -76,9 +81,9 @@
           class="grid gap-x-6 grid-cols-1 lg:grid-cols-12 place-items-center"
         >
           <!-- Left: Dropdown (pada mobile gambar muncul di dalam item aktif) -->
-          <div class="w-full h-full col-span-6 justify-center">
+          <div class="w-full col-span-6 place-self-center">
             <div class="w-full mb-6 isco-text-center-left">
-              <h2 class="isco-short-desc mb-4 text-accent">
+              <h2 class="isco-short-desc mb-4 text-primary">
                 Mengapa Memilih Kami?
               </h2>
               <h3 class="isco-h2">
@@ -89,7 +94,7 @@
               <div
                 v-for="(item, index) in dropdownItems"
                 :key="item.id"
-                class="mb-6 border-b px-4 pb-6"
+                class="mb-6 border-b pb-6"
                 :class="{ 'border-cta': activeIndex === index }"
                 :aria-expanded="activeIndex === index"
               >
@@ -101,7 +106,7 @@
                   <h4
                     :class="[
                       'isco-h3 transition-colors cursor-pointer',
-                      activeIndex === index ? 'text-accent' : 'hover:text-cta',
+                      activeIndex === index ? 'text-primary' : 'hover:text-cta',
                     ]"
                   >
                     {{ item.title }}
@@ -174,13 +179,19 @@
 
     <section id="berita-dan-artikel" class="">
       <div class="isco-container">
-        <div class="w-full text-center mb-9 md:mb-10">
-          <h2 class="isco-short-desc place-self-center mb-4 text-accent">
-            Berita & Artikel
-          </h2>
-          <h3 class="isco-h2">
-            Temukan Informasi Terkini Tentang Dunia Konstruksi
-          </h3>
+        <div class="py-16 grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div class="col-span-6">
+            <h2 class="isco-h4 text-primary mb-4 md:mb-6">Berita & Artikel</h2>
+            <h3 class="isco-h2 text-left">Temukan Informasi Terkini tentang Dunia Konstruksi</h3>
+          </div>
+          <div class="col-span-2">
+            .
+          </div>
+          <div class="flex h-full col-span-4">
+            <p class="isco-paragraph mt-auto">
+              Berita, pengumuman, dan wawasan seputar dunia konstuksi para ahli industri, pemerintah, dan asosiasi terkemuka.
+            </p>
+          </div>
         </div>
         <div class="flex justify-between w-full mt-8 md:mt-16 mb-10">
           <div class="isco-h2 text-black">Berita Terbaru</div>
