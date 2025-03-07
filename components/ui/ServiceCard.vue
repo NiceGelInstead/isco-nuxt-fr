@@ -1,14 +1,15 @@
 <template>
   <div
-    class="flex flex-col gap-4 md:gap-8.5 bg-white py-4 md:py-9.5 px-5 md:px-8 border-2 shadow-md border-border-color hover:border-primary rounded-xl hover:shadow-lg transition-all duration-500"
+    class="flex md:flex-col gap-4 md:gap-8.5 bg-white py-4 md:py-9.5 px-5 md:px-8 border-2 shadow-md border-border-color hover:border-primary rounded-xl hover:shadow-lg transition-all duration-500"
   >
     <img
       :src="imageSrc"
       alt="gambar-pelayanan"
-      class="size-19 md:size-22.5 object-cover"
+      class="size-19 md:size-22.5 object-cover self-center md:self-start"
     />
     <div class="w-full">
-      <h3 class="isco-h3 line-clamp-2 mb-3">{{ title }}</h3>
+      <div class="w-full mb-4">
+      <h3 class="isco-h3 line-clamp-2 mb-2">{{ title }}</h3>
       <p class="isco-paragraph line-clamp-3">{{ description }}</p>
     </div>
     <nuxt-link
@@ -32,6 +33,7 @@
         />
       </svg>
     </nuxt-link>
+    </div>
   </div>
 </template>
 

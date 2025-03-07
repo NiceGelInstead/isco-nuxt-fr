@@ -1,13 +1,13 @@
 <template>
   <a
     :href="`/artikel/${article.slug}`"
-    class="w-full flex flex-col border-2 border-border-color"
+    class="w-full flex flex-col md:border-2 md:border-border-color"
   >
     <ArticleCover
       :article="article"
       css-class="w-full h-28.5 md:h-51 object-cover object-center rounded-xl"
     />
-    <div class="flex flex-col gap-4 p-4">
+    <div class="flex flex-col gap-1.5 md:gap-4 mt-1.5 md:mt-0 md:p-4">
       <div class="isco-small-text md:isco-paragraph">
         <span class="text-primary">
           {{ computedCategory }}
@@ -18,14 +18,14 @@
         </span>
       </div>
       <div class="w-full">
-        <h2 class="isco-h3 mb-3 line-clamp-2">
+        <h2 class="isco-h3 md:mb-3 line-clamp-2">
           {{ article.title }}
         </h2>
         <p class="hidden md:block text-text line-clamp-4">
           {{ article.description }}
         </p>
       </div>
-      <div class="isco-button-text text-primary">Baca Selengkapnya</div>
+      <div class="isco-paragraph text-primary">Baca Selengkapnya</div>
     </div>
   </a>
 </template>

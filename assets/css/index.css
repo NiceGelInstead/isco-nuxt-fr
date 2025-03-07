@@ -50,7 +50,7 @@
   }
   .isco-h3 {
     @apply font-medium;
-    @apply text-xl lg:text-2xl;
+    @apply text-sm lg:text-2xl;
   }
   .isco-h4 {
     @apply font-bold;
@@ -65,7 +65,7 @@
   }
   .isco-paragraph {
     @apply text-xs;
-    @apply text-base font-normal tracking-normal text-text;
+    @apply md:text-base font-normal tracking-normal text-text;
   }
   .isco-small-text {
     @apply text-xs font-normal tracking-normal text-text;

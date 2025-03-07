@@ -89,7 +89,7 @@
               <div
                 v-for="(item, index) in dropdownItems"
                 :key="item.id"
-                class="mb-6 border-b pb-6"
+                class="mb-6 border-b px-4 pb-6"
                 :class="{ 'border-cta': activeIndex === index }"
                 :aria-expanded="activeIndex === index"
               >
@@ -138,7 +138,7 @@
                         key="mobileImage"
                         :src="item.image"
                         alt="Dropdown Image"
-                        class="my-6 w-2/3 mx-auto object-contain block lg:hidden"
+                        class="my-6 w-full mx-auto object-contain block lg:hidden"
                         loading="lazy"
                       />
                     </transition>
@@ -161,7 +161,7 @@
               />
             </transition>
           </div>
-          <div class="flex place-self-start col-span-3 mt-14">
+          <div class="flex md:place-self-start col-span-2 md:col-span-3 mt-14">
             <ButtonCTA button-text="Lihat Profil Perusahaan" to="#" />
           </div>
         </div>
@@ -182,7 +182,7 @@
             Temukan Informasi Terkini Tentang Dunia Konstruksi
           </h3>
         </div>
-        <div class="flex justify-between w-full pt-16 pb-10">
+        <div class="flex justify-between w-full mt-8 md:mt-16 mb-10">
           <div class="isco-h2 text-black">Berita Terbaru</div>
           <div class="hidden md:block isco-button-text text-primary">
             Lihat Semua <span class="ml-3">#</span>
@@ -210,12 +210,12 @@
             </div>
           </div>
         </div>
-        <div v-if="articles.length === 0" class="text-center my-10">
+        <div v-if="articles.length === 0" class="text-center my-5 md:my-10">
           Loading...
         </div>
         <div
           v-else
-          class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-x-8 md:gap-y-8 my-10"
+          class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-x-8 md:gap-y-8 my-5 md:my-10"
         >
           <BlogCard
             v-for="article in articles"
