@@ -1,59 +1,57 @@
 <template>
-  <main>
+  <main 
+    v-for="article in articles"
+    :key="article.documentId"
+  >
     <section class="mt-[calc(var(--header-height))]">
-      <div
-        v-for="article in articles"
-        :key="article.documentId"
-        class="isco-container"
-      >
-        <div class="grid grid-cols-1 lg:grid-cols-4 gap-2.5">
-          <div class="col-span-1 lg:col-span-4">
-            <div class="flex flex-col w-full gap-6 mb-10">
-              <span class="isco-h4 text-center text-primary capitalize">
+      <div class="isco-container">
+        <div class="space-y-4 mb-16 isco-text-break-pretty">
+          <nav>
+            <ol class="flex flex-wrap lg:gap-2.5 isco-h4 uppercase text-primary">
+              <li>
+                <NuxtLink to="/">BERANDA</NuxtLink>
+              </li>
+              <svg class="fill-primary size-5 self-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+              <li>
+                <NuxtLink to="/berita-artikel">Berita & Artikel</NuxtLink>
+              </li>
+              <svg class="fill-primary size-5 self-center" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+              <li>
                 {{ article.category?.name }}
-              </span>
-              <h1 class="isco-h3 text-center text-secondary">
-                {{ article.title }}
-              </h1>
-              <div class="grid grid-cols-[1fr_auto_1fr] gap-1">
-                <span class="isco-p text-primary text-end font-bold">
-                  <span class="text-black"> Penulis </span>
-                  {{ article.author?.name }}
-                </span>
-                <span class="isco-p text-primary"> | </span>
-                <span class="isco-p">
-                  {{ article.updatedAt }}
-                </span>
-              </div>
-            </div>
-            <ArticleCover
-              :article="article"
-              css-class="w-full aspect-2/1 object-cover rounded-xl"
-            />
-          </div>
-          <div class="hidden lg:block sticky">
-            <SideCTA />
-          </div>
-          <div class="col-span-1 lg:col-span-2">CONTENT_HERE</div>
-          <div class="grid grid-rows-3">
-            <p v-if="isAllArticlesLoading">Loading related articles...</p>
-            <BlogCardNoDescription
-              v-for="article in allArticles"
-              v-else
-              :key="article.documentId"
-              :article="article"
-            />
+              </li>
+            </ol>
+          </nav>
+          <h1 class="isco-h1 text-secondary capitalize">
+            {{ article.title }}
+          </h1>
+          <div class="space-x-1.5">
+            <span>
+              Penulis
+            </span>
+            <span class="text-primary">
+              {{ article.author?.name }}
+            </span>
+            <span>
+              {{ article.updatedAt }}
+            </span>
           </div>
         </div>
+        <ArticleCover
+          :article="article"
+          css-class="w-full object-cover object-center rounded-xl"
+        />
+      </div>
+    </section>
+    <section>
+      <div class="isco-container">
+        
       </div>
     </section>
   </main>
 </template>
 
 <script setup lang="ts">
-import { useRoute } from "vue-router";
 import { type Article, defaultArticle } from "~/types/articleTypes";
-import { ref, onMounted, nextTick } from "vue";
 import {
   fetchFilteredArticles,
   fetchAllArticles,
@@ -78,7 +76,9 @@ onMounted(async () => {
         (article) => article.slug !== slug,
       );
       isAllArticlesLoading.value = false;
-    }, 500); // Defer xxx ms, Why defer? Idk, double fetching seems wasteful
+    }, 1000); // Defer xxx ms, Why defer? Idk, double fetching seems wasteful
   });
 });
+
+
 </script>
