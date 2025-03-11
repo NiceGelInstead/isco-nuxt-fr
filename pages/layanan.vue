@@ -11,7 +11,6 @@
       </div>
     </section>
       <BlockCTA />
-    </section>
   </main>
 </template>
 
