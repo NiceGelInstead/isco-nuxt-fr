@@ -39,9 +39,7 @@
               <ButtonSecondary button-text="Lihat Layanan" to="/pelayanan" />
             </div>
           </div>
-          <div>
-            .
-          </div>
+          <div>.</div>
           <!-- Gambar untuk Desktop -->
           <div class="w-full col-span-5">
             <img
@@ -58,16 +56,18 @@
       <div class="isco-container">
         <!-- Heading & Tagline -->
         <div class="w-full text-center mb-9 md:mb-10">
-          <h2 class="isco-short-desc place-self-center mb-4 md:mb-6 text-primary">
+          <h2
+            class="isco-short-desc place-self-center mb-4 md:mb-6 text-primary"
+          >
             Layanan Kami
           </h2>
           <h3 class="isco-h2">
-            Solusi Tepat Untuk Setiap<br>
+            Solusi Tepat Untuk Setiap<br />
             Tender Anda
           </h3>
         </div>
         <!-- components/HomeServiceCard.vue -->
-          <HomeServiceSection />
+        <HomeServiceSection />
         <!-- Tombol CTA -->
         <div class="flex justify-center mt-8 md:mt-14">
           <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
@@ -182,14 +182,15 @@
         <div class="py-16 grid grid-cols-1 md:grid-cols-12 gap-8">
           <div class="col-span-6">
             <h2 class="isco-h4 text-primary mb-4 md:mb-6">Berita & Artikel</h2>
-            <h3 class="isco-h2 text-left">Temukan Informasi Terkini tentang Dunia Konstruksi</h3>
+            <h3 class="isco-h2 text-left">
+              Temukan Informasi Terkini tentang Dunia Konstruksi
+            </h3>
           </div>
-          <div class="col-span-2">
-            .
-          </div>
+          <div class="col-span-2">.</div>
           <div class="flex h-full col-span-4">
             <p class="isco-paragraph mt-auto">
-              Berita, pengumuman, dan wawasan seputar dunia konstuksi para ahli industri, pemerintah, dan asosiasi terkemuka.
+              Berita, pengumuman, dan wawasan seputar dunia konstuksi para ahli
+              industri, pemerintah, dan asosiasi terkemuka.
             </p>
           </div>
         </div>

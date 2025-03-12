@@ -31,14 +31,17 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({ // Halo, selamat pagi. Saya minta artikel
-  article: { type: Object, required: true }, 
+const props = defineProps({
+  // Halo, selamat pagi. Saya minta artikel
+  article: { type: Object, required: true },
 });
 
-const computedCategory = computed( // Kategori kalau empty
+const computedCategory = computed(
+  // Kategori kalau empty
   () => props.article.category?.name || "No Category",
 );
-const formattedDate = computed(() => { // Format tanggalan
+const formattedDate = computed(() => {
+  // Format tanggalan
   if (!props.article.updatedAt) return "No Date";
 
   const date = new Date(props.article.updatedAt);

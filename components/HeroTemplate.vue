@@ -6,9 +6,7 @@
         <h1 class="isco-h4 text-primary mb-4 md:mb-6">{{ title }}</h1>
         <h2 class="isco-h2 text-left">{{ tagline }}</h2>
       </div>
-      <div class="hidden md:col-span-2">
-        .
-      </div>
+      <div class="hidden md:col-span-2">.</div>
       <div class="flex h-full col-span-4">
         <p class="isco-paragraph mt-auto">
           {{ description }}

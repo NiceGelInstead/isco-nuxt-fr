@@ -9,15 +9,15 @@
     />
     <div class="w-full">
       <div class="w-full mb-4">
-      <h3 class="isco-h3 line-clamp-2 mb-2">{{ title }}</h3>
-      <p class="isco-paragraph line-clamp-3">{{ description }}</p>
-    </div>
-    <nuxt-link
-      :to="to"
-      class="isco-button-text text-primary hover:text-cta hover:underline"
-    >
-      Lihat Pelayanan
-    </nuxt-link>
+        <h3 class="isco-h3 line-clamp-2 mb-2">{{ title }}</h3>
+        <p class="isco-paragraph line-clamp-3">{{ description }}</p>
+      </div>
+      <nuxt-link
+        :to="to"
+        class="isco-button-text text-primary hover:text-cta hover:underline"
+      >
+        Lihat Pelayanan
+      </nuxt-link>
     </div>
   </div>
 </template>

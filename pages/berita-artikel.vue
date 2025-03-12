@@ -1,10 +1,10 @@
 <template>
   <main id="Layanan Isco Group">
-        <HeroTemplate
-          title="Layanan Kami"
-          tagline="Memajukan Kontraktor di Indonesia Bersama  ISCO Group"
-          description="Kami menawarkan pelayanan lengkap untuk Kontraktor Jasa Konstruksi dan Jasa Konsultasi."
-        />
+    <HeroTemplate
+      title="Layanan Kami"
+      tagline="Memajukan Kontraktor di Indonesia Bersama  ISCO Group"
+      description="Kami menawarkan pelayanan lengkap untuk Kontraktor Jasa Konstruksi dan Jasa Konsultasi."
+    />
     <section>
       <div class="fixed-container mt-0 pt-0">
         <BlogCaraousel />

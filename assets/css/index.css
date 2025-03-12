@@ -13,11 +13,11 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
- /* Buat text TENGAH (mobile) - KIRI (desktop) */
+/* Buat text TENGAH (mobile) - KIRI (desktop) */
 .isco-text-center-left {
   @apply text-center md:text-left;
 }
- /* Buat text KIRI (mobile) - TENGAH (desktop) */
+/* Buat text KIRI (mobile) - TENGAH (desktop) */
 .isco-text-left-center {
   @apply text-left md:text-center;
 }
