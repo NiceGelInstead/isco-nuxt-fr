@@ -40,7 +40,7 @@
 @layer components {
   /* Tipografi RULE */
   .isco-h1 {
-    @apply font-medium lg:font-medium;
+    @apply font-medium lg:font-bold;
     @apply text-4xl lg:text-5xl;
     @apply leading-[1.25] tracking-[0.02em];
   }

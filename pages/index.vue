@@ -36,7 +36,7 @@
             <!-- Tombol CTA -->
             <div class="flex flex-col md:flex-row gap-2.5 md:gap-8">
               <ButtonCTAIcon />
-              <ButtonSecondary button-text="Lihat Layanan" to="/pelayanan" />
+              <ButtonSecondary button-text="Lihat Layanan" to="/layanan" />
             </div>
           </div>
           <div>.</div>
@@ -70,7 +70,7 @@
         <HomeServiceSection />
         <!-- Tombol CTA -->
         <div class="flex justify-center mt-8 md:mt-14">
-          <ButtonCTA button-text="Lihat Semua Layanan" to="/pelayanan" />
+          <ButtonCTA button-text="Lihat Semua Layanan" to="/layanan" />
         </div>
       </div>
     </section>
@@ -167,7 +167,7 @@
             </transition>
           </div>
           <div class="flex md:place-self-start col-span-2 md:col-span-3 mt-14">
-            <ButtonCTA button-text="Lihat Profil Perusahaan" to="#" />
+            <ButtonCTA button-text="Lihat Profil Perusahaan" to="/tentang" />
           </div>
         </div>
       </div>
@@ -235,7 +235,7 @@
             :article="article"
           />
         </div>
-        <ButtonCTA button-text="Lihat Artikel Lainnya ->" to="#" />
+        <ButtonCTA button-text="Lihat Artikel Lainnya ->" to="/berita-artikel" />
       </div>
     </section>
   </main>

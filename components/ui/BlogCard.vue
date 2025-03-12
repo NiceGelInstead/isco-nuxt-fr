@@ -4,8 +4,8 @@
     class="w-full flex flex-col md:border-2 md:border-border-color"
   >
     <ArticleCover
-      :article="article"
-      css-class="w-full h-28.5 md:h-51 object-cover object-center rounded-xl"
+      :url="article.cover?.url || ''"
+      cssClass="w-full h-28.5 md:h-51 object-cover object-center rounded-xl"
     />
     <div class="flex flex-col gap-1.5 md:gap-4 mt-1.5 md:mt-0 md:p-4">
       <div class="isco-small-text md:isco-paragraph">

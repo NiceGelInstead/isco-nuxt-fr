@@ -1,18 +1,16 @@
 <template>
-  <img :src="imageUrl" alt="" :class="cssClass" />
+  <img :src="computedUrl" alt="" :class="cssClass" />
 </template>
 
-<script setup>
-// URL strapi
+<script setup lang="ts">
 const config = useRuntimeConfig();
 const strapiUrl = config.public.strapiUrl;
 
-// Catch image and classes
-const props = defineProps({
-  article: Object,
-  cssClass: String,
-});
-const imageUrl = props.article?.cover?.url
-  ? strapiUrl + props.article.cover.url
-  : "";
+const props = defineProps<{
+  url: string;
+  cssClass?: string;
+}>();
+
+// Prepend the Strapi URL to the provided URL string if needed
+const computedUrl = props.url ? strapiUrl + props.url : "";
 </script>
