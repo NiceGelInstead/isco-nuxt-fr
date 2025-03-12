@@ -4,8 +4,8 @@
     :key="article.documentId"
   >
     <section class="mt-[calc(var(--header-height))]">
-      <div class="isco-container">
-        <div class="space-y-4 mb-16 isco-text-break-pretty">
+      <div class="isco-container space-y-16 lg:space-y-10">
+        <div class="space-y-4 lg:space-y-6 isco-text-break-pretty">
           <nav>
             <ol class="flex flex-wrap lg:gap-2.5 isco-h4 uppercase text-primary">
               <li>
