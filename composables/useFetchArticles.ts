@@ -1,13 +1,12 @@
 // composables/useFetchArticles.ts
-import { gql } from "nuxt-graphql-request/utils";
-import { useNuxtApp } from "#app";
+import { gql, useQuery } from '@urql/vue';
 import type { Article } from "~/types/articleTypes";
 
 interface ArticlesResponse {
   articles: Article[];
 }
 
-const allArticlesQuery = gql`
+const GET_ALL_ARTICLES_QUERY = gql`
   query allArticlesQuery {
     articles {
       title
@@ -18,34 +17,17 @@ const allArticlesQuery = gql`
       category {
         name
       }
-      cover {
-        url
-      }
-    }
-  }
-`;
-
-const filteredArticleQuery = gql`
-  query filteredArticleQuery($filters: ArticleFiltersInput) {
-    articles(filters: $filters) {
-      title
-      slug
-      documentId
-      cover {
-        url
-      }
-      updatedAt
-      category {
-        name
-      }
       author {
         name
       }
+      cover {
+        url
+      }
     }
   }
 `;
 
-const filteredArticleWithBlocksQuery = gql`
+const GET_ARTICLE_BY_SLUG = gql`
   query filteredArticleQuery($filters: ArticleFiltersInput) {
     articles(filters: $filters) {
       title
@@ -96,31 +78,19 @@ const filteredArticleWithBlocksQuery = gql`
   }
 `;
 
-export const fetchAllArticles = async (): Promise<Article[]> => {
-  const { $graphql } = useNuxtApp();
-  const data =
-    await $graphql.default.request<ArticlesResponse>(allArticlesQuery);
-  return data.articles;
-};
+export function useFetchAllArticles() {
+  return useQuery({ query: GET_ALL_ARTICLES_QUERY });
+}
 
-export const fetchFilteredArticles = async (
-  filters: Record<string, any>,
-): Promise<Article[]> => {
-  const { $graphql } = useNuxtApp();
-  const data = await $graphql.default.request<ArticlesResponse>(
-    filteredArticleQuery,
-    { filters },
-  );
-  return data.articles;
-};
-
-export const fetchFilteredArticleWithBlocks = async (
-  filters: Record<string, any>,
-): Promise<Article[]> => {
-  const { $graphql } = useNuxtApp();
-  const data = await $graphql.default.request<ArticlesResponse>(
-    filteredArticleWithBlocksQuery,
-    { filters },
-  );
-  return data.articles;
-};
+export function useFetchArticleBySlug(slug: string) {
+  return useQuery({
+    query: GET_ARTICLE_BY_SLUG,
+    variables: {
+      filters: {
+        slug: {
+          eq: slug,
+        },
+      },
+    },
+  });
+}

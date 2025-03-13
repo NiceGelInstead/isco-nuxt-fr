@@ -2,12 +2,6 @@
 import tailwindcss from "@tailwindcss/vite";
 
 export default defineNuxtConfig({
-  components: [
-    {
-      path: "~/components",
-      pathPrefix: false,
-    },
-  ],
   compatibilityDate: "2024-11-01",
   devtools: {
     enabled: true,
@@ -20,19 +14,25 @@ export default defineNuxtConfig({
     strapiUrl: "https://staging.testjellysuper.my.id",
     public: {
       strapiUrl: "https://staging.testjellysuper.my.id",
-      graphql: {
-        clients: {
-          default: {
-            endpoint: "https://staging.testjellysuper.my.id/graphql",
-          },
-        },
-      },
+      // graphql: {
+      //   clients: {
+      //     default: {
+      //       endpoint: "https://staging.testjellysuper.my.id/graphql",
+      //     },
+      //   },
+      // },
     },
   },
   // modules: ["nuxt-qrcode", "@nuxt/eslint", "nuxt-graphql-request"],
-  modules: ["nuxt-qrcode", "@nuxt/eslint"],
+  modules: ["nuxt-qrcode", "@nuxt/eslint", '@bicou/nuxt-urql'],
   css: ["~/assets/css/index.css"],
   vite: {
     plugins: [tailwindcss()],
+  },
+  urql: {
+    endpoint: "https://staging.testjellysuper.my.id/graphql"
+  },
+  build: {
+    transpile: ["@urql/vue"]
   },
 });
