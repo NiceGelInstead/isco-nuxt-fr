@@ -29,7 +29,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ["nuxt-qrcode", "@nuxt/eslint", "nuxt-graphql-request"],
+  modules: ["nuxt-qrcode", "@nuxt/eslint"],
   css: ["~/assets/css/index.css"],
   vite: {
     plugins: [tailwindcss()],
