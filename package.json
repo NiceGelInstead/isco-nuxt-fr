@@ -14,7 +14,7 @@
     "lintfix": "eslint . --fix && prettier --write ."
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.3",
+    "@tailwindcss/vite": "^4.0.14",
     "graphql": "^16.10.0",
     "html2pdf.js": "^0.10.2",
     "nuxt": "^3.16.0",
