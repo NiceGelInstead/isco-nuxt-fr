@@ -21,6 +21,11 @@ export default defineNuxtConfig({
       strapiUrl: "https://admin.testjellysuper.my.id",
     },
   },
+  image: {
+    strapi: {
+      baseURL: 'https://admin.testjellysuper.my.id'
+    }
+  },
   modules: ["nuxt-qrcode", "@nuxt/eslint", "@nuxt/image"],
   css: ["~/assets/css/index.css"],
   vite: {

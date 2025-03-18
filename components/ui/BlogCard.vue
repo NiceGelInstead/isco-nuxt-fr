@@ -4,9 +4,14 @@
     :href="`/artikel/${article.slug}`"
     class="w-full flex flex-col md:border-2 md:border-border-color"
   >
-    <ArticleCover
-      :url="article.cover?.url || ''"
-      css-class="w-full h-28.5 md:h-51 object-cover object-center rounded-xl"
+    <NuxtImg
+      provider="strapi"
+      :src="article.cover?.url || ''"
+      :alt="article.title"
+      class="w-full h-28.5 md:h-51 object-cover object-center rounded-xl"
+      format="webp"
+      loading="lazy"
+      placeholder
     />
     <div class="flex flex-col gap-1.5 md:gap-4 mt-1.5 md:mt-0 md:p-4">
       <div class="isco-small-text md:isco-paragraph">

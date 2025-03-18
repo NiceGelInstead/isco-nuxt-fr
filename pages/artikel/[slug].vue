@@ -62,14 +62,20 @@
                 </span>
               </div>
             </div>
-            <ArticleCover
-              :url="article.cover?.url || ''"
-              css-class="w-full object-cover object-center rounded-xl"
+            <NuxtImg
+              provider="strapi"
+              :src="article.cover?.url || ''"
+              :alt="article.title"
+              class="w-full object-cover object-center rounded-xl"
+              format="avif"
+              preload
             />
           </div>
         </section>
         <section>
-          <div class="isco-container" />
+          <div class="isco-container">
+            O
+          </div>
         </section>
       </div>
     </div>

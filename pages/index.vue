@@ -18,11 +18,12 @@
               <div class="relative md:static">
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"
-                />
-                <img
-                  src="@/public/images/test2.png"
-                  class="w-9/10 object-cover md:hidden place-self-center"
+                ></div>
+                <NuxtImg
+                  src="/images/test2.png"
                   alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
+                  class="w-9/10 object-cover md:hidden place-self-center"
+                  preload
                 />
                 <p
                   class="isco-short-desc isco-text-center-left absolute md:static bottom-1 text-white self-center"
@@ -42,10 +43,11 @@
           <div>.</div>
           <!-- Gambar untuk Desktop -->
           <div class="w-full col-span-5">
-            <img
-              src="@/assets/images/test2.png"
+            <NuxtImg
+              src="/images/test2.png"
               class="object-contain w-full h-125 hidden md:block justify-self-end"
               alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
+              preload
             />
           </div>
         </div>
@@ -138,13 +140,14 @@
                     </p>
                     <!-- Gambar untuk mobile (hanya tampil di mobile) -->
                     <transition name="fade">
-                      <img
+                      <NuxtImg
                         v-if="activeIndex === index"
                         key="mobileImage"
                         :src="item.image"
                         alt="Dropdown Image"
                         class="my-6 w-full mx-auto object-contain block lg:hidden"
                         loading="lazy"
+                        placeholder
                       />
                     </transition>
                   </div>
@@ -156,13 +159,14 @@
           <!-- Right: Gambar untuk desktop (hanya tampil di desktop) -->
           <div class="hidden lg:flex h-125 lg:place-content-end col-span-5">
             <transition name="fade">
-              <img
+              <NuxtImg
                 v-if="currentImage"
                 key="desktopImage"
                 :src="currentImage"
                 alt="Dropdown Image"
                 class="object-contain"
                 loading="lazy"
+                placeholder
               />
             </transition>
           </div>

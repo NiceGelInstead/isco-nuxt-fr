@@ -2,10 +2,12 @@
   <div
     class="flex md:flex-col gap-4 md:gap-8.5 bg-white py-4 md:py-9.5 px-5 md:px-8 border-2 shadow-md border-border-color hover:border-primary rounded-xl hover:shadow-lg transition-all duration-500"
   >
-    <img
+    <NuxtImg
       :src="imageSrc"
       alt="gambar-pelayanan"
       class="size-19 md:size-22.5 object-cover self-center md:self-start"
+      loading="lazy"
+      placeholder
     />
     <div class="w-full">
       <div class="w-full mb-4">
