@@ -25,4 +25,3 @@ export function useMergeArticle(article?: Partial<Article>): Article {
     },
   };
 }
-

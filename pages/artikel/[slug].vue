@@ -1,13 +1,14 @@
 <template>
   <main>
     <p
-      v-if="isMainArticleLoading"
+      v-if="status === 'pending'"
       class="mt-[calc(var(--header-height))] px-4 md:px-17.5 lg:px-35.5 text-center"
     >
       Loading...
     </p>
+    <div v-else-if="error">Error: {{ error.message }}</div>
     <div v-else>
-      <div v-for="article in articles" :key="article.documentId">
+      <div v-for="article in mergedArticles" :key="article.documentId">
         <section
           class="mt-[calc(var(--header-height))] px-4 md:px-17.5 lg:px-35.5"
         >
@@ -76,51 +77,19 @@
 </template>
 
 <script setup lang="ts">
-import {
-  fetchAllArticles,
-  fetchFilteredArticles,
-} from "~/composables/useFetchArticles";
-import { type Article, defaultArticle } from "~/types/articleTypes";
+import { useFetchFilteredArticleBySlug } from "~/composables/useFetchArticles";
+import { useMergeArticle } from "~/composables/useMergeResponse";
+import { type Article } from "~/types/articleTypes";
 
-// Reactive state
-const articles = ref<Article[]>([]);
-const allArticles = ref<Article[]>([]);
-const isMainArticleLoading = ref(true);
-const isAllArticlesLoading = ref(true);
-
-// current route slug
 const route = useRoute();
 const slug = route.params.slug as string;
 
-onMounted(async () => {
-  try {
-    // Fetch the main article
-    const fetchedArticles = await fetchFilteredArticles({ slug: { eq: slug } });
-    articles.value = fetchedArticles.map((article) => ({
-      ...defaultArticle,
-      ...article,
-    }));
-  } catch (error) {
-    console.error("Error fetching main article:", error);
-  } finally {
-    isMainArticleLoading.value = false; // Stop loading for the main article
-  }
-
-  // Fetch all articles after a delay
-  setTimeout(async () => {
-    try {
-      const fetchedAllArticles = await fetchAllArticles();
-      allArticles.value = fetchedAllArticles
-        .filter((article) => article.slug !== slug)
-        .map((article) => ({
-          ...defaultArticle,
-          ...article,
-        }));
-    } catch (error) {
-      console.error("Error fetching all articles:", error);
-    } finally {
-      isAllArticlesLoading.value = false; // Stop loading for all articles
-    }
-  }, 1000);
+const { data, status, error, refresh } = useFetchFilteredArticleBySlug(slug);
+const articles = computed(() => data.value?.data || []);
+const mergedArticles = computed(() =>
+  articles.value.map((article: Partial<Article>) => useMergeArticle(article)),
+);
+onMounted(() => {
+  refresh();
 });
 </script>
