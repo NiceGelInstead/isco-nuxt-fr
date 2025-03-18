@@ -9,8 +9,9 @@
   --color-accent: #f49515;
   --color-text: #4f4f4f;
   --color-border-color: #c3c5c7;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 /* Buat text TENGAH (mobile) - KIRI (desktop) */

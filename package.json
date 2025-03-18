@@ -8,10 +8,11 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "npm run lint:eslint && npm run lint:prettier",
+    "lint": "npm run lintfix && npm run prettierwrite",
     "lint:eslint": "eslint .",
     "lint:prettier": "prettier . --check",
-    "lintfix": "eslint . --fix && prettier --write ."
+    "lintfix": "eslint . --fix",
+    "prettierwrite": "prettier --write ."
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.14",
