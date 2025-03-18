@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       strapiUrl: "https://admin.testjellysuper.my.id",
     },
   },
-  modules: ["nuxt-qrcode", "@nuxt/eslint"],
+  modules: ["nuxt-qrcode", "@nuxt/eslint", "@nuxt/image"],
   css: ["~/assets/css/index.css"],
   vite: {
     plugins: [tailwindcss()],
