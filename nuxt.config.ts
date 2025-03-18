@@ -4,14 +4,13 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   components: [
     {
-      path: "~/components",
+      path: '~/components',
       pathPrefix: false,
     },
   ],
   compatibilityDate: "2024-11-01",
   devtools: {
     enabled: true,
-
     timeline: {
       enabled: true,
     },
@@ -20,13 +19,6 @@ export default defineNuxtConfig({
     strapiUrl: "https://staging.testjellysuper.my.id",
     public: {
       strapiUrl: "https://staging.testjellysuper.my.id",
-      graphql: {
-        clients: {
-          default: {
-            endpoint: "https://staging.testjellysuper.my.id/graphql",
-          },
-        },
-      },
     },
   },
   modules: ["nuxt-qrcode", "@nuxt/eslint"],

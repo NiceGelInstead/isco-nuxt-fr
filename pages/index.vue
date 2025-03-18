@@ -242,10 +242,18 @@
 </template>
 
 <script setup lang="ts">
-// Api fetch for blog list
-import { useFetchAllArticles } from "@/composables/useFetchArticles";
-const { data, status, error } = useFetchAllArticles();
+import { useFetchAllArticles } from "~/composables/useFetchArticles";
+
+// Api fetch for article list
+const { data, status, error, refresh } = useFetchAllArticles();
 const articles = computed(() => data.value?.data || []);
+
+onMounted(() => {
+  refresh();
+  if (window.innerWidth < 768) {
+    activeIndex.value = null;
+  }
+});
 
 const dropdownItems = ref([
   {
