@@ -1,3 +1,4 @@
+<!-- components/ui/BlogCard.vue -->
 <template>
   <a
     :href="`/artikel/${article.slug}`"
@@ -5,12 +6,12 @@
   >
     <ArticleCover
       :url="article.cover?.url || ''"
-      cssClass="w-full h-28.5 md:h-51 object-cover object-center rounded-xl"
+      css-class="w-full h-28.5 md:h-51 object-cover object-center rounded-xl"
     />
     <div class="flex flex-col gap-1.5 md:gap-4 mt-1.5 md:mt-0 md:p-4">
       <div class="isco-small-text md:isco-paragraph">
         <span class="text-primary">
-          {{ computedCategory }}
+          {{ article.category?.name }}
         </span>
         <span class="px-1 md:px-2.5"> | </span>
         <span class="text-text">
@@ -31,24 +32,13 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  // Halo, selamat pagi. Saya minta artikel
-  article: { type: Object, required: true },
-});
+import { useDateFormat } from "~/composables/useDateFormat";
+import type { Article } from "~/types/articleTypes";
+const props = defineProps<{ article: Article }>();
+const formattedDate = useDateFormat(props.article.updatedAt);
 
-const computedCategory = computed(
-  // Kategori kalau empty
-  () => props.article.category?.name || "No Category",
-);
-const formattedDate = computed(() => {
-  // Format tanggalan
-  if (!props.article.updatedAt) return "No Date";
-
-  const date = new Date(props.article.updatedAt);
-  return new Intl.DateTimeFormat("en-GB", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric",
-  }).format(date);
-});
+// Work in progress (it does works, but need to enhance the flow)
+// import { useMergeArticle } from '~/composables/useMergeResponse';
+// const { mergeArticle } = useMergeArticle();
+// const mergedArticle: Article = mergeArticle(props.article);
 </script>
