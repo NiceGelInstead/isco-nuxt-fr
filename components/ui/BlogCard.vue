@@ -35,7 +35,7 @@
 import { useDateFormat } from "~/composables/useDateFormat";
 import type { Article } from "~/types/articleTypes";
 const props = defineProps<{ article: Article }>();
-&populate[cover][fields][0]=url&populate[category][fields][0]=name&populate[author][fields][0]=name&populate[blocks][on][shared.media][populate][file][fields][0]=url&populate[blocks][on][shared.quote][fields][0]=title&populate[blocks][on][shared.quote][fields][1]=body&populate[blocks][on][shared.rich-text][fields][0]=body&populate[blocks][on][shared.slider][populate][files][fields][0]=url&fields[0]=title&fields[1]=slug&fields[2]=documentId&fields[3]=updatedAt&pagination[pageSize]=1&pagination[page]=1&status=published
+const formattedDate = useDateFormat(props.article.updatedAt);
 
 // Work in progress (it does works, but need to enhance the flow)
 // import { useMergeArticle } from '~/composables/useMergeResponse';
