@@ -1,13 +1,20 @@
 <template>
   <main>
-    <p v-if="isMainArticleLoading" class="mt-[calc(var(--header-height))] px-4 md:px-17.5 lg:px-35.5 text-center">
+    <p
+      v-if="isMainArticleLoading"
+      class="mt-[calc(var(--header-height))] px-4 md:px-17.5 lg:px-35.5 text-center"
+    >
       Loading...
     </p>
     <div v-else>
       <div v-for="article in articles" :key="article.documentId">
-        <section class="mt-[calc(var(--header-height))] px-4 md:px-17.5 lg:px-35.5">
+        <section
+          class="mt-[calc(var(--header-height))] px-4 md:px-17.5 lg:px-35.5"
+        >
           <div class="isco-container">
-            <div class="space-y-4 lg:space-y-6 isco-text-break-pretty mb-16 lg:mb-10">
+            <div
+              class="space-y-4 lg:space-y-6 isco-text-break-pretty mb-16 lg:mb-10"
+            >
               <nav>
                 <ol
                   class="flex flex-wrap lg:gap-2.5 isco-h4 uppercase text-primary"
@@ -56,12 +63,12 @@
             </div>
             <ArticleCover
               :url="article.cover?.url || ''"
-              cssClass="w-full object-cover object-center rounded-xl"
+              css-class="w-full object-cover object-center rounded-xl"
             />
           </div>
         </section>
         <section>
-          <div class="isco-container"></div>
+          <div class="isco-container" />
         </section>
       </div>
     </div>
@@ -69,7 +76,10 @@
 </template>
 
 <script setup lang="ts">
-import { fetchAllArticles, fetchFilteredArticles } from "~/composables/useFetchArticles";
+import {
+  fetchAllArticles,
+  fetchFilteredArticles,
+} from "~/composables/useFetchArticles";
 import { type Article, defaultArticle } from "~/types/articleTypes";
 
 // Reactive state
@@ -114,4 +124,3 @@ onMounted(async () => {
   }, 1000);
 });
 </script>
-
