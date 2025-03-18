@@ -222,9 +222,8 @@
             </div>
           </div>
         </div>
-        <div v-if="articles.length === 0" class="text-center my-5 md:my-10">
-          Loading...
-        </div>
+        <div v-if="status === 'pending'">Loading...</div>
+        <div v-else-if="error">Error: {{ error.message }}</div>
         <div
           v-else
           class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-x-8 md:gap-y-8 my-5 md:my-10"
@@ -235,24 +234,18 @@
             :article="article"
           />
         </div>
-        <ButtonCTA button-text="Lihat Artikel Lainnya ->" to="/berita-artikel" />
+        <ButtonCTA button-text="Lihat Artikel Lainnya ->" to="/berita" />
       </div>
     </section>
   </main>
+  <!-- <pre> {{ articles }} </pre> -->
 </template>
 
 <script setup lang="ts">
-import { fetchAllArticles } from "~/composables/useFetchArticles";
-import { type Article, defaultArticle } from "~/types/articleTypes";
-const articles = ref<Article[]>([]);
-onMounted(async () => {
-  const fetchedArticles = await fetchAllArticles(); // API request
-  articles.value = fetchedArticles.map((article) => ({
-    // Merging article with defautArticle for placeholder
-    ...defaultArticle,
-    ...article,
-  }));
-});
+// Api fetch for blog list
+import { useFetchAllArticles } from "@/composables/useFetchArticles";
+const { data, status, error } = useFetchAllArticles();
+const articles = computed(() => data.value?.data || []);
 
 const dropdownItems = ref([
   {

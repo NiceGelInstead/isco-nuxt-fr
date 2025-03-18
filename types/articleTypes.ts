@@ -1,4 +1,4 @@
-// types/playerTypes.ts
+// types/articleTypes.ts
 
 // Default in case of nulls
 export const defaultCover: cover = {
