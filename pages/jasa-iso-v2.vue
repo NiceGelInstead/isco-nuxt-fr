@@ -1,8 +1,8 @@
 <template>
   <div id="landing-page" class="landing-page bg-gray-100">
-    <section id="hero" class="pt-0 lg:pt-16 bg-secondary">
-      <div class="container min-h-[120vh] lg:min-h-screen place-content-center">
-        <div class="grid lg:grid-cols-12 items-center">
+    <section id="hero" class="bg-secondary pt-0 lg:pt-16">
+      <div class="container min-h-[120vh] place-content-center lg:min-h-screen">
+        <div class="grid items-center lg:grid-cols-12">
           <div class="flex flex-col lg:col-span-8">
             <h1 class="isco-h3 isco-text-responsive text-accent">
               Jasa Sertifikasi ISO
@@ -10,19 +10,19 @@
             <h2 class="isco-h1 isco-text-responsive mb-6">
               Menangkan Kontrak, Sukseskan Audit
             </h2>
-            <p class="text-white isco-text-responsive mb-9">
+            <p class="isco-text-responsive mb-9 text-white">
               Jasa Sertifikasi ISO Cepat, Mudah, dan Bergaransi Terbaik
               Se-Tangerang. <br />Melayani Banten dan Sekitarnya.
             </p>
             <ButtonCTA
               button-text="Sukseskan Audit Anda"
               to="/"
-              class="lg:mr-auto text-center"
+              class="text-center lg:mr-auto"
             />
-            <div class="flex gap-4 flex-wrap mt-4">
+            <div class="mt-4 flex flex-wrap gap-4">
               <div class="flex gap-2">
                 <svg
-                  class="fill-accent w-4"
+                  class="w-4 fill-accent"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                 >
@@ -34,7 +34,7 @@
               </div>
               <div class="flex gap-2">
                 <svg
-                  class="fill-accent w-4"
+                  class="w-4 fill-accent"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                 >
@@ -46,7 +46,7 @@
               </div>
               <div class="flex gap-2">
                 <svg
-                  class="fill-accent w-4"
+                  class="w-4 fill-accent"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 448 512"
                 >
@@ -61,7 +61,7 @@
           <div class="mt-8 lg:col-span-4">
             <img
               src="@/assets/images/test2.png"
-              class="w-4/5 place-self-center col-span-1"
+              class="col-span-1 w-4/5 place-self-center"
               alt="poto"
             />
           </div>
@@ -70,14 +70,14 @@
     </section>
     <section>
       <div class="container">
-        <div class="flex flex-col mb-16 gap-2">
+        <div class="mb-16 flex flex-col gap-2">
           <h2 class="isco-h2 text-center">Dapatkan Sertifikasi ISO Lengkap</h2>
-          <p class="text-center self-center">
+          <p class="self-center text-center">
             Kami menyediakan sertifikasi dari industri konstruksi, konsultan,
             hingga manufaktur.
           </p>
         </div>
-        <div class="grid gap-8 grid-cols-2 lg:grid-cols-4">
+        <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
           <IconBox
             svg="check-to-slot"
             tagline="ISO 9001"
@@ -131,9 +131,9 @@
     </section>
     <section>
       <div class="container">
-        <div class="flex flex-col mb-16 gap-2">
+        <div class="mb-16 flex flex-col gap-2">
           <h2 class="isco-h2 text-center">Mengapa Memilih Kami?</h2>
-          <p class="text-center self-center">
+          <p class="self-center text-center">
             Berpengalaman lebih dari 10+ tahun, kami membantu 100+ kontraktor
             memenangkan lebih banyak tender.
           </p>
@@ -168,18 +168,18 @@
     </section>
     <section class="bg-secondary">
       <div class="container">
-        <div class="grid lg:grid-cols-2 w-full">
+        <div class="grid w-full lg:grid-cols-2">
           <img
             src="@/assets/images/test2.png"
             class="h-2/3 place-self-center"
             alt="poto"
           />
           <div class="flex flex-col">
-            <h2 class="isco-h2 text-white text-start mb-8">Cara Kerjanya</h2>
-            <div class="grid grid-rows-3 gap-8 isco-text-break w-full">
+            <h2 class="isco-h2 mb-8 text-start text-white">Cara Kerjanya</h2>
+            <div class="isco-text-break grid w-full grid-rows-3 gap-8">
               <div class="flex items-end gap-4">
                 <span class="text-6xl text-accent"> 1. </span>
-                <div class="flex flex-col isco-text-break">
+                <div class="isco-text-break flex flex-col">
                   <h4 class="isco-h4 text-white">Konsultasi</h4>
                   <p class="text-white">
                     Hubungi kami melalui WhatsApp dan jadwalkan konsultasi
@@ -189,7 +189,7 @@
               </div>
               <div class="flex items-end gap-4">
                 <span class="text-6xl text-accent"> 2. </span>
-                <div class="flex flex-col isco-text-break">
+                <div class="isco-text-break flex flex-col">
                   <h4 class="isco-h4 text-white">Pelatihan & Verifikasi</h4>
                   <p class="text-white">
                     Lakukan pelatihan prosedur dan pehamaman standar ISO.
@@ -198,7 +198,7 @@
               </div>
               <div class="flex items-end gap-4">
                 <span class="text-6xl text-accent"> 3. </span>
-                <div class="flex flex-col isco-text-break">
+                <div class="isco-text-break flex flex-col">
                   <h4 class="isco-h4 text-white">Dokumentasi & Audit</h4>
                   <p class="text-white">
                     Berikan berkas yang dibutuhkan, kami lakukan dokumentasi dan
@@ -209,7 +209,7 @@
               <ButtonCTA
                 button-text="Sukseskan Audit Anda"
                 to="/"
-                class="lg:mr-auto text-center"
+                class="text-center lg:mr-auto"
               />
             </div>
           </div>
@@ -218,14 +218,14 @@
     </section>
     <section>
       <div class="container">
-        <div class="flex flex-col mb-4 gap-2">
+        <div class="mb-4 flex flex-col gap-2">
           <h2 class="isco-h2 text-center">Dapatkan Serfikat ISO Anda Segera</h2>
-          <p class="text-center self-center">
+          <p class="self-center text-center">
             Kami menyediakan sertifikasi dari industri konstruksi, konsultan,
             hingga manufaktur.
           </p>
         </div>
-        <div class="grid grid-cols-4 w-full place-items-center">
+        <div class="grid w-full grid-cols-4 place-items-center">
           <img
             src="@/public/images/logo/Logo-IscoGroup.png"
             class="h-8 w-8"

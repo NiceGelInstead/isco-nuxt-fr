@@ -2,7 +2,7 @@
   <main>
     <p
       v-if="status === 'pending'"
-      class="mt-[calc(var(--header-height))] px-4 md:px-17.5 lg:px-35.5 text-center"
+      class="mt-[calc(var(--header-height))] px-4 text-center md:px-17.5 lg:px-35.5"
     >
       Loading...
     </p>
@@ -14,17 +14,17 @@
         >
           <div class="isco-container">
             <div
-              class="space-y-4 lg:space-y-6 isco-text-break-pretty mb-16 lg:mb-10"
+              class="isco-text-break-pretty mb-16 space-y-4 lg:mb-10 lg:space-y-6"
             >
               <nav>
                 <ol
-                  class="flex flex-wrap lg:gap-2.5 isco-h4 uppercase text-primary"
+                  class="isco-h4 flex flex-wrap text-primary uppercase lg:gap-2.5"
                 >
                   <li>
                     <NuxtLink to="/">BERANDA</NuxtLink>
                   </li>
                   <svg
-                    class="fill-primary size-5 lg:size-6 self-center"
+                    class="size-5 self-center fill-primary lg:size-6"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 320 512"
                   >
@@ -36,7 +36,7 @@
                     <NuxtLink to="/berita-artikel">Berita & Artikel</NuxtLink>
                   </li>
                   <svg
-                    class="fill-primary size-5 self-center"
+                    class="size-5 self-center fill-primary"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 320 512"
                   >
@@ -52,7 +52,7 @@
               <h1 class="isco-h1 text-secondary capitalize">
                 {{ article.title }}
               </h1>
-              <div class="space-x-1.5 isco-short-desc">
+              <div class="isco-short-desc space-x-1.5">
                 <span> Penulis </span>
                 <span class="text-primary">
                   {{ article.author?.name }}
@@ -66,16 +66,14 @@
               provider="strapi"
               :src="article.cover?.url || ''"
               :alt="article.title"
-              class="w-full object-cover object-center rounded-xl"
+              class="w-full rounded-xl object-cover object-center"
               format="avif"
               preload
             />
           </div>
         </section>
         <section>
-          <div class="isco-container">
-            O
-          </div>
+          <div class="isco-container">O</div>
         </section>
       </div>
     </div>

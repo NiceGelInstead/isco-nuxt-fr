@@ -43,7 +43,7 @@
           animi dolor unde, ipsum officiis alias ex aliquam dolorem cumque
           nostrum tempore voluptatem dicta!
         </p>
-        <div class="flex gap-8 mt-8">
+        <div class="mt-8 flex gap-8">
           <img
             src="@/assets/images/test2.png"
             class="h-28 w-full object-contain"

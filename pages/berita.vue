@@ -11,7 +11,7 @@
         <div v-else-if="error">Error: {{ error.message }}</div>
         <div
           v-else
-          class="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-5 md:gap-x-8 md:gap-y-8 my-5 md:my-10"
+          class="my-5 grid grid-cols-2 gap-x-4 gap-y-5 md:my-10 md:grid-cols-3 md:gap-x-8 md:gap-y-8"
         >
           <BlogCard
             v-for="article in mergedArticles"

@@ -1,17 +1,17 @@
 <template>
   <div class="container">
-    <div class="flex flex-col md:flex-row justify-between items-center">
+    <div class="flex flex-col items-center justify-between md:flex-row">
       <div>
         <div class="mb-8">
-          <h2 class="isco-h2 text-white isco-text-center-left mb-4">
+          <h2 class="isco-h2 isco-text-center-left mb-4 text-white">
             Menang Tender Lebih Banyak Mulai Hari Ini!
           </h2>
-          <h3 class="isco-short-desc text-white isco-text-center-left">
+          <h3 class="isco-short-desc isco-text-center-left text-white">
             WhatsApp Kami dan Konsultasikan Kebutuhan Anda Sekarang!
           </h3>
         </div>
         <div
-          class="flex flex-col md:flex-row gap-2.5 md:gap-8 md:items-center mb-10 md:mb-0"
+          class="mb-10 flex flex-col gap-2.5 md:mb-0 md:flex-row md:items-center md:gap-8"
         >
           <div class="flex items-center gap-3">
             <svg

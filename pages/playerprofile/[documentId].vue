@@ -1,35 +1,35 @@
 <template>
-  <div class="w-full min-h-screen bg-[#FF5482] place-content-center">
+  <div class="min-h-screen w-full place-content-center bg-[#FF5482]">
     <div
       v-if="player"
       ref="pdfSection"
-      class="isco-container p-8 grid grid-cols-3 gap-8 bg-[#FF54] rounded-lg"
+      class="isco-container grid grid-cols-3 gap-8 rounded-lg bg-[#FF54] p-8"
     >
       <img
         :src="player.Photo?.url ? strapiUrl + player.Photo.url : ''"
         alt=""
-        class="w-full h-48 object-cover"
+        class="h-48 w-full object-cover"
       />
       <div class="bg-white">
         <div
           :class="{
             'text-black': !player.isAlive,
             'text-[#FF5482]': player.isAlive,
-            'text-2xl font-semibold mb-2': true,
+            'mb-2 text-2xl font-semibold': true,
           }"
         >
           {{ player.isAlive ? "Alive" : "Dead" }}
         </div>
         <h1 class="mb-8">{{ player.Name }}</h1>
-        <p class="text-lg mt-8">{{ player.EmergencyContact }}</p>
-        <div class="text-lg mb-8 underline">{{ player.uid }}</div>
+        <p class="mt-8 text-lg">{{ player.EmergencyContact }}</p>
+        <div class="mb-8 text-lg underline">{{ player.uid }}</div>
         <Qrcode :value="fullUrl" variant="pixelated" height="100" />
       </div>
     </div>
 
     <div class="mt-8 text-center">
       <button
-        class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600"
+        class="rounded-lg bg-blue-500 px-6 py-2 text-white hover:bg-blue-600"
         @click="exportToPDF"
       >
         Unduh Sertifikat

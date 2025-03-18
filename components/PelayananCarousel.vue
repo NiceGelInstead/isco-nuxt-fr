@@ -27,11 +27,11 @@
 
     <!-- Pagination -->
     <div
-      class="flex justify-center items-center mt-16 space-x-4 border-t border-border-color pt-6"
+      class="mt-16 flex items-center justify-center space-x-4 border-t border-border-color pt-6"
     >
       <button
         :disabled="currentPage === 1"
-        class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
+        class="rounded bg-primary px-4 py-2 text-white disabled:opacity-50"
         @click="prevPage"
       >
         Previous
@@ -39,7 +39,7 @@
       <span>Page {{ currentPage }} of {{ totalPages }}</span>
       <button
         :disabled="currentPage === totalPages"
-        class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
+        class="rounded bg-primary px-4 py-2 text-white disabled:opacity-50"
         @click="nextPage"
       >
         Next

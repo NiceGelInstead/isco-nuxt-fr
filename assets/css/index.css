@@ -24,7 +24,7 @@
 }
 /* Buat ~*mempercantik*~ paragraf panjang */
 .isco-text-break-pretty {
-  @apply break-words text-pretty;
+  @apply text-pretty break-words;
 }
 
 /* Pakai ini untuk MARGIN HERO agar tidak ketutupan header, header pake juga */
@@ -59,11 +59,11 @@
     @apply text-lg md:text-2xl;
   }
   .isco-short-desc {
-    @apply text-lg tracking-normal max-w-lg font-normal;
+    @apply max-w-lg text-lg font-normal tracking-normal;
   }
   .isco-button-text {
     @apply text-base;
-    @apply md:text-lg font-medium tracking-normal;
+    @apply font-medium tracking-normal md:text-lg;
   }
   .isco-paragraph {
     @apply text-base font-normal tracking-normal text-text;
@@ -73,9 +73,9 @@
   }
   /* Komponen */
   .btn {
-    @apply flex justify-center items-center rounded-xl px-5 py-2.5 gap-1.5;
+    @apply flex items-center justify-center gap-1.5 rounded-xl px-5 py-2.5;
     @apply text-center;
-    @apply w-full h-auto;
+    @apply h-auto w-full;
     @apply md:w-auto;
   }
   .btn:hover {
@@ -85,10 +85,10 @@
     @apply scale-100 shadow-sm;
   }
   .btn:disabled {
-    @apply opacity-50 cursor-not-allowed;
+    @apply cursor-not-allowed opacity-50;
   }
   .isco-container {
-    @apply max-w-7xl mx-auto;
+    @apply mx-auto max-w-7xl;
   }
 }
 
@@ -102,10 +102,10 @@
     font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
   }
   p {
-    @apply text-sm md:text-base max-w-lg leading-relaxed;
+    @apply max-w-lg text-sm leading-relaxed md:text-base;
   }
   section {
-    @apply w-full px-4 md:px-6 lg:px-10 py-16;
+    @apply w-full px-4 py-16 md:px-6 lg:px-10;
   }
 
   /* Transisi untuk paragraf dropdown */

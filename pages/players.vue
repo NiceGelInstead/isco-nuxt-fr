@@ -5,18 +5,18 @@
     <div v-else-if="players.length" class="grid grid-cols-2 gap-8 p-8">
       <div
         v-for="player in players"
-        class="p-4 bg-[#FF5482] shadow-md rounded-lg overflow-hidden"
+        class="overflow-hidden rounded-lg bg-[#FF5482] p-4 shadow-md"
       >
         <img
           :src="player.Photo?.url ? strapiUrl + player.Photo.url : ''"
           alt=""
-          class="w-full h-48 object-cover"
+          class="h-48 w-full object-cover"
         />
         <div class="p-4 text-center">
           <h3
             :class="{
               'line-through': player.isAlive,
-              'text-black text-3xl font-semibold': true,
+              'text-3xl font-semibold text-black': true,
             }"
           >
             {{ player.Name }}
@@ -26,14 +26,14 @@
             :class="{
               'text-red-500': !player.isAlive,
               'text-green-500': player.isAlive,
-              'text-3xl font-semibold bg-white my-4 p-2 rounded-full': true,
+              'my-4 rounded-full bg-white p-2 text-3xl font-semibold': true,
             }"
           >
             Time of Death: {{ player.TimeOfDeath }}
           </p>
           <NuxtLink
             :to="`/playerprofile/${player.documentId}`"
-            class="btn border-black rounded-full border-2 hover:bg-black hover:text-white font-semibold"
+            class="btn rounded-full border-2 border-black font-semibold hover:bg-black hover:text-white"
           >
             Check Their Profile
           </NuxtLink>

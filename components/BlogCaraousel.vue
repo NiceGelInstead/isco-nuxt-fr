@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto px-4 py-6">
     <!-- Search & Sort Bar -->
-    <div class="flex flex-rows gap-4 mb-6">
+    <div class="flex-rows mb-6 flex gap-4">
       <SearchBar
         v-model:search-query="searchQuery"
         search-text="Cari berita/artikel"
@@ -16,7 +16,7 @@
     <!-- Jika dalam mode default (tanpa filter & di halaman pertama) -->
     <div v-if="isDefaultView">
       <!-- Tampilan Default untuk Berita -->
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
         <!-- Kolom 1: Card Style 1 (1 data berita pertama) -->
         <div class="col-span-2">
           <BlogCard1
@@ -27,7 +27,7 @@
           />
         </div>
         <!-- Kolom 2: Card Style 2 (3 data berita berikutnya) -->
-        <div class="flex flex-col gap-8 col-span-2">
+        <div class="col-span-2 flex flex-col gap-8">
           <BlogCard2
             v-for="(item, index) in card2Data"
             :key="'card2-' + index"
@@ -39,7 +39,7 @@
 
       <!-- Tampilan Default untuk Artikel -->
       <div class="mt-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
           <BlogCard3
             v-for="(item, index) in card3Data"
             :key="'card3-' + index"
@@ -60,7 +60,7 @@
         Berita & artikel yang anda cari tidak ada.
       </div>
       <!-- Jika ada data, tampilkan dengan card style 3 -->
-      <div v-else class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div v-else class="grid grid-cols-1 gap-4 md:grid-cols-3">
         <BlogCard3
           v-for="(item, index) in currentPageData"
           :key="'filtered-' + index"
@@ -70,10 +70,10 @@
     </div>
 
     <!-- Pagination (selalu ditampilkan) -->
-    <div class="flex justify-center items-center mt-8 space-x-4 border-t pt-4">
+    <div class="mt-8 flex items-center justify-center space-x-4 border-t pt-4">
       <button
         :disabled="currentPage === 1"
-        class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
+        class="rounded bg-primary px-4 py-2 text-white disabled:opacity-50"
         @click="prevPage"
       >
         Previous
@@ -81,7 +81,7 @@
       <span>Page {{ currentPage }} of {{ totalPages }}</span>
       <button
         :disabled="currentPage === totalPages"
-        class="px-4 py-2 bg-primary text-white rounded disabled:opacity-50"
+        class="rounded bg-primary px-4 py-2 text-white disabled:opacity-50"
         @click="nextPage"
       >
         Next

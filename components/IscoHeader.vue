@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full px-3 md:px-8 lg:px-16 fixed top-0 left-0">
-    <header class="h-[calc(var(--header-height))] max-w-7xl mx-auto text-white">
-      <div class="hidden md:flex gap-8 justify-end w-full py-2">
+  <div class="fixed top-0 left-0 w-full px-3 md:px-8 lg:px-16">
+    <header class="mx-auto h-[calc(var(--header-height))] max-w-7xl text-white">
+      <div class="hidden w-full justify-end gap-8 py-2 md:flex">
         <div>
           <span class="mr-2"> # </span>
           iscogroup@gmail.com
@@ -12,7 +12,7 @@
         </div>
       </div>
       <div
-        class="hidden md:flex justify-between place-content-center w-full py-2"
+        class="hidden w-full place-content-center justify-between py-2 md:flex"
       >
         <div class="place-content-center">ISCO Group</div>
         <nav class="place-content-center">
@@ -31,7 +31,7 @@
         <ButtonCTAIcon />
       </div>
       <div
-        class="flex md:hidden justify-between place-content-center w-full py-4"
+        class="flex w-full place-content-center justify-between py-4 md:hidden"
       >
         <div class="place-content-center">ISCO Group</div>
         <div>#</div>

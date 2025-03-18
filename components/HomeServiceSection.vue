@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Desktop View: Carousel Slider -->
-    <div class="hidden md:block relative">
+    <div class="relative hidden md:block">
       <!-- Container slider -->
       <div class="overflow-hidden">
         <!-- Inner container yang akan digeser -->
@@ -13,7 +13,7 @@
           <div
             v-for="(page, pageIndex) in pages"
             :key="pageIndex"
-            class="w-full flex-shrink-0 grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
+            class="grid w-full flex-shrink-0 gap-8 sm:grid-cols-2 lg:grid-cols-3"
           >
             <ServiceCard
               v-for="(service, index) in page"
@@ -30,7 +30,7 @@
       <!-- Tombol panah Prev (kiri) -->
       <button
         :disabled="currentPage === 1"
-        class="hidden sm:flex absolute -left-5/100 top-1/2 transform -translate-y-1/2 p-2 cursor-pointer hover:scale-125 transition-all duration-300 focus:outline-none"
+        class="absolute top-1/2 -left-5/100 hidden -translate-y-1/2 transform cursor-pointer p-2 transition-all duration-300 hover:scale-125 focus:outline-none sm:flex"
         @click="prevPage"
       >
         <svg
@@ -53,7 +53,7 @@
       <!-- Tombol panah Next (kanan) -->
       <button
         :disabled="currentPage === totalPages"
-        class="hidden sm:flex absolute -right-5/100 top-1/2 transform -translate-y-1/2 p-2 hover:scale-125 transition-all duration-300 cursor-pointer focus:outline-none"
+        class="absolute top-1/2 -right-5/100 hidden -translate-y-1/2 transform cursor-pointer p-2 transition-all duration-300 hover:scale-125 focus:outline-none sm:flex"
         @click="nextPage"
       >
         <svg
@@ -74,18 +74,18 @@
       </button>
 
       <!-- Pagination Bullets -->
-      <div class="hidden sm:flex justify-center mt-4 gap-2">
+      <div class="mt-4 hidden justify-center gap-2 sm:flex">
         <div
           v-for="page in totalPages"
           :key="page"
-          class="w-4 h-4 rounded-full transition-all duration-300"
-          :class="page === currentPage ? 'bg-primary scale-125' : 'bg-gray-300'"
+          class="h-4 w-4 rounded-full transition-all duration-300"
+          :class="page === currentPage ? 'scale-125 bg-primary' : 'bg-gray-300'"
         />
       </div>
     </div>
 
     <!-- Mobile View: Menampilkan 3 card saja -->
-    <div class="md:hidden grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:hidden">
       <ServiceCard
         v-for="(service, index) in mobileServices"
         :key="index"

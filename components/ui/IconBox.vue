@@ -1,6 +1,6 @@
 <template>
   <div :class="iconBoxClasses">
-    <div class="w-16 h-16 bg-accent">
+    <div class="h-16 w-16 bg-accent">
       {{ svg }}
       <!-- install https://nuxt.com/modules/nuxt-fontawesome disini -->
     </div>

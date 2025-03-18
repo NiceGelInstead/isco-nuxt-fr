@@ -2,7 +2,7 @@
   <NuxtLink
     to="https://wa.me/6285157375776"
     target="_blank"
-    class="btn border-2 border-primary bg-primary hover:bg-cta text-white isco-button-text focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition-all duration-300 text-lg"
+    class="btn isco-button-text border-2 border-primary bg-primary text-lg text-white transition-all duration-300 hover:bg-cta focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:outline-none"
   >
     <span>#</span>
     Gratis Konsultasi

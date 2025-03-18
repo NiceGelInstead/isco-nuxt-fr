@@ -1,11 +1,11 @@
 <template>
   <footer class="bg-secondary">
     <div
-      class="container py-14 md:py-16 flex flex-col md:flex-row justify-between items-center"
+      class="container flex flex-col items-center justify-between py-14 md:flex-row md:py-16"
     >
       <!-- Logo & Deskripsi + Sosial Media -->
       <div class="w-full md:w-1/4">
-        <div class="flex items-center gap-3 mb-4">
+        <div class="mb-4 flex items-center gap-3">
           <img
             src="@/assets/images/logo-IscoGroup.png"
             alt="Logo"
@@ -15,26 +15,26 @@
             >Isco Group</nuxt-link
           >
         </div>
-        <p class="text-base font-medium mb-4 text-white text-left">
+        <p class="mb-4 text-left text-base font-medium text-white">
           ISCO GROUP adalah perusahaan yang bergerak di konsultasi konstruksi
           dan legalitas sertifikasi.
         </p>
         <div class="flex gap-4">
           <nuxt-link to="/"
-            ><i class="fab fa-facebook text-white text-xl hover:underline"
+            ><i class="fab fa-facebook text-xl text-white hover:underline"
           /></nuxt-link>
           <nuxt-link to="/"
-            ><i class="fab fa-instagram text-white text-xl hover:underline"
+            ><i class="fab fa-instagram text-xl text-white hover:underline"
           /></nuxt-link>
           <nuxt-link to="/"
-            ><i class="fab fa-linkedin text-white text-xl hover:underline"
+            ><i class="fab fa-linkedin text-xl text-white hover:underline"
           /></nuxt-link>
         </div>
       </div>
 
       <!-- Tentang Kami & Layanan (dalam satu row di mobile) -->
       <div
-        class="w-full md:w-1/2 flex flex-row justify-between md:justify-around mt-8 md:mt-0"
+        class="mt-8 flex w-full flex-row justify-between md:mt-0 md:w-1/2 md:justify-around"
       >
         <div>
           <nuxt-link
@@ -66,11 +66,11 @@
       </div>
 
       <!-- Kontak -->
-      <div class="w-full md:w-1/4 mt-8 md:mt-0">
+      <div class="mt-8 w-full md:mt-0 md:w-1/4">
         <nuxt-link to="/" class="text-2xl font-bold text-white hover:underline"
           >Informasi Kontak</nuxt-link
         >
-        <div class="flex items-center gap-3 mt-4">
+        <div class="mt-4 flex items-center gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -88,7 +88,7 @@
             Jalan Rahasia Barat No. 2, Banget, Kota Jayajarta, 10150
           </p>
         </div>
-        <div class="flex items-center gap-3 mt-4">
+        <div class="mt-4 flex items-center gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -104,7 +104,7 @@
 
           <p class="footer-p">+62 8123-2321-1234</p>
         </div>
-        <div class="flex items-center gap-3 mt-4">
+        <div class="mt-4 flex items-center gap-3">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"

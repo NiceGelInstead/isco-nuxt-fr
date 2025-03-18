@@ -1,9 +1,9 @@
 <template>
   <div id="landing-page" class="landing-page bg-gray-100">
-    <section id="hero" class="pt-0 lg:pt-16 bg-secondary">
-      <div class="container min-h-[120vh] lg:min-h-screen place-content-center">
+    <section id="hero" class="bg-secondary pt-0 lg:pt-16">
+      <div class="container min-h-[120vh] place-content-center lg:min-h-screen">
         <div class="grid lg:grid-cols-2">
-          <div class="flex flex-col gap-12 my-auto">
+          <div class="my-auto flex flex-col gap-12">
             <div class="flex flex-col gap-2">
               <h1 class="isco-h3 isco-text-responsive text-accent">
                 Jasa Sertifikasi ISO
@@ -11,7 +11,7 @@
               <h2 class="isco-h1 isco-text-responsive">
                 Menangkan Kontrak, Sukseskan Audit
               </h2>
-              <p class="text-white isco-text-responsive">
+              <p class="isco-text-responsive text-white">
                 Jasa Sertifikasi ISO Cepat, Mudah, dan Bergaransi Terbaik
                 Se-Tangerang. <br />Melayani Banten dan Sekitarnya.
               </p>
@@ -20,12 +20,12 @@
               <ButtonCTA
                 button-text="Dapatkan Sertifikat ISO"
                 to="/"
-                class="lg:mr-auto text-center"
+                class="text-center lg:mr-auto"
               />
-              <div class="flex gap-4 flex-wrap">
+              <div class="flex flex-wrap gap-4">
                 <div class="flex gap-2">
                   <svg
-                    class="fill-accent w-4"
+                    class="w-4 fill-accent"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                   >
@@ -37,7 +37,7 @@
                 </div>
                 <div class="flex gap-2">
                   <svg
-                    class="fill-accent w-4"
+                    class="w-4 fill-accent"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                   >
@@ -49,7 +49,7 @@
                 </div>
                 <div class="flex gap-2">
                   <svg
-                    class="fill-accent w-4"
+                    class="w-4 fill-accent"
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 448 512"
                   >
@@ -72,7 +72,7 @@
     </section>
     <section>
       <div class="container">
-        <div class="flex flex-col text-center mb-16">
+        <div class="mb-16 flex flex-col text-center">
           <h2 class="isco-h3">Mengapa Memilih Kami</h2>
           <h3 class="isco-h2">Membantu Anda Meraih Tender Lebih Banyak</h3>
         </div>
@@ -106,11 +106,11 @@
     </section>
     <section>
       <div class="container">
-        <div class="flex flex-col text-center mb-16">
+        <div class="mb-16 flex flex-col text-center">
           <h2 class="isco-h3">Layanan Kami</h2>
           <h3 class="isco-h2">Dapatkan Sertifikasi ISO Lengkap</h3>
         </div>
-        <div class="grid gap-8 grid-cols-2 lg:grid-cols-4">
+        <div class="grid grid-cols-2 gap-8 lg:grid-cols-4">
           <IconBox
             svg="check-to-slot"
             tagline="ISO 9001"
@@ -164,42 +164,42 @@
     </section>
     <section class="bg-secondary">
       <div class="container">
-        <div class="grid lg:grid-cols-2 w-full">
+        <div class="grid w-full lg:grid-cols-2">
           <img
             src="@/assets/images/test2.png"
             class="h-2/3 place-self-center"
             alt="poto"
           />
           <div class="flex flex-col">
-            <div class="flex flex-col mb-8">
+            <div class="mb-8 flex flex-col">
               <h2 class="isco-h3 text-start text-accent">Bagaimana Caranya?</h2>
-              <h3 class="isco-h2 text-white text-start">
+              <h3 class="isco-h2 text-start text-white">
                 Lengkapi Persyaratan Tender dengan 3 Cara Simpel
               </h3>
             </div>
-            <div class="grid grid-rows-3 gap-8 isco-text-break w-full">
+            <div class="isco-text-break grid w-full grid-rows-3 gap-8">
               <div class="flex items-end gap-4">
                 <span class="text-6xl text-accent"> 1. </span>
-                <h4 class="isco-h4 text-white isco-text-break">
+                <h4 class="isco-h4 isco-text-break text-white">
                   Konsultasi Gratis
                 </h4>
               </div>
               <div class="flex items-end gap-4">
                 <span class="text-6xl text-accent"> 2. </span>
-                <h4 class="isco-h4 text-white isco-text-break">
+                <h4 class="isco-h4 isco-text-break text-white">
                   Audit Dokumentasi dan Persyaratan Anda
                 </h4>
               </div>
               <div class="flex items-end gap-4">
                 <span class="text-6xl text-accent"> 3. </span>
-                <h4 class="isco-h4 text-white isco-text-break">
+                <h4 class="isco-h4 isco-text-break text-white">
                   Dapatakan Sertifikasi Anda
                 </h4>
               </div>
               <ButtonCTA
                 button-text="Dapatkan Sertifikat ISO"
                 to="/"
-                class="lg:mr-auto text-center"
+                class="text-center lg:mr-auto"
               />
             </div>
           </div>
@@ -208,15 +208,15 @@
     </section>
     <section>
       <div class="container">
-        <div class="flex flex-col mb-4 gap-2">
+        <div class="mb-4 flex flex-col gap-2">
           <h2 class="isco-h2 text-center">Dapatkan Serfikat ISO Anda Segera</h2>
-          <p class="text-center self-center">
+          <p class="self-center text-center">
             Kami menyediakan sertifikasi dari industri konstruksi, konsultan,
             hingga manufaktur.
           </p>
         </div>
         <div
-          class="grid grid-cols-2 lg:grid-cols-4 w-full place-items-center gap-4"
+          class="grid w-full grid-cols-2 place-items-center gap-4 lg:grid-cols-4"
         >
           <div class="flex flex-col place-items-center gap-2">
             <img

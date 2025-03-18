@@ -2,18 +2,18 @@
 <template>
   <a
     :href="`/artikel/${article.slug}`"
-    class="w-full flex flex-col md:border-2 md:border-border-color"
+    class="flex w-full flex-col md:border-2 md:border-border-color"
   >
     <NuxtImg
       provider="strapi"
       :src="article.cover?.url || ''"
       :alt="article.title"
-      class="w-full h-28.5 md:h-51 object-cover object-center rounded-xl"
+      class="h-28.5 w-full rounded-xl object-cover object-center md:h-51"
       format="webp"
       loading="lazy"
       placeholder
     />
-    <div class="flex flex-col gap-1.5 md:gap-4 mt-1.5 md:mt-0 md:p-4">
+    <div class="mt-1.5 flex flex-col gap-1.5 md:mt-0 md:gap-4 md:p-4">
       <div class="isco-small-text md:isco-paragraph">
         <span class="text-primary">
           {{ article.category?.name }}
@@ -24,10 +24,10 @@
         </span>
       </div>
       <div class="w-full">
-        <h2 class="isco-h3 md:mb-3 line-clamp-2">
+        <h2 class="isco-h3 line-clamp-2 md:mb-3">
           {{ article.title }}
         </h2>
-        <p class="hidden md:block text-text line-clamp-4">
+        <p class="line-clamp-4 hidden text-text md:block">
           {{ article.description }}
         </p>
       </div>
