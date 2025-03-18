@@ -9,7 +9,18 @@ fr fr
 2. Run `npm install`
 3. Run `npm run dev`
 
-## How To Deploy
+## How To Deploy (Node.js)
+
+1. Commit to remote (github)
+2. Pull from remote in server
+3. Deploy to folder in server
+4. Make Nodejs App and configure everything
+5. Run NPM Install via Nodejs App interface
+6. Run NPM Build via Nodejs App interface (or `nuxt build` via terminal)
+7. Put this into server.cjs `node .output/server/index.mjs`
+8. Restart the Nodejs App
+
+## How To Deploy (Static)
 
 1. Run `nuxi generate`
 2. Put generated files to hosting
@@ -18,9 +29,9 @@ fr fr
 
 > How to use best practices on writing code (ESLint & Prettier)
 
-1. run `npm run lint`
+1. run `npm run lintfix`
 2. FIX EVERYTHING FIRST
-3. run `npm run lintfix`
+3. run `npm run prettywrite`
 4. .....???
 5. Profit!!
 
