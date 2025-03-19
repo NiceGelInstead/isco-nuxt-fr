@@ -73,8 +73,11 @@
           </div>
         </section>
         <section>
-          <div class="isco-container">
-            <div v-if="article && article.blocks">
+          <div class="isco-container grid-cols-1 lg:grid-cols-12">
+            <div class="lg:col-span-2">
+              Table of content
+            </div>
+            <div v-if="article && article.blocks" class="lg:col-span-8">
               <div v-for="block in article.blocks" :key="block.id">
                 <template v-if="block && block.__component">
                   <SharedMedia
@@ -83,6 +86,9 @@
                   />
                 </template>
               </div>
+            </div>
+            <div class="lg:col-span-2">
+              Block CTA
             </div>
           </div>
         </section>
