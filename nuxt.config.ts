@@ -26,9 +26,23 @@ export default defineNuxtConfig({
       baseURL: "https://admin.testjellysuper.my.id",
     },
   },
-  modules: ["nuxt-qrcode", "@nuxt/eslint", "@nuxt/image"],
+  modules: [
+    "nuxt-qrcode",
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxtjs/mdc",
+  ],
   css: ["~/assets/css/index.css"],
   vite: {
     plugins: [tailwindcss()],
   },
+  // Please consider the custom prose AND native HTML tag
+  // mdc: {
+  //   components: {
+  //     prose: false,
+  //     map: {
+  //       h2: 'IscoH2Prose'
+  //     }
+  //   }
+  // }
 });
