@@ -18,7 +18,7 @@
               <div class="relative md:static">
                 <div
                   class="absolute inset-0 bg-gradient-to-t from-secondary to-transparent md:hidden"
-                ></div>
+                />
                 <NuxtImg
                   src="/images/test2.png"
                   alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"

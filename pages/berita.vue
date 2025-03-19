@@ -31,7 +31,7 @@
 <script setup lang="ts">
 import { useFetchAllArticles } from "~/composables/useFetchArticles";
 import { useMergeArticle } from "~/composables/useMergeResponse";
-import { type Article } from "~/types/articleTypes";
+import type { Article } from "~/types/articleTypes";
 
 // Api fetch for article list
 const { data, status, error, refresh } = useFetchAllArticles();

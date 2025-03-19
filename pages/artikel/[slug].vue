@@ -73,7 +73,18 @@
           </div>
         </section>
         <section>
-          <div class="isco-container">O</div>
+          <div class="isco-container">
+            <div v-if="article && article.blocks">
+              <div v-for="block in article.blocks" :key="block.id">
+                <template v-if="block && block.__component">
+                  <SharedMedia
+                    v-if="block.__component === 'shared.media'"
+                    :file="block.file"
+                  />
+                </template>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -83,7 +94,7 @@
 <script setup lang="ts">
 import { useFetchFilteredArticleBySlug } from "~/composables/useFetchArticles";
 import { useMergeArticle } from "~/composables/useMergeResponse";
-import { type Article } from "~/types/articleTypes";
+import type { Article } from "~/types/articleTypes";
 
 const route = useRoute();
 const slug = route.params.slug as string;

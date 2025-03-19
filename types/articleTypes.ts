@@ -20,6 +20,7 @@ export const defaultArticle: Article = {
   author: defaultAuthor,
   category: defaultCategory,
   updatedAt: "No Date",
+  blocks: [],
 };
 
 export interface Article {
@@ -32,6 +33,7 @@ export interface Article {
   author: author | null;
   category: category | null;
   updatedAt: string;
+  blocks: any[];
 }
 interface cover {
   url: string;

@@ -1,5 +1,5 @@
 // composables/useMergeResponse.ts
-import { type Article } from "~/types/articleTypes";
+import type { Article } from "~/types/articleTypes";
 import {
   defaultArticle,
   defaultCover,
