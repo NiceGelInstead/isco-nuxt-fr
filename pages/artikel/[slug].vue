@@ -77,7 +77,7 @@
             <div class="md:col-span-2">
               Table of content
             </div>
-            <div v-if="article && article.blocks" class="md:col-span-8">
+            <article v-if="article && article.blocks" class="md:col-span-8">
               <div v-for="block in article.blocks" :key="block.id">
                 <template v-if="block && block.__component">
                   <SharedMedia
@@ -88,9 +88,14 @@
                     v-if="block.__component === 'shared.rich-text'"
                     :body="block.body"
                   />
+                  <SharedQuote
+                    v-if="block.__component === 'shared.quote'"
+                    :title="block.title"
+                    :body="block.body"
+                  />
                 </template>
               </div>
-            </div>
+            </article>
             <div class="md:col-span-2">
               Block CTA
             </div>
