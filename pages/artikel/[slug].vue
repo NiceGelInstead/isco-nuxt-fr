@@ -108,6 +108,7 @@
       </div>
     </div>
   </main>
+  <pre> {{ mergedArticles }} </pre>
 </template>
 
 <script setup lang="ts">

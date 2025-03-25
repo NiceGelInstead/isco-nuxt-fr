@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-    <div class="flex flex-col">
+    <div class="grid grid-cols-2">
       <NuxtImg
         v-for="file in files" :key="file.id" 
         provider="strapi"
