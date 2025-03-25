@@ -242,7 +242,7 @@
       </div>
     </section>
   </main>
-  <!-- <pre> {{ articles }} </pre> -->
+  <pre> {{ articles }} </pre>
 </template>
 
 <script setup lang="ts">

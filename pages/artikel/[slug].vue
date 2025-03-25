@@ -73,10 +73,8 @@
           </div>
         </section>
         <section>
-          <div class="isco-container grid grid-cols-1 md:grid-cols-12 gap-8">
-            <div class="md:col-span-2">
-              Table of content
-            </div>
+          <div class="isco-container grid grid-cols-1 gap-8 md:grid-cols-12">
+            <div class="md:col-span-2">Table of content</div>
             <article v-if="article && article.blocks" class="md:col-span-8">
               <div v-for="block in article.blocks" :key="block.id">
                 <template v-if="block && block.__component">
@@ -100,15 +98,13 @@
                 </template>
               </div>
             </article>
-            <div class="md:col-span-2">
-              Block CTA
-            </div>
+            <div class="md:col-span-2">Block CTA</div>
           </div>
         </section>
       </div>
     </div>
   </main>
-  <pre> {{ mergedArticles }} </pre>
+  <pre> {{ articles }} </pre>
 </template>
 
 <script setup lang="ts">

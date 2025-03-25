@@ -4,12 +4,23 @@ import type { Article, ApiResponse } from "~/types/articleTypes";
 export function useFetchAllArticles() {
   const config = useRuntimeConfig();
   const strapiUrl = config.public.strapiUrl;
-  const Get_All_Articles_Query =
-    "/api/articles?sort[0]=updatedAt:desc&populate[category][fields][0]=name&populate[cover][fields][0]=url&fields[0]=title&fields[1]=slug&fields[2]=documentId&fields[3]=description&fields[4]=updatedAt&pagination[pageSize]=9&pagination[page]=1&status=published";
+  const Get_Sort_By_UpdatedAt = "/api/articles?sort[0]=updatedAt:desc";
+
+  const Get_All_Query_Params = [
+    "&fields[0]=title",
+    "&fields[1]=slug",
+    "&fields[2]=description",
+    "&fields[3]=updatedAt",
+    "&populate[category][fields][0]=name",
+    "&populate[cover][fields][0]=url",
+    "&pagination[pageSize]=9",
+    "&pagination[page]=1",
+    "&status=published",
+  ];
 
   const { data, status, error, refresh, clear } = useFetch<
     ApiResponse<Article[]>
-  >(`${strapiUrl}${Get_All_Articles_Query}`);
+  >(`${strapiUrl}${Get_Sort_By_UpdatedAt}${Get_All_Query_Params.join("")}`);
 
   if (process.env.NODE_ENV === "development") {
     console.log("Fetched articles:", data.value);
@@ -18,6 +29,9 @@ export function useFetchAllArticles() {
   }
 
   return { data, status, error, refresh };
+
+  // const Get_All_Articles_Query =
+  //   "/api/articles?sort[0]=updatedAt:desc&populate[category][fields][0]=name&populate[cover][fields][0]=url&fields[0]=title&fields[1]=slug&fields[2]=documentId&fields[3]=description&fields[4]=updatedAt&pagination[pageSize]=9&pagination[page]=1&status=published";
 }
 
 export function useFetchFilteredArticleBySlug(slug: string) {
@@ -26,39 +40,37 @@ export function useFetchFilteredArticleBySlug(slug: string) {
   const Get_Filter_By_Slug = "/api/articles?filters[slug][$eq]=";
 
   const Get_All_Query_Params = [
+    "&fields[0]=title",
+    "&fields[1]=slug",
+    "&fields[2]=description",
+    "&fields[3]=updatedAt",
     "&populate[cover][fields][0]=url",
     "&populate[category][fields][0]=name",
     "&populate[author][fields][0]=name",
-    "&populate[blocks][on][shared.media][populate][file][fields][2]=alternativeText",
-    "&populate[blocks][on][shared.media][populate][file][fields][1]=mime",
     "&populate[blocks][on][shared.media][populate][file][fields][0]=url",
+    "&populate[blocks][on][shared.media][populate][file][fields][1]=mime",
+    "&populate[blocks][on][shared.media][populate][file][fields][2]=alternativeText",
+    "&populate[blocks][on][shared.rich-text][fields][0]=body",
     "&populate[blocks][on][shared.quote][fields][0]=title",
     "&populate[blocks][on][shared.quote][fields][1]=body",
-    "&populate[blocks][on][shared.rich-text][fields][0]=body",
-    "&populate[blocks][on][shared.slider][populate][files][fields][1]=alternativeText",
     "&populate[blocks][on][shared.slider][populate][files][fields][0]=url",
-    "&fields[0]=title",
-    "&fields[1]=slug",
-    "&fields[2]=documentId",
-    "&fields[3]=updatedAt",
+    "&populate[blocks][on][shared.slider][populate][files][fields][1]=alternativeText",
     "&pagination[pageSize]=1",
     "&pagination[page]=1",
     "&status=published",
   ];
 
-const { data, status, error, refresh, clear } = useFetch<
-  ApiResponse<Article[]>
->(
-  `${strapiUrl}${Get_Filter_By_Slug}${slug}${Get_All_Query_Params.join("")}`,
-);
+  const { data, status, error, refresh, clear } = useFetch<
+    ApiResponse<Article[]>
+  >(`${strapiUrl}${Get_Filter_By_Slug}${slug}${Get_All_Query_Params.join("")}`);
 
-if (process.env.NODE_ENV === "development") {
-  console.log("Fetched articles:", data.value);
-  console.log("Fetch error:", error.value);
-  console.log("Fetch status:", status.value);
-}
+  if (process.env.NODE_ENV === "development") {
+    console.log("Fetched articles:", data.value);
+    console.log("Fetch error:", error.value);
+    console.log("Fetch status:", status.value);
+  }
 
-return { data, status, error, refresh };
+  return { data, status, error, refresh };
 
   // Debugging purposes
   //
@@ -101,8 +113,8 @@ return { data, status, error, refresh };
   // const Get_Article_UpdatedAt_Field = "&fields[3]=updatedAt";
 
   // // Pagination
-  // const Get_Article_Pagination_PageSize = "&pagination[pageSize]=1"; 
-  // const Get_Article_Pagination_Page = "&pagination[page]=1"; 
+  // const Get_Article_Pagination_PageSize = "&pagination[pageSize]=1";
+  // const Get_Article_Pagination_Page = "&pagination[page]=1";
   // const Get_Article_Status_Published = "&status=published";
 
   // const { data, status, error, refresh, clear } = useFetch<

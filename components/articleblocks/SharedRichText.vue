@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps({
   body: {
-    type: String
+    type: String,
   },
 });
 </script>
@@ -12,6 +12,4 @@ defineProps({
   </div>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

@@ -1,7 +1,7 @@
 <script setup>
 defineProps({
   file: {
-    type: Object
+    type: Object,
   },
 });
 </script>
@@ -9,8 +9,8 @@ defineProps({
 <template>
   <div v-if="file" class="shared-media">
     <NuxtImg
-      provider="strapi"
       v-if="file.mime && file.mime.startsWith('image')"
+      provider="strapi"
       :src="file.url"
       :alt="file.documentId"
       class=""

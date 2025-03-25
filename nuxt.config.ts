@@ -26,12 +26,7 @@ export default defineNuxtConfig({
       baseURL: "https://admin.testjellysuper.my.id",
     },
   },
-  modules: [
-    "nuxt-qrcode",
-    "@nuxt/eslint",
-    "@nuxt/image",
-    "@nuxtjs/mdc",
-  ],
+  modules: ["nuxt-qrcode", "@nuxt/eslint", "@nuxt/image", "@nuxtjs/mdc"],
   css: ["~/assets/css/index.css"],
   vite: {
     plugins: [tailwindcss()],
