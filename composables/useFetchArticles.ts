@@ -37,6 +37,8 @@ export function useFetchFilteredArticleBySlug(slug: string) {
     "&populate[blocks][on][shared.media][populate][file][fields][1]=url";
   const Get_Article_Blocks_Media_File_Mime_Query =
     "&populate[blocks][on][shared.media][populate][file][fields][0]=mime";
+  const Get_Article_Blocks_Media_File_AlternativeText_Query =
+    "&populate[blocks][on][shared.media][populate][file][fields][0]=alternativeText";
 
   // shared.quote
   const Get_Article_Blocks_Quote_Title_Query =
@@ -51,6 +53,8 @@ export function useFetchFilteredArticleBySlug(slug: string) {
   // shared.slider
   const Get_Article_Blocks_Slider_Files_Url_Query =
     "&populate[blocks][on][shared.slider][populate][files][fields][0]=url";
+  const Get_Article_Blocks_Slider_Files_AlternativeText_Query =
+    "&populate[blocks][on][shared.slider][populate][files][fields][0]=alternativeText";
 
   // Article fields
   const Get_Article_Title_Field = "&fields[0]=title";

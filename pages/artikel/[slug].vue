@@ -93,6 +93,10 @@
                     :title="block.title"
                     :body="block.body"
                   />
+                  <SharedSlider
+                    v-if="block.__component === 'shared.slider'"
+                    :files="block.files"
+                  />
                 </template>
               </div>
             </article>
