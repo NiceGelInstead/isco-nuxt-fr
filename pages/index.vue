@@ -23,6 +23,8 @@
                   src="/images/test2.png"
                   alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
                   class="w-9/10 place-self-center object-cover md:hidden"
+                  format="webp"
+                  placeholder
                   preload
                 />
                 <p
@@ -47,6 +49,8 @@
               src="/images/test2.png"
               class="hidden h-125 w-full justify-self-end object-contain md:block"
               alt="Gambar seseorang kontraktor konstruksi dengan logo berbagai lembaga pembangunan pemerintah Indonesia"
+              format="webp"
+              placeholder
               preload
             />
           </div>
@@ -147,6 +151,7 @@
                         alt="Dropdown Image"
                         class="mx-auto my-6 block w-full object-contain lg:hidden"
                         loading="lazy"
+                        format="webp"
                         placeholder
                       />
                     </transition>
@@ -166,6 +171,7 @@
                 alt="Dropdown Image"
                 class="object-contain"
                 loading="lazy"
+                format="webp"
                 placeholder
               />
             </transition>

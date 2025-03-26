@@ -26,11 +26,23 @@ export default defineNuxtConfig({
       baseURL: "https://admin.testjellysuper.my.id",
     },
   },
-  modules: ["nuxt-qrcode", "@nuxt/eslint", "@nuxt/image", "@nuxtjs/mdc"],
+  modules: [
+    "nuxt-qrcode",
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxtjs/mdc",
+    "@nuxtjs/seo"
+  ],
   css: ["~/assets/css/index.css"],
   vite: {
     plugins: [tailwindcss()],
   },
+  site: {
+    url: 'https://iscogroup.id',
+    name: 'Isco Group',
+    description: 'Memajukan kontraktor di seluruh indonesia.',
+    defaultLocale: 'id',
+  }
   // Please consider the custom prose AND native HTML tag
   // mdc: {
   //   components: {
