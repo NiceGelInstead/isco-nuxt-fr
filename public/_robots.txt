@@ -1,1 +1,13 @@
+# Allow crawlers
+User-agent: *
+Disallow:
 
+# Block access 
+Disallow: /players
+Disallow: /playerprofile/*
+
+# Allow access 
+# Allow: /admin/public
+
+# Sitemap
+Sitemap: https://iscogroup.id/sitemap.xml

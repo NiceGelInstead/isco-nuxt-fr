@@ -31,7 +31,8 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/image",
     "@nuxtjs/mdc",
-    "@nuxtjs/seo"
+    "@nuxtjs/seo",
+    "@nuxtjs/sitemap"
   ],
   css: ["~/assets/css/index.css"],
   vite: {
@@ -42,6 +43,11 @@ export default defineNuxtConfig({
     name: 'Isco Group',
     description: 'Memajukan kontraktor di seluruh indonesia.',
     defaultLocale: 'id',
+  },
+  sitemap: {
+    sources: [
+      '/api/__sitemap__/articles'
+    ]
   }
   // Please consider the custom prose AND native HTML tag
   // mdc: {
