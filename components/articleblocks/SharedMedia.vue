@@ -7,13 +7,13 @@ defineProps({
 </script>
 
 <template>
-  <div v-if="file" class="shared-media">
+  <div v-if="file" class="mb-8">
     <NuxtImg
       v-if="file.mime && file.mime.startsWith('image')"
       provider="strapi"
       :src="file.url"
-      :alt="file.documentId"
-      class=""
+      :alt="file.alternativeText"
+      class="rounded-lg"
       loading="lazy"
       placeholder
     />

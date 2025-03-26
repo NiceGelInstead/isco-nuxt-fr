@@ -58,7 +58,7 @@
                   {{ article.author?.name }}
                 </span>
                 <span>
-                  {{ article.updatedAt }}
+                  {{ formattedDate }}
                 </span>
               </div>
             </div>
@@ -122,5 +122,11 @@ const mergedArticles = computed(() =>
 );
 onMounted(() => {
   refresh();
+});
+
+const formattedDate = computed(() => {
+  return mergedArticles.value.length > 0
+    ? useDateFormat(mergedArticles.value[0].updatedAt)
+    : null;
 });
 </script>

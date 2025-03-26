@@ -94,7 +94,7 @@
 
 @layer base {
   /* Tipografi */
-  /* UNTUK artikel (Gunakan isco-hx untuk text non-artikel (markdown)) */
+  /* UNTUK ARTIKEL (MARKDOWN) (Gunakan isco-hx untuk text non-artikel) */
   h1 {
     @apply font-medium lg:font-bold;
     @apply text-4xl lg:text-5xl;
@@ -118,8 +118,12 @@
     @apply text-base md:text-xl;
   }
   p {
-    @apply text-base font-normal tracking-normal text-text;
+    @apply text-base font-normal tracking-normal text-pretty break-words text-text;
   }
+  p a {
+    @apply text-base font-normal tracking-normal text-primary underline;
+  }
+
   section {
     @apply w-full px-4 py-16 md:px-6 lg:px-10;
   }

@@ -7,9 +7,7 @@ defineProps({
 </script>
 
 <template>
-  <div v-if="body" class="">
-    <MDC :value="body" tag="article" />
-  </div>
+  <MDC v-if="body" :value="body" tag="article" class="mb-8 space-y-4" />
 </template>
 
 <style scoped></style>

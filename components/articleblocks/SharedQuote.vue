@@ -10,14 +10,13 @@ defineProps({
 </script>
 
 <template>
-  <div v-if="title" class="w-full">
-    <blockquote class="w-full space-y-2 border-1 p-2">
-      <p class="isco-paragraph">
-        {{ body }}
-      </p>
-      <h3 class="isco-h3">
-        {{ title }}
-      </h3>
-    </blockquote>
-  </div>
+  <blockquote
+    v-if="title"
+    class="mb-8 w-full space-y-4 rounded-lg border-1 p-4"
+  >
+    <p class="isco-short-desc text-secondary">"{{ body }}"</p>
+    <cite class="isco-h3 text-primary">
+      {{ title }}
+    </cite>
+  </blockquote>
 </template>
