@@ -40,6 +40,7 @@ const columns = computed(() => {
         :alt="file.documentId"
         class="h-auto max-w-full rounded-lg"
         loading="lazy"
+        format="webp"
         placeholder
       />
     </div>

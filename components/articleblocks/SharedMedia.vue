@@ -15,6 +15,7 @@ defineProps({
       :alt="file.alternativeText"
       class="rounded-lg"
       loading="lazy"
+      format="webp"
       placeholder
     />
     <video
